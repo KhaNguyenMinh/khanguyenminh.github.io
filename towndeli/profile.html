@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <![endif]-->
+    <title>TownDeli - My Profile</title>
+    <meta name="keywords" content="keywords"/>
+    <meta name="description" content="description"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="dist/images/favicon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="dist/styles/main.css?v=1.0.1"/>
+
+    <!--[if lt IE 9]>
+    <script src="dist/scripts/html5shiv.js"></script>
+    <script src="dist/scripts/respond.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="modal fade login-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng nhập</h3>
+                <p>Cần tạo tài khoản? <a data-toggle="modal" data-target=".register-modal">Đăng ký</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc</span></div>
+                <form>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <div class="clearfix mgt-10 mgb-10">
+                        <div class="remember">
+                            <label for="remember-chk">Ghi nhớ</label>
+                            <input id="remember-chk" type="checkbox" />
+                        </div>
+                        <a class="forgot-password-link">Quên mật khẩu ?</a>
+                    </div>
+                    <button class="submit-btn">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade register-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng ký</h3>
+                <p>Bạn đã có tài khoản? <a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc đăng kí tài khoản trên Towndeli</span></div>
+                <form>
+                    <div class="row">
+                        <div class="col-xs-6 pdr-5">
+                            <div class="wrap-input">
+                                <span><img src="dist/images/user-icon.png" alt="img" /></span>
+                                <input type="text" placeholder="Tên" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6 pdl-5">
+                            <div class="wrap-input">
+                                <input type="text" placeholder="Họ" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="text" placeholder="Số điện thoại" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <p class="note">Bằng việc đăng ký và sử dụng website, bạn đồng ý với các Điều khoản & Quy chế</p>
+                    <button class="submit-btn">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="topbar">
+    <div class="container">
+        <h4><strong>boost up your monday ! 50% off</strong> for espresso every monday from 09:00-12:00. <a>see more</a>
+        </h4>
+        <span class="close-icon"><img src="dist/images/close-icon.png" alt="img" /></span>
+    </div>
+</div>
+<!-- /.topbar -->
+
+<header class="header">
+    <div class="container">
+        <div class="wrap-cat-menu">
+            <span class="menu-icon"></span>
+            <!-- /.menu-icon -->
+            <div class="cat-menu">
+                <h3>Categories</h3>
+                <div class="popular-links">
+                    <h4><a>Deals</a></h4>
+                    <h4><a>Popular</a></h4>
+                    <h4><a>Recently Viewed</a></h4>
+                </div>
+                <ul class="cat-menu-details">
+                    <li class="has-child">
+                        <a>Produce</a>
+                        <ul>
+                            <li>
+                                <a>Produce 1</a>
+                            </li>
+                            <li>
+                                <a>Produce 2</a>
+                            </li>
+                            <li>
+                                <a>Produce 3</a>
+                            </li>
+                            <li>
+                                <a>Produce 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Meat & Seafood</a>
+                        <ul>
+                            <li>
+                                <a>Meat & Seafood 1</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 2</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 3</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Deli</a>
+                        <ul>
+                            <li>
+                                <a>Deli 1</a>
+                            </li>
+                            <li>
+                                <a>Deli 2</a>
+                            </li>
+                            <li>
+                                <a>Deli 3</a>
+                            </li>
+                            <li>
+                                <a>Deli 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Bakery</a>
+                        <ul>
+                            <li>
+                                <a>Bakery 1</a>
+                            </li>
+                            <li>
+                                <a>Bakery 2</a>
+                            </li>
+                            <li>
+                                <a>Bakery 3</a>
+                            </li>
+                            <li>
+                                <a>Bakery 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Alcohol</a>
+                    </li>
+                    <li>
+                        <a>Dairy & Eggs</a>
+                    </li>
+                    <li>
+                        <a>Bulk</a>
+                    </li>
+                    <li class="has-child">
+                        <a>Canned Goods</a>
+                        <ul>
+                            <li>
+                                <a>Canned Goods 1</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 2</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 3</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Dry Goods & Pasta</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.cat-menu -->
+        </div>
+        <!-- /.wrap-cat-menu -->
+        <h1 class="logo">
+            <a href="index.html" title="TownDeli">TownDeli</a>
+        </h1>
+        <!-- /.logo -->
+        <ul class="menu">
+            <li>
+                <a><span class="glass-icon"></span>Menu</a>
+            </li>
+            <li>
+                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span>Schedule</a>
+            </li>
+            <li class="cart-menu">
+                <a><span class="cart-icon" data-value="10"></span>Your cart</a>
+                <div class="cart-box">
+                    <div class="table-responsive">
+                        <table class="table checkout-table">
+                            <tbody>
+                            <tr>
+                                <td><h3>Cart</h3></td>
+                                <td><a class="more-link">Drink more</a></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                </td>
+                                <td>Std.size Cookie, Strawberry...</td>
+                                <td>
+                                    <div class="wrap-quantity">
+                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </td>
+                                <td class="text-center">50.000 VNĐ</td>
+                                <td class="text-right">
+                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                </td>
+                                <td>Std.size Cookie, Strawberry...</td>
+                                <td>
+                                    <div class="wrap-quantity">
+                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </td>
+                                <td class="text-center">50.000 VNĐ</td>
+                                <td class="text-right">
+                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                </td>
+                                <td>Std.size Cookie, Strawberry...</td>
+                                <td>
+                                    <div class="wrap-quantity">
+                                        <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                        <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                        <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                    </div>
+                                </td>
+                                <td class="text-center">50.000 VNĐ</td>
+                                <td class="text-right">
+                                    <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bottom-cart-box">
+                        <div class="info">
+                            <p><strong>TOTAL:</strong></p>
+                            <p><strong>180.000 VNĐ / DAY</strong></p>
+                            <p>150.000 VNĐ: Coffee & Dessert</p>
+                            <p>30.000 VNĐ: Shipping Fee</p>
+                        </div>
+                        <button class="checkout-btn">CHECKOUT <i class="fa fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- /.menu -->
+        <ul class="top-links">
+            <li class="user">
+                <a><img src="dist/images/avatar.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li><a data-toggle="modal" data-target=".register-modal">Đăng ký</a></li>
+                        <li class="devider no-mg"></li>
+                        <li><a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown dưới là khi user đã login -->
+                <!--
+                <div class="child-box big">
+                    <ul>
+                        <li><a class="highlight">Schedule</a></li>
+                        <li><a class="highlight">Reward points</a></li>
+                        <li class="devider"></li>
+                        <li><a>Profile</a></li>
+                        <li><a>Log out</a></li>
+                    </ul>
+                </div>
+                -->
+            </li>
+            <li class="lang">
+                <a><img src="dist/images/en-flag.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li class="active"><a>English</a></li>
+                        <li class="devider no-mg"></li>
+                        <li><a>Tiếng Việt</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- /.top-links -->
+    </div>
+</header>
+<!-- /.header -->
+
+<div class="hero">
+    <div class="wrap-sliders">
+        <div id="home-sliders" class="master-slider ms-skin-default">
+            <div class="ms-slide">
+                <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
+                <div class="ms-layer ms-caption" data-effect="left(200)"
+                     data-duration="700"
+                     data-delay="0"
+                     data-hide-effect="fade">
+                    <div class="slider-text">
+                        <h4>This summer too hot ?<br/> buy 1 get 1 today</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat
+                            faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar
+                            pulvinar leo eget pretium.</p>
+                        <a class="more-btn">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-slide">
+                <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
+                <div class="ms-layer ms-caption" data-effect="skewright(20|30,100|200)"
+                     data-duration="700"
+                     data-delay="0"
+                     data-hide-effect="fade">
+                    <div class="slider-text">
+                        <h4>This summer too hot ?<br/> buy 1 get 1 today</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat
+                            faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar
+                            pulvinar leo eget pretium.</p>
+                        <a class="more-btn">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-slide">
+                <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
+                <div class="ms-layer ms-caption" data-effect="front(300)"
+                     data-duration="700"
+                     data-delay="0"
+                     data-hide-effect="fade">
+                    <div class="slider-text">
+                        <h4>This summer too hot ?<br/> buy 1 get 1 today</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat
+                            faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar
+                            pulvinar leo eget pretium.</p>
+                        <a class="more-btn">See more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#home-sliders -->
+    </div>
+</div>
+<!-- /.hero -->
+
+<div class="main">
+    <div class="container">
+        <div class="wrap-profile">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="cat-menu">
+                        <ul>
+                            <li class="active"><a href="profile.html">My Profile</a></li>
+                            <li><a href="point.html">My Point</a></li>
+                            <li><a>My Schedule</a></li>
+                            <li><a>My Order</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.cat-menu -->
+                </div>
+                <div class="col-sm-10">
+                    <div class="profile-content">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="wrap-avatar">
+                                    <img class="img-responsive center-block" src="dist/images/avatar-3.png" alt="img" />
+                                    <label for="avatar-input">Đổi AVATAR</label>
+                                    <input id="avatar-input" type="file" />
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="lv-bagde new-lv">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <div class="wrap-lv-img">
+                                                <span class="lv-img"></span>
+                                            </div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h4><strong>Cấp độ:</strong> New Townie</h4>
+                                            <h4><strong>Điểm:</strong> 100</h4>
+                                        </div>
+                                    </div>
+                                    <i class="info-icon" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, voluptatum?"></i>
+                                </div>
+                                <form class="profile-form">
+                                    <h4>Thông tin cá nhân</h4>
+                                    <div class="form-group">
+                                        <div class="left-form">
+                                            <label for="fullname">Họ tên</label>
+                                        </div>
+                                        <div class="right-form">
+                                            <input id="fullname" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="left-form">
+                                            <label for="phone">SĐT</label>
+                                        </div>
+                                        <div class="right-form">
+                                            <input id="phone" type="text" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="left-form">
+                                            <label for="fullname">Giới tính</label>
+                                        </div>
+                                        <div class="right-form">
+                                            <div class="wrap-sex">
+                                                <select style="width: 100%" class="custom-select no-search">
+                                                    <option value="male">Nam</option>
+                                                    <option value="female">Nữ</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="left-form">
+                                            <label for="fullname">Ngày sinh</label>
+                                        </div>
+                                        <div class="right-form">
+                                            <div class="wrap-date">
+                                                <select style="width: 100%" class="custom-select no-search">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                    <option value="12">12</option>
+                                                    <option value="13">13</option>
+                                                    <option value="14">14</option>
+                                                    <option value="15">15</option>
+                                                    <option value="16">16</option>
+                                                    <option value="17">17</option>
+                                                    <option value="18">18</option>
+                                                    <option value="19">19</option>
+                                                    <option value="20">20</option>
+                                                    <option value="21">21</option>
+                                                    <option value="22">22</option>
+                                                    <option value="23">23</option>
+                                                    <option value="24">24</option>
+                                                    <option value="25">25</option>
+                                                    <option value="26">26</option>
+                                                    <option value="27">27</option>
+                                                    <option value="28">28</option>
+                                                    <option value="29">29</option>
+                                                    <option value="30">30</option>
+                                                    <option value="31">31</option>
+                                                </select>
+                                            </div>
+                                            <div class="wrap-month">
+                                                <select style="width: 100%" class="custom-select no-search">
+                                                    <option value="1">Tháng một</option>
+                                                    <option value="2">Tháng hai</option>
+                                                    <option value="3">Tháng ba</option>
+                                                    <option value="4">Tháng tư</option>
+                                                    <option value="5">Tháng năm</option>
+                                                    <option value="6">Tháng sáu</option>
+                                                    <option value="7">Tháng bảy</option>
+                                                    <option value="8">Tháng tám</option>
+                                                    <option value="9">Tháng chín</option>
+                                                    <option value="10">Tháng mười</option>
+                                                    <option value="11">Tháng mười một</option>
+                                                    <option value="12">Tháng mười hai</option>
+                                                </select>
+                                            </div>
+                                            <div class="wrap-year">
+                                                <select style="width: 100%" class="custom-select no-search">
+                                                    <option value="1990">1990</option>
+                                                    <option value="1991">1991</option>
+                                                    <option value="1992">1992</option>
+                                                    <option value="1993">1993</option>
+                                                    <option value="1994">1994</option>
+                                                    <option value="1995">1995</option>
+                                                    <option value="1996">1996</option>
+                                                    <option value="1997">1997</option>
+                                                    <option value="1998">1998</option>
+                                                    <option value="1999">1999</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h4>Thông tin tài khoản</h4>
+                                    <div class="form-group">
+                                        <div class="left-form">
+                                            <label for="email">Email</label>
+                                        </div>
+                                        <div class="right-form">
+                                            <input id="email" type="email" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="left-form">
+                                            <label>Mật khẩu</label>
+                                        </div>
+                                        <div class="right-form">
+                                            <a class="change-password-link">Đổi mật khẩu</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="left-form"></div>
+                                        <div class="right-form">
+                                            <button class="submit-btn">Cập nhật</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.profile-content -->
+                </div>
+            </div>
+        </div>
+        <!-- /.wrap-profile -->
+    </div>
+</div>
+<!-- /.main -->
+
+<div class="get-app">
+    <div class="container">
+        <img class="two-mobile" src="dist/images/two-mobile.png" alt="img"/>
+        <h3>Pay with your phone. And do so much more.</h3>
+        <ul>
+            <li>
+                <a>
+                    <img src="dist/images/app-store.png" alt="img"/>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="dist/images/google-play.png" alt="img"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /.get-app -->
+
+<div class="social-section">
+    <div class="container">
+        <ul class="list-socials">
+            <li>
+                <a><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-pinterest"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+        <!-- /.list-socials -->
+        <div class="get-email">
+            <form>
+                <label for="join-our-input">Join our email list</label>
+                <input id="join-our-input" type="email" placeholder="Email address"/>
+                <button class="submit-btn">Get started</button>
+            </form>
+        </div>
+        <!-- /.get-email -->
+    </div>
+</div>
+<!-- /.social-section -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <h3>About us</h3>
+                <p>Địa chỉ</p>
+                <p>Email: youremail</p>
+                <p>Phone: yourphone</p>
+                <p>Fax: fax</p>
+                <ul class="list-socials">
+                    <li>
+                        <a><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-google-plus"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Latest our from blog</h3>
+                <ul class="footer-blogs">
+                    <li>
+                        <p><a>Our Blog 1</a></p>
+                        <span>November 29, 2016</span>
+                    </li>
+                    <li>
+                        <p><a>Our Blog 2</a></p>
+                        <span>November 29, 2016</span>
+                    </li>
+                    <li>
+                        <p><a>Our Blog 3</a></p>
+                        <span>November 29, 2016</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Further links</h3>
+                <ul class="further-links">
+                    <li>
+                        <a>Further Link 1</a>
+                    </li>
+                    <li>
+                        <a>Further Link 2</a>
+                    </li>
+                    <li>
+                        <a>Further Link 3</a>
+                    </li>
+                    <li>
+                        <a>Further Link 4</a>
+                    </li>
+                    <li>
+                        <a>Further Link 5</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <h3>Photo stream</h3>
+                <img src="dist/images/flickr.jpg" alt="img"/>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /.footer -->
+
+<script type="text/javascript" src="dist/scripts/main.js?v=1.0.1"></script>
+
+</body>
+</html>
