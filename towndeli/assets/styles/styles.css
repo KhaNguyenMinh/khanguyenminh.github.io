@@ -10251,6 +10251,7 @@ header.header .top-links li .child-box ul li a.highlight {
   border-radius: 5px;
 }
 .main .wrap-tracking .tracking-content .orders-flow .top .content .left {
+  position: absolute;
   color: #ffffff;
   font-size: 13px;
   font-weight: 500;
@@ -10261,10 +10262,55 @@ header.header .top-links li .child-box ul li a.highlight {
 .main .wrap-tracking .tracking-content .orders-flow .top .content .left span {
   display: block;
 }
+.main .wrap-tracking .tracking-content .orders-flow .top .content .right {
+  height: 100px;
+  width: 20px;
+  float: right;
+  margin: 10px;
+}
+.main .wrap-tracking .tracking-content .orders-flow .top .content .right .up {
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.main .wrap-tracking .tracking-content .orders-flow .top .content .right .up span {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+  background: url('../images/up.png') no-repeat;
+}
+.main .wrap-tracking .tracking-content .orders-flow .top .content .right .paging {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  margin-top: 5px;
+  position: absolute;
+}
+.main .wrap-tracking .tracking-content .orders-flow .top .content .right .down {
+  background-color: #ffffff;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  bottom: 10px;
+  position: absolute;
+}
+.main .wrap-tracking .tracking-content .orders-flow .top .content .right .down span {
+  position: absolute;
+  margin-top: 7px;
+  margin-left: 4px;
+  width: 20px;
+  height: 20px;
+  background: url('../images/down.png') no-repeat;
+}
 .main .wrap-tracking .tracking-content .orders-flow .mid .main-line {
   height: 10px;
   margin: 0 20px;
-  background: url('../images/line.png') no-repeat;
+  background-color: #d9d9d9;
 }
 .main .wrap-tracking .tracking-content .orders-flow .mid .main-line a .icon {
   width: 40px;
