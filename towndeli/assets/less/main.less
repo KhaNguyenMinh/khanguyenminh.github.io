@@ -2869,6 +2869,10 @@ header.header {
         TRACKING PAGE
     ----------------------------------------- */
     .wrap-tracking {
+        .row {
+            margin-left: 0;
+            margin-right: 0
+        }
         .cat-menu {
             padding: 40px 0;
             ul {
@@ -2909,6 +2913,18 @@ header.header {
                     font-size: 18px;
                     font-weight: 400;
                     text-align: left;
+                    span {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        display: inline-block;
+                        @media (max-width: 520px) {
+                            max-width: 270px;  
+                        }
+                        @media (max-width: 480px) {
+                            max-width: 180px;  
+                        }
+                    }
                 }
                 .btn-control {
                     float: right;
@@ -2952,10 +2968,16 @@ header.header {
                 }
             }
             .general-info {
-                height: 80px;
+                min-height: 80px;
                 text-align: center;
+                margin-left: 0;
+                margin-right: 0;
+                border: none;
                 .border-right {
                     border-right: 1px solid #eee;
+                    @media (max-width: 860px) {
+                        border: none;
+                    }
                 }
                 .wrapper {
                     padding-left: 10px;
@@ -2963,22 +2985,36 @@ header.header {
                     font-size: 14px;
                     line-height: 25px;
                     text-align: left;
+                    &.waiting {
+                        .icon {
+                            position: absolute;
+                            margin-top: 3px;
+                            width: 13px;
+                            height: 16px;
+                            background: url('../images/waiting.png');
+                        }
+                        .status {
+                            padding-left: 20px;
+                            color: #ff9800;
+                        }
+                    }
                 }
             }
             .orders-flow {
-                height: 300px;
+                min-height: 300px;
                 background-color: #eee;
                 border-top: 1px solid #dcdcdc;
                 border-bottom: 1px solid #dcdcdc;
                 .top {
-                    height: 150px;
+                    height: 140px;
                     .content {
                         background-color:  #27b99b;
-                        width: 308px;
+                        min-width: 235px;
                         height: 100px;
                         position: absolute;
                         margin: 20px;
                         border-radius: 5px;
+                        margin: 20px 20px 0 20px;
                         .left {
                             position: absolute;
                             color: #ffffff;
@@ -3039,96 +3075,88 @@ header.header {
                     }
                 }
                 .mid {
-                    .main-line {
-                        height: 10px;
-                        margin: 0 20px;
-                        background-color:  #d9d9d9;
-                        a {
-                            .icon {
-                                width: 40px;
-                                height: 40px;
-                                display: block;
-                            }
+                    padding-bottom: 20px;
+                    .step-menu {
+                        .line {
+                            height: 10px;
+                            background-color:  #d9d9d9;
+                            width: 95%;
+                            margin-top: 15px;
+                            position: relative;
+                            margin-left: 5px;
                         }
-                        .step1-wrapper {
-                            a {
-                                position: absolute;
-                                margin-top: -15px;
-                                border-radius: 50%;
-                                background-color:  #79c423;
-                                width: 40px;
-                                height: 40px;
-                                .icon {
+                        position: relative;
+                        z-index: 1;
+                        padding: 0 10px;
+                        ul {
+                            list-style-position: inside;
+                            margin: 0;
+                            li {
+                                margin-top: -25px;
+                                display: inline-block;
+                                width: 33%;
+                                position: relative;
+                                .circle {
+                                    border-radius: 50%;
+                                    background-color:  #d9d9d9;
+                                    width: 40px;
+                                    height: 40px;
+                                    cursor: pointer;
+                                    i {
+                                        display: inline-block;
+                                        width: 40px;
+                                        height: 40px;
+                                    }
+                                }
+                                &.active {
+                                    .circle {
+                                        background-color:  #79c423;
+                                    }
+                                }
+                                h4 {
+                                    color:  #000000;
+                                    font-size: 14px;
+                                    font-weight: 400;
+                                    line-height: 20px;
+                                }
+                            }
+                            .step1 {
+                                i {
                                     background: url('../images/step1.png') no-repeat;
                                     margin: 10px 12px;
                                 }
                             }
-                            .title {
-                                position: absolute;
-                                padding-top: 30px;
-                                color: #000000;
-                                font-size: 14px;
-                                font-weight: 600;
-                                line-height: 20px;
-                                text-align: left;
-                            }
-                        }
-                        
-                        .step2-wrapper {
-                            a {
-                                position: absolute;
-                                margin-left: 380px;
-                                margin-top: -15px;
-                                border-radius: 50%;
-                                background-color:  #d9d9d9;
-                                width: 40px;
-                                height: 40px;
-                                .icon {
-                                    background: url('../images/step2.png') no-repeat;
-                                    margin: 10px;
+                            .step2 {
+                                text-align: center;
+                                .circle {
+                                    margin: auto;
+                                    i {
+                                        background: url('../images/step2.png') no-repeat;
+                                        margin: 10px;
+                                    }
                                 }
                             }
-                            .title {
+                            .step3 {
                                 position: absolute;
-                                margin-left: 380px;
-                                padding-top: 30px;
-                                color: #000000;
-                                font-size: 14px;
-                                font-weight: 600;
-                                line-height: 20px;
-                                text-align: left;
-                            }
-                        }
-
-                        .step3-wrapper {
-                            a {
-                                position: absolute;
-                                margin-left: 735px;
-                                margin-top: -15px;
-                                border-radius: 50%;
-                                background-color:  #d9d9d9;
-                                width: 40px;
-                                height: 40px;
-                                .icon {
-                                    background: url('../images/step3.png') no-repeat;
-                                    margin: 10px 12px;
+                                .wrapper {
+                                    float: right;
+                                    .circle {
+                                        margin-left: 90px;
+                                        i {
+                                            background: url('../images/step3.png') no-repeat;
+                                            margin: 10px 12px;
+                                        }
+                                    }
+                                    h4 {
+                                        text-align: right;
+                                    }
                                 }
-                            }
-                            .title {
-                                position: absolute;
-                                margin-left: 670px;
-                                padding-top: 30px;
-                                color: #000000;
-                                font-size: 14px;
-                                font-weight: 600;
-                                line-height: 20px;
-                                text-align: left;
                             }
                         }
                     }
                 }
                 .bottom {
-                    padding-top: 80px;
+                    padding-bottom: 20px;
                     color:  #666666;
                     font-size: 16px;
                     font-weight: 300;
@@ -3137,6 +3165,9 @@ header.header {
                 }
             }
             .orders-detail {
+                .table-responsive {
+                    border: none;
+                }
                 .title {
                     color: @main-color;
                     font-size: 16px;

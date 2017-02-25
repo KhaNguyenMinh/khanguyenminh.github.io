@@ -10137,6 +10137,10 @@ header.header .top-links li .child-box ul li a.highlight {
   margin-bottom: 0;
   text-align: left;
 }
+.main .wrap-tracking .row {
+  margin-left: 0;
+  margin-right: 0;
+}
 .main .wrap-tracking .cat-menu {
   padding: 40px 0;
 }
@@ -10179,6 +10183,22 @@ header.header .top-links li .child-box ul li a.highlight {
   font-weight: 400;
   text-align: left;
 }
+.main .wrap-tracking .tracking-content .tracking-header .order-name span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+@media (max-width: 520px) {
+  .main .wrap-tracking .tracking-content .tracking-header .order-name span {
+    max-width: 270px;
+  }
+}
+@media (max-width: 480px) {
+  .main .wrap-tracking .tracking-content .tracking-header .order-name span {
+    max-width: 180px;
+  }
+}
 .main .wrap-tracking .tracking-content .tracking-header .btn-control {
   float: right;
   padding: 10px 10px;
@@ -10220,11 +10240,19 @@ header.header .top-links li .child-box ul li a.highlight {
   background: url('../images/next.png') no-repeat;
 }
 .main .wrap-tracking .tracking-content .general-info {
-  height: 80px;
+  min-height: 80px;
   text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  border: none;
 }
 .main .wrap-tracking .tracking-content .general-info .border-right {
   border-right: 1px solid #eee;
+}
+@media (max-width: 860px) {
+  .main .wrap-tracking .tracking-content .general-info .border-right {
+    border: none;
+  }
 }
 .main .wrap-tracking .tracking-content .general-info .wrapper {
   padding-left: 10px;
@@ -10233,22 +10261,34 @@ header.header .top-links li .child-box ul li a.highlight {
   line-height: 25px;
   text-align: left;
 }
+.main .wrap-tracking .tracking-content .general-info .wrapper.waiting .icon {
+  position: absolute;
+  margin-top: 3px;
+  width: 13px;
+  height: 16px;
+  background: url('../images/waiting.png');
+}
+.main .wrap-tracking .tracking-content .general-info .wrapper.waiting .status {
+  padding-left: 20px;
+  color: #ff9800;
+}
 .main .wrap-tracking .tracking-content .orders-flow {
-  height: 300px;
+  min-height: 300px;
   background-color: #eee;
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
 }
 .main .wrap-tracking .tracking-content .orders-flow .top {
-  height: 150px;
+  height: 140px;
 }
 .main .wrap-tracking .tracking-content .orders-flow .top .content {
   background-color: #27b99b;
-  width: 308px;
+  min-width: 235px;
   height: 100px;
   position: absolute;
   margin: 20px;
   border-radius: 5px;
+  margin: 20px 20px 0 20px;
 }
 .main .wrap-tracking .tracking-content .orders-flow .top .content .left {
   position: absolute;
@@ -10307,90 +10347,93 @@ header.header .top-links li .child-box ul li a.highlight {
   height: 20px;
   background: url('../images/down.png') no-repeat;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line {
+.main .wrap-tracking .tracking-content .orders-flow .mid {
+  padding-bottom: 20px;
+}
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu {
+  position: relative;
+  z-index: 1;
+  padding: 0 10px;
+}
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu .line {
   height: 10px;
-  margin: 0 20px;
   background-color: #d9d9d9;
+  width: 95%;
+  margin-top: 15px;
+  position: relative;
+  margin-left: 5px;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line a .icon {
-  width: 40px;
-  height: 40px;
-  display: block;
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul {
+  list-style-position: inside;
+  margin: 0;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step1-wrapper a {
-  position: absolute;
-  margin-top: -15px;
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul li {
+  margin-top: -25px;
+  display: inline-block;
+  width: 33%;
+  position: relative;
+}
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul li .circle {
   border-radius: 50%;
-  background-color: #79c423;
+  background-color: #d9d9d9;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul li .circle i {
+  display: inline-block;
   width: 40px;
   height: 40px;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step1-wrapper a .icon {
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul li.active .circle {
+  background-color: #79c423;
+}
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul li h4 {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step1 i {
   background: url('../images/step1.png') no-repeat;
   margin: 10px 12px;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step1-wrapper .title {
-  position: absolute;
-  padding-top: 30px;
-  color: #000000;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  text-align: left;
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step2 {
+  text-align: center;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step2-wrapper a {
-  position: absolute;
-  margin-left: 380px;
-  margin-top: -15px;
-  border-radius: 50%;
-  background-color: #d9d9d9;
-  width: 40px;
-  height: 40px;
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step2 .circle {
+  margin: auto;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step2-wrapper a .icon {
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step2 .circle i {
   background: url('../images/step2.png') no-repeat;
   margin: 10px;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step2-wrapper .title {
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step3 {
   position: absolute;
-  margin-left: 380px;
-  padding-top: 30px;
-  color: #000000;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  text-align: left;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step3-wrapper a {
-  position: absolute;
-  margin-left: 735px;
-  margin-top: -15px;
-  border-radius: 50%;
-  background-color: #d9d9d9;
-  width: 40px;
-  height: 40px;
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step3 .wrapper {
+  float: right;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step3-wrapper a .icon {
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step3 .wrapper .circle {
+  margin-left: 90px;
+}
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step3 .wrapper .circle i {
   background: url('../images/step3.png') no-repeat;
   margin: 10px 12px;
 }
-.main .wrap-tracking .tracking-content .orders-flow .mid .main-line .step3-wrapper .title {
-  position: absolute;
-  margin-left: 670px;
-  padding-top: 30px;
-  color: #000000;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  text-align: left;
+.main .wrap-tracking .tracking-content .orders-flow .mid .step-menu ul .step3 .wrapper h4 {
+  text-align: right;
 }
 .main .wrap-tracking .tracking-content .orders-flow .bottom {
-  padding-top: 80px;
+  padding-bottom: 20px;
   color: #666666;
   font-size: 16px;
   font-weight: 300;
   line-height: 25px;
   text-align: center;
+}
+.main .wrap-tracking .tracking-content .orders-detail .table-responsive {
+  border: none;
 }
 .main .wrap-tracking .tracking-content .orders-detail .title {
   color: #02b691;
