@@ -1037,6 +1037,56 @@ header.header {
     }
 }
 
+.review-modal {
+    .modal-body {
+        .title {
+            font-family: Roboto;
+            color:  #333333;
+            font-size: 14px;
+            font-weight: 400;
+            text-align: left;
+        }
+        .star-wrapper {
+            .star {
+                position: absolute;
+                width: 20px;
+                height: 19px;
+                cursor: pointer;
+                background: url('../images/star.png') no-repeat;
+            }
+            .star2 {
+                margin-left: 25px;
+            }
+            .star3 {
+                margin-left: 50px;
+            }
+            .star4 {
+                margin-left: 75px;
+            }
+            .star5 {
+                margin-left: 100px;
+            }
+        }
+        textarea {
+            border-radius: 0;
+        }
+    }
+    .modal-footer {
+        .btn-send {
+            background-color:  #02b691;
+            width: 70px;
+            height: 32px;
+            color:  #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+            border-radius: 0;
+        }
+        .btn-cacel {
+            border-radius: 0;
+        }
+    }
+}
+
 /* ---------------------------------------
     HERO
 ----------------------------------------- */
@@ -3028,6 +3078,19 @@ header.header {
                             color: #a6cd78;
                         }
                     }
+                    &.completed {
+                        .icon {
+                            position: absolute;
+                            margin-top: 5px;
+                            width: 15px;
+                            height: 11px;
+                            background: url('../images/completed-icon.png');
+                        }
+                        .status {
+                            padding-left: 20px;
+                            color: #a6cd78;
+                        }
+                    }
                 }
             }
             .orders-flow {
@@ -3035,11 +3098,23 @@ header.header {
                 background-color: #eee;
                 border-top: 1px solid #dcdcdc;
                 border-bottom: 1px solid #dcdcdc;
-                &.orders-flow-tracking-3 {
-                    min-height: 320px;
-                }
                 &.orders-flow-tracking-2 {
                     min-height: 320px;
+                    @media (max-width: 520px) {
+                        min-height: 400px !important;
+                    }
+                }
+                &.orders-flow-tracking-3 {
+                    min-height: 320px;
+                    @media (max-width: 520px) {
+                        min-height: 400px !important;
+                    }
+                }
+                &.orders-flow-tracking-4 {
+                    min-height: 320px;
+                    @media (max-width: 520px) {
+                        min-height: 400px !important;
+                    }
                 }
                 .top {
                     height: 160px;
@@ -3199,7 +3274,7 @@ header.header {
                             position: absolute;
                             padding-top: 10px;
                         }
-                        .shiper-infor {
+                        .shiper-info {
                             float: right;
                             padding-left: 50px;
                             padding-top: 5px;
@@ -3232,6 +3307,45 @@ header.header {
                                 width: 11px;
                                 height: 14px;
                                 background: url('../images/location.png');
+                            }
+                        }
+                    }
+
+                    .content-step-4 {
+                        position: relative;
+                        float: right;
+                        width: 300px;
+                        min-height: 100px;
+                        padding-right: 5px;
+                        @media (max-width: 420px) {
+                            min-height: 120px;
+                            width: 250px;
+                            &:before {
+                                margin-top: 120px !important;
+                            }
+                        }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 20px;
+                            height: 20px;
+                            margin-top: 100px;
+                            margin-left: 65%;
+                            background: url('../images/icon1.png') no-repeat;
+                        }
+                        .coffe-cup {
+                            position: absolute;
+                            padding-top: 15px;
+                        }
+                        .ship-info {
+                            float: right;
+                            padding-left: 60px;
+                            padding-top: 5px;
+                            a {
+                                color: #000000;
+                                font-size: 13px;
+                                font-weight: 700;
+                                text-decoration: underline;
                             }
                         }
                     }
@@ -3282,6 +3396,9 @@ header.header {
                                     margin-left: 36%;
                                 }
                             }
+                            .progress-bar-4 {
+                                width: 99%;
+                            }
                             .one, .two, .three {
                                 position:absolute;
                                 .circle {
@@ -3331,6 +3448,9 @@ header.header {
                                         }
                                     }
                                 }
+                                .title {
+                                     margin-left: -15px;
+                                }
                             }
                             .three{
                                 left:95%;
@@ -3350,6 +3470,18 @@ header.header {
                                 }
                             }
                             &.progress-tracking-1 {
+                                @media (max-width: 420px) {
+                                    .title {
+                                        width: 100px;
+                                        margin-left: -10px;
+                                    }
+                                    .three {
+                                        .title {
+                                            min-width: 100px !important;
+                                            margin-left: -60px !important;
+                                        }
+                                    }
+                                }
                                 .three {
                                     .titile-step-3 {
                                         margin-left: -160px;
@@ -3359,6 +3491,18 @@ header.header {
                                 }
                             }
                             &.progress-tracking-2 {
+                                @media (max-width: 520px) {
+                                    .title {
+                                        width: 100px;
+                                        margin-left: -10px;
+                                    }
+                                    .three {
+                                        .title {
+                                            min-width: 100px !important;
+                                            margin-left: -60px !important;
+                                        }
+                                    }
+                                }
                                 .three {
                                     .titile-step-3 {
                                         margin-left: -160px;
@@ -3368,6 +3512,39 @@ header.header {
                                 }
                             }
                             &.progress-tracking-3 {
+                                @media (max-width: 520px) {
+                                    .title {
+                                        width: 100px;
+                                        margin-left: -10px;
+                                    }
+                                    .three {
+                                        .title {
+                                            min-width: 100px !important;
+                                            margin-left: -60px !important;
+                                        }
+                                    }
+                                }
+                                .three {
+                                    .titile-step-3 {
+                                        margin-left: -160px;
+                                        text-align: right;
+                                        min-width: 200px;
+                                    }
+                                }
+                            }
+                            &.progress-tracking-4 {
+                                @media (max-width: 520px) {
+                                    .title {
+                                        width: 100px;
+                                        margin-left: -10px;
+                                    }
+                                    .three {
+                                        .title {
+                                            min-width: 100px !important;
+                                            margin-left: -60px !important;
+                                        }
+                                    }
+                                }
                                 .three {
                                     .titile-step-3 {
                                         margin-left: -160px;
@@ -3380,6 +3557,9 @@ header.header {
                     }
                 }
                 .bottom {
+                    @media (max-width: 420px) {
+                        padding-top: 40px !important;
+                    }
                     padding-top: 20px;
                     padding-bottom: 20px;
                     color:  #666666;
