@@ -8331,6 +8331,81 @@ header.header .top-links li .child-box ul li a.highlight {
 .review-modal .modal-footer .btn-cacel {
   border-radius: 0;
 }
+.review-completed-modal .modal-body .like-icon {
+  text-align: center;
+}
+.review-completed-modal .modal-body .text {
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+}
+.review-completed-modal .modal-body .text span {
+  display: block;
+}
+.review-completed-modal .modal-footer {
+  border: none !important;
+  height: 80px;
+}
+.review-completed-modal .modal-footer ul {
+  position: absolute;
+  margin-left: 28%;
+  text-align: center;
+}
+.review-completed-modal .modal-footer ul li {
+  display: inline;
+}
+.review-completed-modal .modal-footer ul .facebook {
+  position: absolute;
+  background-color: #4b76bd;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.review-completed-modal .modal-footer ul .facebook i {
+  position: absolute;
+  display: block;
+  width: 15px;
+  height: 26px;
+  margin-top: 7px;
+  margin-left: 12px;
+  background: url('../images/facebook.png') no-repeat;
+}
+.review-completed-modal .modal-footer ul .google {
+  position: absolute;
+  background-color: #fc5345;
+  width: 40px;
+  height: 40px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+.review-completed-modal .modal-footer ul .google i {
+  position: absolute;
+  display: block;
+  width: 31px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 6px;
+  background: url('../images/google.png') no-repeat;
+}
+.review-completed-modal .modal-footer ul .twitter {
+  position: absolute;
+  background-color: #00c6ff;
+  width: 40px;
+  height: 40px;
+  margin-left: 100px;
+  cursor: pointer;
+}
+.review-completed-modal .modal-footer ul .twitter i {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  margin-top: 10px;
+  margin-left: 8px;
+  background: url('../images/twitter.png') no-repeat;
+}
 /* ---------------------------------------
     HERO
 ----------------------------------------- */
