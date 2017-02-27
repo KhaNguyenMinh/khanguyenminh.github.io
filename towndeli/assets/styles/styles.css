@@ -11066,6 +11066,13 @@ header.header .top-links li .child-box ul li a.highlight {
   border-left: 1px solid #eee;
   padding: 20px 0 50px 20px;
 }
+@media (max-width: 860px) {
+  .main .wrap-orders-history .orders-history-content {
+    padding-left: 0;
+    padding-top: 0;
+    border-left: none;
+  }
+}
 .main .wrap-orders-history .orders-history-content .header .title {
   color: #000000;
   font-size: 18px;
@@ -11074,14 +11081,16 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .main .wrap-orders-history .orders-history-content .header .search-order {
   border-radius: 0;
+  color: #999999;
+  font-size: 13px;
+  font-style: italic;
+  text-align: left;
 }
 .main .wrap-orders-history .orders-history-content .table-responsive {
   margin: 10px 10px;
 }
-@media (max-width: 857px) {
+@media (max-width: 1199px) {
   .main .wrap-orders-history .orders-history-content .table-responsive {
-    border: none;
-    margin: 10px 5px 0;
     width: auto;
   }
 }
@@ -11103,6 +11112,9 @@ header.header .top-links li .child-box ul li a.highlight {
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   padding: 10px;
+  color: #333333;
+  font-size: 13px;
+  font-weight: 400;
 }
 .main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(1) {
   text-align: center;
@@ -11110,15 +11122,68 @@ header.header .top-links li .child-box ul li a.highlight {
 .main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(3) {
   text-align: center;
 }
-.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(4) {
-  text-align: center;
-}
 .main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(5) {
   text-align: center;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(6) {
+  text-align: center;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(7) {
+  text-align: right;
 }
 .main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td a {
   color: #02b691;
   text-decoration: underline;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td span {
+  display: block;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code {
+  position: relative;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code i {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code1 {
+  position: relative;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code1 i {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code1 i {
+  width: 14px;
+  height: 11px;
+  background: url('../images/code1.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code2 {
+  position: relative;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code2 i {
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .code2 i {
+  width: 16px;
+  height: 11px;
+  background: url('../images/code2.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .star {
+  position: relative;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td .star i {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin-left: 2px;
+  background: url('../images/yellow-star.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control {
+  padding-top: 15px;
 }
 .main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn-action {
   width: 20px;
@@ -11127,13 +11192,29 @@ header.header .top-links li .child-box ul li a.highlight {
   padding-right: 20px;
   margin-left: 12px;
 }
-.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn1 {
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .no-review {
   width: 20px;
   height: 20px;
   padding-top: 5px;
   padding-right: 20px;
   margin-left: 12px;
-  background: url('../images/edit.png') no-repeat;
+  background: url('../images/no-review.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .reviewed {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-left: 12px;
+  background: url('../images/reviewd.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .lock {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-left: 12px;
+  background: url('../images/lock.png') no-repeat;
 }
 .main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn2 {
   width: 20px;

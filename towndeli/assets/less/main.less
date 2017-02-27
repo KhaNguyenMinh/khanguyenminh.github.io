@@ -3814,6 +3814,11 @@ header.header {
         .orders-history-content {
             border-left: 1px solid #eee;
             padding: 20px 0 50px 20px;
+            @media (max-width: 860px) {
+                padding-left: 0;
+                padding-top: 0;
+                border-left: none;
+            }
             .header {
                 .title {
                     color:  #000000;
@@ -3823,13 +3828,15 @@ header.header {
                 }
                 .search-order {
                     border-radius: 0;
+                    color: #999999;
+                    font-size: 13px;
+                    font-style: italic;
+                    text-align: left;
                 }
             }
             .table-responsive {
                 margin: 10px 10px;
-                @media (max-width: @screen-xs-max) {
-                    border: none;
-                    margin: 10px 5px 0;
+                @media (max-width: 1199px) {
                     width: auto;
                 }
                 .orders-table {
@@ -3843,37 +3850,6 @@ header.header {
                                 color: #fff;
                                 padding: 10px;
                                 border-bottom: none;
-                                // &:nth-child(1) {
-                                //     width: 150px;
-                                //     text-align: center;
-                                // }
-                                // &:nth-child(2) {
-                                //     width: 400px;
-                                // }
-                                // &:nth-child(3) {
-                                //     width: 150px;
-                                //     text-align: center;
-                                // }
-                                // &:nth-child(4) {
-                                //     width: 150px;
-                                //     text-align: center;
-                                // }
-                                // &:nth-child(5) {
-                                //     width: 150px;
-                                //     text-align: center;
-                                // }
-                                // &:nth-child(6) {
-                                //     width: 150px;
-                                //     text-align: center;
-                                // }
-                                // &:nth-child(7) {
-                                //     width: 150px;
-                                //     text-align: center;
-                                // }
-                                // &:nth-child(8) {
-                                //     width: 150px;
-                                //     text-align: center;
-                                // }
                             }
                         }
                     }
@@ -3888,26 +3864,70 @@ header.header {
                                 border-top: 1px solid #e0e0e0;
                                 border-bottom: 1px solid #e0e0e0;
                                 padding: 10px;
+                                color:  #333333;
+                                font-size: 13px;
+                                font-weight: 400;
                                 &:nth-child(1) {
                                     text-align: center;
                                 }
                                 &:nth-child(3) {
                                     text-align: center;
                                 }
-                                &:nth-child(4) {
-                                    text-align: center;
-                                }
                                 &:nth-child(5) {
                                     text-align: center;
+                                }
+                                &:nth-child(6) {
+                                    text-align: center;
+                                }
+                                &:nth-child(7) {
+                                    text-align: right;
                                 }
                                 a {
                                     color: @main-color;
                                     text-decoration: underline;
                                 }
+                                span {
+                                    display: block;
+                                }
+                                .code {
+                                    position: relative;
+                                    i {
+                                        position: absolute;
+                                        margin-top: 2px;
+                                        margin-left: 5px;
+                                    }
+                                }
+                                .code1 {
+                                    .code();
+                                    i {
+                                        width: 14px;
+                                        height: 11px;
+                                        background: url('../images/code1.png') no-repeat;
+                                    }
+                                }
+                                .code2 {
+                                    .code();
+                                    i {
+                                        width: 16px;
+                                        height: 11px;
+                                        background: url('../images/code2.png') no-repeat;
+                                    }
+                                }
+                                .star {
+                                    position: relative;
+                                    i {
+                                        position: absolute;
+                                        width: 14px;
+                                        height: 14px;
+                                        margin-left: 2px;
+                                        background: url('../images/yellow-star.png') no-repeat;
+                                    }
+                                }
                             }
                         }
 
                         .btn-control {
+                            padding-top: 15px;
                             .btn-action {
                                 width: 20px;
                                 height: 20px;
@@ -3915,9 +3935,17 @@ header.header {
                                 padding-right: 20px;
                                 margin-left: 12px;
                             }
-                            .btn1 {
+                            .no-review {
                                 .btn-action();
-                                background: url('../images/edit.png') no-repeat;
+                                background: url('../images/no-review.png') no-repeat;
+                            }
+                            .reviewed {
+                                .btn-action();
+                                background: url('../images/reviewd.png') no-repeat;
+                            }
+                            .lock {
+                                .btn-action();
+                                background: url('../images/lock.png') no-repeat;
                             }
                             .btn2 {
                                 .btn-action();
