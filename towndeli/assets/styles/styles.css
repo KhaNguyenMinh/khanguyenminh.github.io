@@ -10823,7 +10823,17 @@ header.header .top-links li .child-box ul li a.highlight {
   margin-left: -15px;
 }
 .main .wrap-tracking .tracking-content .orders-flow .mid .progress-wrapper .progress .three {
-  left: 95%;
+  left: calc(100% - 30px);
+}
+@media (max-width: 420px) {
+  .main .wrap-tracking .tracking-content .orders-flow .mid .progress-wrapper .progress .three {
+    left: calc(100% - 10px);
+  }
+}
+@media (max-width: 640px) {
+  .main .wrap-tracking .tracking-content .orders-flow .mid .progress-wrapper .progress .three {
+    left: calc(100% - 20px);
+  }
 }
 .main .wrap-tracking .tracking-content .orders-flow .mid .progress-wrapper .progress .three .circle .icon {
   position: absolute;

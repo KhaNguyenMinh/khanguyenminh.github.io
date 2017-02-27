@@ -3533,7 +3533,13 @@ header.header {
                                 }
                             }
                             .three{
-                                left:95%;
+                                left: ~"calc(100% - 30px)";
+                                @media (max-width: 420px) {
+                                    left: ~"calc(100% - 10px)";
+                                }
+                                @media (max-width: 640px) {
+                                    left: ~"calc(100% - 20px)";
+                                }
                                 .circle {
                                     .icon {
                                         position: absolute;
