@@ -9570,6 +9570,9 @@ header.header .top-links li .child-box ul li a.highlight {
   /* ---------------------------------------
         TRACKING PAGE
     ----------------------------------------- */
+  /* ---------------------------------------
+        ORDERS HISTORY PAGE
+    ----------------------------------------- */
 }
 .main .wrap-profile .cat-menu {
   padding: 40px 0;
@@ -11032,6 +11035,129 @@ header.header .top-links li .child-box ul li a.highlight {
 .main .wrap-tracking .tracking-content .orders-detail .orders-table-footer .total {
   margin: 20px 0;
   text-align: right;
+}
+.main .wrap-orders-history .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.main .wrap-orders-history .cat-menu {
+  padding: 40px 0;
+}
+.main .wrap-orders-history .cat-menu ul {
+  margin-bottom: 0;
+}
+.main .wrap-orders-history .cat-menu ul li {
+  list-style: none;
+  margin-bottom: 3px;
+}
+.main .wrap-orders-history .cat-menu ul li:hover a,
+.main .wrap-orders-history .cat-menu ul li.active a {
+  font-weight: 700;
+  border-left: 3px solid #02b691;
+}
+.main .wrap-orders-history .cat-menu ul li a {
+  font-size: 18px;
+  color: #000;
+  display: inline-block;
+  padding: 7px 14px;
+  transition-duration: 0.1s;
+}
+.main .wrap-orders-history .orders-history-content {
+  border-left: 1px solid #eee;
+  padding: 20px 0 50px 20px;
+}
+.main .wrap-orders-history .orders-history-content .header .title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+.main .wrap-orders-history .orders-history-content .header .search-order {
+  border-radius: 0;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive {
+  margin: 10px 10px;
+}
+@media (max-width: 857px) {
+  .main .wrap-orders-history .orders-history-content .table-responsive {
+    border: none;
+    margin: 10px 5px 0;
+    width: auto;
+  }
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table {
+  font-size: 13px;
+  border: 1px solid #e0e0e0;
+  min-width: 900px;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table thead tr th {
+  background-color: #666;
+  color: #fff;
+  padding: 10px;
+  border-bottom: none;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr:nth-child(2n) td {
+  background-color: #eee;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td {
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(1) {
+  text-align: center;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(3) {
+  text-align: center;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(4) {
+  text-align: center;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td:nth-child(5) {
+  text-align: center;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody tr td a {
+  color: #02b691;
+  text-decoration: underline;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn-action {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-left: 12px;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn1 {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-left: 12px;
+  background: url('../images/edit.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn2 {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-left: 12px;
+  background: url('../images/add-to-card.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn3 {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-left: 12px;
+  background: url('../images/mail.png') no-repeat;
+}
+.main .wrap-orders-history .orders-history-content .table-responsive .orders-table tbody .btn-control .btn4 {
+  width: 20px;
+  height: 20px;
+  padding-top: 5px;
+  padding-right: 20px;
+  margin-left: 12px;
+  background: url('../images/download.png') no-repeat;
 }
 /* ---------------------------------------
     FOOTER

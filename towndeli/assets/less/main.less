@@ -3779,6 +3779,164 @@ header.header {
             }
         }
     }
+
+    /* ---------------------------------------
+        ORDERS HISTORY PAGE
+    ----------------------------------------- */
+    .wrap-orders-history {
+        .row {
+            margin-left: 0;
+            margin-right: 0
+        }
+        .cat-menu {
+            padding: 40px 0;
+            ul {
+                margin-bottom: 0;
+                li {
+                    list-style: none;
+                    margin-bottom: 3px;
+                    &:hover, &.active {
+                        a {
+                            font-weight: 700;
+                            border-left: 3px solid @main-color;
+                        }
+                    }
+                    a {
+                        font-size: 18px;
+                        color: #000;
+                        display: inline-block;
+                        padding: 7px 14px;
+                        transition-duration: 0.1s;
+                    }
+                }
+            }
+        }
+        .orders-history-content {
+            border-left: 1px solid #eee;
+            padding: 20px 0 50px 20px;
+            .header {
+                .title {
+                    color:  #000000;
+                    font-size: 18px;
+                    font-weight: 400;
+                    text-align: left;
+                }
+                .search-order {
+                    border-radius: 0;
+                }
+            }
+            .table-responsive {
+                margin: 10px 10px;
+                @media (max-width: @screen-xs-max) {
+                    border: none;
+                    margin: 10px 5px 0;
+                    width: auto;
+                }
+                .orders-table {
+                    font-size: 13px;
+                    border: 1px solid #e0e0e0;
+                    min-width: 900px;
+                    thead {
+                        tr {
+                            th {
+                                background-color: #666;
+                                color: #fff;
+                                padding: 10px;
+                                border-bottom: none;
+                                // &:nth-child(1) {
+                                //     width: 150px;
+                                //     text-align: center;
+                                // }
+                                // &:nth-child(2) {
+                                //     width: 400px;
+                                // }
+                                // &:nth-child(3) {
+                                //     width: 150px;
+                                //     text-align: center;
+                                // }
+                                // &:nth-child(4) {
+                                //     width: 150px;
+                                //     text-align: center;
+                                // }
+                                // &:nth-child(5) {
+                                //     width: 150px;
+                                //     text-align: center;
+                                // }
+                                // &:nth-child(6) {
+                                //     width: 150px;
+                                //     text-align: center;
+                                // }
+                                // &:nth-child(7) {
+                                //     width: 150px;
+                                //     text-align: center;
+                                // }
+                                // &:nth-child(8) {
+                                //     width: 150px;
+                                //     text-align: center;
+                                // }
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            &:nth-child(2n) {
+                                td {
+                                    background-color: #eee;
+                                }
+                            }
+                            td {
+                                border-top: 1px solid #e0e0e0;
+                                border-bottom: 1px solid #e0e0e0;
+                                padding: 10px;
+                                &:nth-child(1) {
+                                    text-align: center;
+                                }
+                                &:nth-child(3) {
+                                    text-align: center;
+                                }
+                                &:nth-child(4) {
+                                    text-align: center;
+                                }
+                                &:nth-child(5) {
+                                    text-align: center;
+                                }
+                                a {
+                                    color: @main-color;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .btn-control {
+                            .btn-action {
+                                width: 20px;
+                                height: 20px;
+                                padding-top: 5px;
+                                padding-right: 20px;
+                                margin-left: 12px;
+                            }
+                            .btn1 {
+                                .btn-action();
+                                background: url('../images/edit.png') no-repeat;
+                            }
+                            .btn2 {
+                                .btn-action();
+                                background: url('../images/add-to-card.png') no-repeat;
+                            }
+                            .btn3 {
+                                .btn-action();
+                                background: url('../images/mail.png') no-repeat;
+                            }
+                            .btn4 {
+                                .btn-action();
+                                background: url('../images/download.png') no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* ---------------------------------------
