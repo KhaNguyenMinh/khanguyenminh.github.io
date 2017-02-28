@@ -117,106 +117,6 @@
     </div>
 </div>
 
-<div class="modal fade review-order-modal" tabindex="-1">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title"><strong>Review về đơn hàng:</strong> Cold-brewed coffe-Mã 123456</h4>
-            </div>
-            <div class="modal-body">
-                <div class="row mgb-5">
-                    <div class="col-xs-4">
-                        <span class="title">Xử lý đơn hàng:</span>
-                    </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-yellow"></i>
-                        <i class="star star2 star-yellow"></i>
-                        <i class="star star3 star-yellow"></i>
-                        <i class="star star4 star-yellow"></i>
-                        <i class="star star5 star-gray"></i>
-                    </div>
-                </div>
-                <div class="row mgb-5">
-                    <div class="col-xs-4">
-                        <span class="title">Thời gian giao hàng:</span>
-                    </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-yellow"></i>
-                        <i class="star star2 star-yellow"></i>
-                        <i class="star star3 star-yellow"></i>
-                        <i class="star star4 star-yellow"></i>
-                        <i class="star star5 star-gray"></i>
-                    </div>
-                </div>
-                <div class="row mgb-5">
-                    <div class="col-xs-4">
-                        <span class="title">Phong cách giao hàng:</span>
-                    </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-yellow"></i>
-                        <i class="star star2 star-yellow"></i>
-                        <i class="star star3 star-yellow"></i>
-                        <i class="star star4 star-yellow"></i>
-                        <i class="star star5 star-gray"></i>
-                    </div>
-                </div>
-                <div class="row mgb-15">
-                    <div class="col-xs-4">
-                        <span class="title">Chất lượng món nước:</span>
-                    </div>
-                    <div class="col-xs-8 star-wrapper">
-                        <i class="star star1 star-yellow"></i>
-                        <i class="star star2 star-yellow"></i>
-                        <i class="star star3 star-yellow"></i>
-                        <i class="star star4 star-yellow"></i>
-                        <i class="star star5 star-gray"></i>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <textarea class="form-control" rows="5" id="comment" placeholder="Review của bạn...">Giao hàng rất nhanh và đúng giớ, thức uống rất ngon
-                        </textarea>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade send-order-email-modal" tabindex="-1">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title"><strong>Gởi mail đơn hàng:</strong> Cold-brewed coffe</h4>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" placeholder="Nhiều email cách nhau bằng ;">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-send">Gởi</button>
-                <button type="button" class="btn btn-cacel" data-dismiss="modal">Hủy</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade edit-order-name-modal" tabindex="-1">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title"><strong>Đổi tên đơn hàng:</strong></h4>
-            </div>
-            <div class="modal-body">
-                <input type="text" class="form-control" placeholder="Nhiều email cách nhau bằng ;" value="Cold-brewed coffe">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-send">Lưu</button>
-                <button type="button" class="btn btn-cacel" data-dismiss="modal">Hủy</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="topbar">
     <div class="container">
         <h4><strong>boost up your monday ! 50% off</strong> for espresso every monday from 09:00-12:00. <a>see more</a>
@@ -527,7 +427,7 @@
 
 <div class="main">
     <div class="container">
-        <div class="wrap-orders-history">
+        <div class="wrap-schedule">
             <div class="row">
                 <div class="col-sm-2">
                     <div class="cat-menu">
@@ -541,133 +441,47 @@
                     <!-- /.cat-menu -->
                 </div>
                 <div class="col-sm-10">
-                    <div class="orders-history-content">
+                    <div class="schedule-content">
                         <div class="row header">
-                            <div class="col-xs-6">
-                                <h4 class="title">Lịch sử đơn hàng</h4>
-                            </div>
-                            <div class="col-xs-6">
-                                <input type="text" class="search-order form-control" placeholder="Nhập tên đơn hàng...">
+                            <div class="col-xs-12">
+                                <h4 class="title">Lịch đặt món</h4>
                             </div>
                         </div>
                         <div class="row">
                             <div class="table-responsive">
-                                <table class="table orders-table">
+                                <table class="table schedule-table">
                                     <thead>
                                         <tr>
-                                            <th>Thời gian đặt</th>
-                                            <th>Đơn hàng</th>
-                                            <th>Đánh giá chung</th>
-                                            <th>Tình trạng</th>
+                                            <th>STT</th>
+                                            <th>Tên món</th>
+                                            <th>Ngày tạo</th>
+                                            <th>Size</th>
+                                            <th>Số lượng</th>
                                             <th>Thời gian giao</th>
-                                            <th>SL</th>
-                                            <th>Thành tiền</th>
                                             <th></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td>
+                                                1
+                                            </td>
+                                            <td>
+                                                <span>Cafe Sữa</span>
+                                                <span><strong>Tooping:</strong> Phô mai, khúc bạch, trân châu</span>
+                                            </td>
+                                            <td>
                                                 <span class="time">23:30</span>
                                                 <span class="date">13/12/2016</span>
                                             </td>
                                             <td>
-                                                <span class="code1">Mã:123456 <i></i></span>
-                                                <a>Cold-brewed coffee</a>
-                                            </td>
-                                            <td>
-                                                <span class="star">4 <i></i></span>
-                                            </td>
-                                            <td>Đã giao</td>
-                                            <td>
-                                                <span class="time">23:30</span>
-                                                <span class="date">13/12/2016</span>
+                                                <span class="time">Vưa</span>
                                             </td>
                                             <td>2 ly</td>
-                                            <td>16.000đ</td>
+                                            <td><span>8:30 Mỗi ngày</span></td>
                                             <td class="btn-control">
-                                                <a class="reviewed" data-toggle="modal" data-target=".review-order-modal"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3" data-toggle="modal" data-target=".send-order-email-modal"></a>
-                                                <a class="btn4" data-toggle="modal" data-target=".edit-order-name-modal"></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="time">23:30</span>
-                                                <span class="date">13/12/2016</span>
-                                            </td>
-                                            <td>
-                                                <span class="code2">Mã:123456 <i></i></span>
-                                                <a>Cold-brewed coffee</a>
-                                            </td>
-                                            <td>
-                                                <span class="star">4 <i></i></span>
-                                            </td>
-                                            <td>Đã giao</td>
-                                            <td>
-                                                <span class="time">23:30</span>
-                                                <span class="date">13/12/2016</span>
-                                            </td>
-                                            <td>2 ly</td>
-                                            <td>16.000đ</td>
-                                            <td class="btn-control">
-                                                <a class="no-review"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3"></a>
-                                                <a class="btn4"></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="time">23:30</span>
-                                                <span class="date">13/12/2016</span>
-                                            </td>
-                                            <td>
-                                                <span class="code1">Mã:123456 <i></i></span>
-                                                <a>Cold-brewed coffee</a>
-                                            </td>
-                                            <td>
-                                                <span class="star">4 <i></i></span>
-                                            </td>
-                                            <td>Đã giao</td>
-                                            <td>
-                                                <span class="time">23:30</span>
-                                                <span class="date">13/12/2016</span>
-                                            </td>
-                                            <td>2 ly</td>
-                                            <td>16.000đ</td>
-                                            <td class="btn-control">
-                                                <a class="no-review"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3"></a>
-                                                <a class="btn4"></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <span class="time">23:30</span>
-                                                <span class="date">13/12/2016</span>
-                                            </td>
-                                            <td>
-                                                <span class="code1">Mã:123456 <i></i></span>
-                                                <a>Cold-brewed coffee</a>
-                                            </td>
-                                            <td>
-                                                <span class="star">4 <i></i></span>
-                                            </td>
-                                            <td>Đã giao</td>
-                                            <td>
-                                                <span class="time">23:30</span>
-                                                <span class="date">13/12/2016</span>
-                                            </td>
-                                            <td>2 ly</td>
-                                            <td>16.000đ</td>
-                                            <td class="btn-control">
-                                                <a class="no-review"></a>
-                                                <a class="btn2"></a>
-                                                <a class="btn3"></a>
-                                                <a class="btn4"></a>
+                                                <a href="" class="edit"></a>
+                                                <a href="" class="remove"></a>
                                             </td>
                                         </tr>
                                     </tbody>
