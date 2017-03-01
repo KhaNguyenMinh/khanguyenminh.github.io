@@ -1356,6 +1356,143 @@ header.header {
     }
 }
 
+.download-order-modal {
+    text-align: center;
+    padding: 0 !important;
+
+    @media (min-width: 1200px) {
+        &:before {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -4px;
+        }
+    }
+    .modal-dialog {
+        @media (max-width: 858px) {
+            min-width: 310px;
+        }
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .modal-body {
+        padding-top: 0;
+        color:  #000000;
+        font-size: 14px;
+        line-height: 25px;
+        text-align: left;
+        label {
+            display: block;
+        }
+        .title {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 30px;
+            text-align: left;
+        }
+        .table-responsive {
+            @media (max-width: 520px) {
+                width: 350px;
+                overflow-x: scroll;
+            }
+            @media (max-width: 420px) {
+                width: 300px;
+                overflow-x: scroll;
+            }
+            .detail-order-table {
+                font-size: 13px;
+                border: 1px solid #e0e0e0;
+                min-width: 320px;
+                thead {
+                    tr {
+                        th {
+                            background-color: #666;
+                            color: #fff;
+                            padding: 10px;
+                            border-bottom: none;
+                        }
+                    }
+                }
+                tbody {
+                    tr {
+                        td {
+                            border-top: 1px solid #e0e0e0;
+                            border-bottom: 1px solid #e0e0e0;
+                            padding: 10px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 25px;
+                            &:nth-child(3) {
+                                text-align: center;
+                            }
+                            &:nth-child(4) {
+                                text-align: right;
+                            }
+                            a {
+                                color: @main-color;
+                                text-decoration: underline;
+                            }
+                            span {
+                                display: block;
+                            }
+                            .cash {
+                                color:  #555555;
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .btn-control {
+            padding-top: 25px;
+            .btn-send-order {
+                .icon {
+                    position: absolute;
+                    width: 37px;
+                    height: 30px;
+                    margin-left: 15px;
+                    background: url('../images/big-email.png') no-repeat;
+                }
+            }
+            .btn-down-order {
+                padding-left: 100px;
+                @media (max-width: 420px) {
+                    padding-left: 80px;
+                }
+                .icon {
+                    position: absolute;
+                    width: 24px;
+                    height: 30px;
+                    margin-left: 20px;
+                    background: url('../images/big-download.png') no-repeat;
+                }
+            }
+            .text {
+                @media (max-width: 420px) {
+                    line-height: 15px;
+                    font-size: 13px;
+                }
+                padding-top: 35px;
+                position: absolute;
+                color:  #000000;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 30px;
+            }
+        }
+
+        .total-order {
+            text-align: right;
+        }
+    }
+}
+
 .edit-schedule-modal {
     text-align: center;
     padding: 0 !important;
@@ -4335,7 +4472,6 @@ header.header {
                 .schedule-table {
                     font-size: 13px;
                     border: 1px solid #e0e0e0;
-                    // min-width: 900px;
                     thead {
                         tr {
                             th {
