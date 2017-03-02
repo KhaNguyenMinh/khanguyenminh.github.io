@@ -10488,6 +10488,26 @@ header.header .top-links li .child-box ul li a.highlight {
   float: left;
   width: calc(100% - 110px);
 }
+.main .wrap-checkout .schedule .payment-one-month-checkbox label {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+.main .wrap-checkout .schedule .payment-one-month-checkbox label:after {
+  border-width: 2px;
+  border-color: #02b691;
+  border-style: solid;
+  content: "";
+  height: 21px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+}
+.main .wrap-checkout .schedule .payment-one-month-checkbox input[type=checkbox].css-checkbox:checked + label.css-label:after {
+  background-position: none !important;
+  background: url("../images/checked.png") no-repeat !important;
+}
 .main .wrap-checkout .payment-methods #payment-methods-select {
   width: 300px;
 }
