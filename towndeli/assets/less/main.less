@@ -2622,8 +2622,27 @@ header.header {
         tr {
             &.voucher-row {
                 td {
-                    border-bottom: 1px solid #eae9e9;
+                    // border-bottom: 1px solid #eae9e9;
                     border-top: 1px solid #eae9e9;
+                    input[type="text"] {
+                        border: 2px solid #515252;
+                        height: 30px;
+                        padding: 0 10px;
+                        width: 300px;
+                    }
+                    .btn-apply {
+                        background-color:  #02b691;
+                        margin-left: 10px;
+                        width: 99px;
+                        height: 30px;
+                        border: none;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                }
+            }
+            &.scores-row {
+                td {
                     input[type="text"] {
                         border: 2px solid #515252;
                         height: 30px;
@@ -3161,6 +3180,65 @@ header.header {
                 color: @main-color;
                 font-size: 32px;
                 line-height: 1;
+            }
+        }
+        .customer-info {
+            label {
+                color:  #515252;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: left;
+                margin-right: 10px;
+            }
+            input[type=text] {
+                border-width: 2px;
+                border-color:  #515252;
+                border-style: solid;
+                height: 37px;
+                width: 100%;
+            }
+            .send-gift-checkbox {
+                label {
+                    padding-left: 30px;
+                    padding-top: 5px;
+                    &:after {
+                        border-width: 2px;
+                        border-color:  #02b691;
+                        border-style: solid;
+                        content: "";
+                        height: 21px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        width: 22px;
+                    }
+                }
+                input[type=checkbox].css-checkbox:checked + label.css-label {
+                    &:after {
+                        background-position: none !important;
+                        background: url("../images/checked.png") no-repeat !important;
+                    }
+                }
+            }
+            .location {
+                height: 40px !important;
+            }
+            .form-group {
+                display: inline-block;
+                width: 100%;
+                .left-form {
+                    float: left;
+                    width: 110px;
+                    label {
+                        font-weight: normal;
+                        margin: 7px 0 0;
+                    }
+                }
+                .right-form {
+                    float: left;
+                    width: ~"calc(100% - 110px)";
+                }
             }
         }
         .payment-methods {

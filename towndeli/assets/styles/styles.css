@@ -9920,10 +9920,24 @@ header.header .top-links li .child-box ul li a.highlight {
   margin-bottom: 0;
 }
 .checkout-table tbody tr.voucher-row td {
-  border-bottom: 1px solid #eae9e9;
   border-top: 1px solid #eae9e9;
 }
 .checkout-table tbody tr.voucher-row td input[type="text"] {
+  border: 2px solid #515252;
+  height: 30px;
+  padding: 0 10px;
+  width: 300px;
+}
+.checkout-table tbody tr.voucher-row td .btn-apply {
+  background-color: #02b691;
+  margin-left: 10px;
+  width: 99px;
+  height: 30px;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+.checkout-table tbody tr.scores-row td input[type="text"] {
   border: 2px solid #515252;
   height: 30px;
   padding: 0 10px;
@@ -10420,6 +10434,59 @@ header.header .top-links li .child-box ul li a.highlight {
   color: #02b691;
   font-size: 32px;
   line-height: 1;
+}
+.main .wrap-checkout .customer-info label {
+  color: #515252;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin-right: 10px;
+}
+.main .wrap-checkout .customer-info input[type=text] {
+  border-width: 2px;
+  border-color: #515252;
+  border-style: solid;
+  height: 37px;
+  width: 100%;
+}
+.main .wrap-checkout .customer-info .send-gift-checkbox label {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+.main .wrap-checkout .customer-info .send-gift-checkbox label:after {
+  border-width: 2px;
+  border-color: #02b691;
+  border-style: solid;
+  content: "";
+  height: 21px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+}
+.main .wrap-checkout .customer-info .send-gift-checkbox input[type=checkbox].css-checkbox:checked + label.css-label:after {
+  background-position: none !important;
+  background: url("../images/checked.png") no-repeat !important;
+}
+.main .wrap-checkout .customer-info .location {
+  height: 40px !important;
+}
+.main .wrap-checkout .customer-info .form-group {
+  display: inline-block;
+  width: 100%;
+}
+.main .wrap-checkout .customer-info .form-group .left-form {
+  float: left;
+  width: 110px;
+}
+.main .wrap-checkout .customer-info .form-group .left-form label {
+  font-weight: normal;
+  margin: 7px 0 0;
+}
+.main .wrap-checkout .customer-info .form-group .right-form {
+  float: left;
+  width: calc(100% - 110px);
 }
 .main .wrap-checkout .payment-methods #payment-methods-select {
   width: 300px;
