@@ -25,6 +25,9 @@
 
     <link rel="stylesheet" type="text/css" href="dist/styles/main.css?v=1.0.1"/>
 
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+
+    
     <!--[if lt IE 9]>
     <script src="dist/scripts/html5shiv.js"></script>
     <script src="dist/scripts/respond.js"></script>
@@ -536,7 +539,7 @@
                             <label for="send-gift-checkbox" class="css-label">SEND THIS GIFT TO</label>
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 hidden receive-gift-info">
                         <div class="row">
                             <div class="col-md-6">
                                 <label>NAME</label>
@@ -573,8 +576,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-8">
-                        <input type="text" class="location" value="01 Le Duan, Dakao, Q.1, HCMC, Vietnam">
+                    <div class="col-md-8 location-container">
+                        <input type="text" class="location" id="locationTextField">
+                        <img src="dist/images/location1.png" class="input_img">
                     </div>
                 </div>
             </div>
@@ -582,7 +586,6 @@
             <div class="schedule">
                 <div class="wrap-caption-link">
                     <h3>schedule</h3>
-                    <a class="more-link">Schedule more</a>
                 </div>
                 <div class="clearfix mgb-20 mgt-15">
                     <div class="pull-left">
@@ -624,7 +627,7 @@
                         <textarea id="additional-note-input" placeholder="Please add your note here"></textarea>
                     </div>
                 </div>
-                <div class="text-right"><button class="payment-btn">PAYMENT</button></div>
+                <div class="text-right"><button class="payment-btn">Hoàn thành</button></div>
             </div>
         </div>
         <!-- /.wrap-checkout -->
@@ -757,6 +760,12 @@
 </footer>
 <!-- /.footer -->
 
+<script>
+    function initMap () {
+        var autocomplete = new google.maps.places.Autocomplete(document.getElementById('locationTextField'));
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyC9YsGjT0YMg7iOHE71N3ZTNDa1SXz54GU&callback=initMap"></script>
 <script type="text/javascript" src="dist/scripts/main.js?v=1.0.1"></script>
 
 </body>

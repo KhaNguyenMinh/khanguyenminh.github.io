@@ -313,7 +313,7 @@
 
 
         /* =================================
-         ===  Checkout Quantity                 ====
+         ===  Checkout Quantity         ====
          =================================== */
         $(this).on('click', '.wrap-quantity .plus-icon', function () {
             var this_quantity_input = $(this).closest('.wrap-quantity').find('input');
@@ -328,6 +328,17 @@
             }
         });
 
+        /* =================================
+         ===  Checkout Page             ====
+         =================================== */
+        $(this).on('change', '.wrap-checkout #send-gift-checkbox', function () {
+            if(this.checked) {
+                console.log('checked');
+                $('.receive-gift-info').removeClass('hidden');
+            } else {
+                $('.receive-gift-info').addClass('hidden');
+            }
+        });
     });
 
 })(window.jQuery);

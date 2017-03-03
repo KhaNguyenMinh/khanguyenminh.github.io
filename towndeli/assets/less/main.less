@@ -3108,6 +3108,7 @@ header.header {
             text-transform: uppercase;
         }
         .wrap-caption-link {
+            display: inline-block;
             h3 {
                 float: left;
                 margin-right: 40px;
@@ -3194,6 +3195,7 @@ header.header {
                 border-width: 2px;
                 border-color:  #515252;
                 border-style: solid;
+                padding: 0 10px;
                 height: 37px;
                 width: 100%;
             }
@@ -3221,9 +3223,19 @@ header.header {
                     }
                 }
             }
-            .location {
-                height: 40px !important;
+            .location-container {
+                .location {
+                    height: 40px !important;
+                }
+                .input_img {
+                    position: absolute;
+                    right: 0;
+                    top: 7px;
+                    padding-right: 15px;
+                    padding-left: 10p;
+                }
             }
+
             .form-group {
                 display: inline-block;
                 width: 100%;

@@ -10367,6 +10367,9 @@ header.header .top-links li .child-box ul li a.highlight {
   margin: 0;
   text-transform: uppercase;
 }
+.main .wrap-checkout .wrap-caption-link {
+  display: inline-block;
+}
 .main .wrap-checkout .wrap-caption-link h3 {
   float: left;
   margin-right: 40px;
@@ -10446,6 +10449,7 @@ header.header .top-links li .child-box ul li a.highlight {
   border-width: 2px;
   border-color: #515252;
   border-style: solid;
+  padding: 0 10px;
   height: 37px;
   width: 100%;
 }
@@ -10469,8 +10473,15 @@ header.header .top-links li .child-box ul li a.highlight {
   background-position: none !important;
   background: url("../images/checked.png") no-repeat !important;
 }
-.main .wrap-checkout .customer-info .location {
+.main .wrap-checkout .customer-info .location-container .location {
   height: 40px !important;
+}
+.main .wrap-checkout .customer-info .location-container .input_img {
+  position: absolute;
+  right: 0;
+  top: 7px;
+  padding-right: 15px;
+  padding-left: 10p;
 }
 .main .wrap-checkout .customer-info .form-group {
   display: inline-block;
