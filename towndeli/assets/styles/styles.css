@@ -8385,6 +8385,12 @@ header.header .top-links li .child-box ul li a.highlight {
 .review-order-modal .modal-header {
   background-color: #ffffff;
 }
+.review-order-modal .modal-header .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 .review-order-modal .modal-header .modal-title {
   text-transform: none;
   color: #000000;
@@ -8571,6 +8577,13 @@ header.header .top-links li .child-box ul li a.highlight {
 .edit-order-name-modal .modal-header {
   background-color: #ffffff;
 }
+.send-order-email-modal .modal-header .close-icon,
+.edit-order-name-modal .modal-header .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 .send-order-email-modal .modal-header .modal-title,
 .edit-order-name-modal .modal-header .modal-title {
   text-transform: none;
@@ -8637,6 +8650,16 @@ header.header .top-links li .child-box ul li a.highlight {
   .download-order-modal .modal-dialog {
     min-width: 310px;
   }
+}
+.download-order-modal .modal-header {
+  background-color: #ffffff;
+  min-height: 10px !important;
+}
+.download-order-modal .modal-header .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .download-order-modal .modal-body {
   padding-top: 0;
@@ -8769,6 +8792,7 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .edit-schedule-modal .modal-header {
   background-color: #ffffff;
+  min-height: 10px !important;
 }
 .edit-schedule-modal .modal-header .modal-title {
   text-transform: none;
@@ -8777,6 +8801,12 @@ header.header .top-links li .child-box ul li a.highlight {
   font-weight: 400;
   line-height: 30px;
   text-align: left;
+}
+.edit-schedule-modal .modal-header .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .edit-schedule-modal .modal-body {
   padding-top: 0;
@@ -8841,6 +8871,16 @@ header.header .top-links li .child-box ul li a.highlight {
     min-width: 310px;
   }
 }
+.remove-schedule-modal .modal-header {
+  background-color: #ffffff;
+  min-height: 10px !important;
+}
+.remove-schedule-modal .modal-header .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 .remove-schedule-modal .modal-body .remove-icon {
   text-align: center;
 }
@@ -8871,6 +8911,113 @@ header.header .top-links li .child-box ul li a.highlight {
   font-size: 15.99px;
   font-weight: 400;
   border-radius: 0;
+}
+.verify-code-modal {
+  text-align: center;
+  padding: 0 !important;
+}
+.verify-code-modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+.verify-code-modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+@media (max-width: 858px) {
+  .verify-code-modal .modal-dialog {
+    min-width: 310px;
+  }
+}
+.verify-code-modal .modal-header {
+  background-color: #ffffff;
+  text-align: center;
+}
+.verify-code-modal .modal-header .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.verify-code-modal .modal-body .text {
+  color: #181718;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: center;
+}
+.verify-code-modal .modal-body .text span {
+  font-weight: 700;
+}
+.verify-code-modal .modal-body .error {
+  color: #eb0202;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 25px;
+  text-align: center;
+}
+.verify-code-modal .modal-body .code-input {
+  border-radius: 0 !important;
+}
+.verify-code-modal .modal-body .re-send-code {
+  color: #02b691;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+  text-decoration: underline;
+}
+.verify-code-modal .modal-body .update-phone-mumber label,
+.verify-code-modal .modal-body .no-update-phone-mumber label {
+  cursor: pointer;
+  padding-left: 30px;
+  padding-top: 5px;
+  color: #999999;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 25px;
+}
+.verify-code-modal .modal-body .update-phone-mumber label:after,
+.verify-code-modal .modal-body .no-update-phone-mumber label:after {
+  border-radius: 50%;
+  border-width: 1px;
+  border-color: #02b691;
+  border-style: solid;
+  content: "";
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.verify-code-modal .modal-body .update-phone-mumber input[type=radio],
+.verify-code-modal .modal-body .no-update-phone-mumber input[type=radio] {
+  width: 0;
+  height: 0;
+}
+.verify-code-modal .modal-body .update-phone-mumber input[type=radio].css-checkbox:checked + label.css-label,
+.verify-code-modal .modal-body .no-update-phone-mumber input[type=radio].css-checkbox:checked + label.css-label {
+  color: #02b691;
+}
+.verify-code-modal .modal-body .update-phone-mumber input[type=radio].css-checkbox:checked + label.css-label:after,
+.verify-code-modal .modal-body .no-update-phone-mumber input[type=radio].css-checkbox:checked + label.css-label:after {
+  background-image: url("../images/check1.png") !important;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.verify-code-modal .modal-footer {
+  text-align: center;
+}
+.verify-code-modal .modal-footer .btn-send {
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #02b691;
+  width: 110px;
+  height: 40px;
 }
 /* ---------------------------------------
     HERO
@@ -9870,6 +10017,29 @@ header.header .top-links li .child-box ul li a.highlight {
   margin: 0 5px 5px 0;
   padding: 4px 18px;
 }
+.quickview-modal .quickview-inner .media .media-body .quickview-options .add-topping-checkbox label,
+.quickview-modal .quickview-inner .media .media-body .quickview-options .require-checkbox label {
+  padding-left: 30px;
+  padding-top: 5px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .add-topping-checkbox label:after,
+.quickview-modal .quickview-inner .media .media-body .quickview-options .require-checkbox label:after {
+  border-width: 2px;
+  border-color: #02b691;
+  border-style: solid;
+  content: "";
+  height: 21px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+}
+.quickview-modal .quickview-inner .media .media-body .quickview-options .add-topping-checkbox input[type=checkbox].css-checkbox:checked + label.css-label:after,
+.quickview-modal .quickview-inner .media .media-body .quickview-options .require-checkbox input[type=checkbox].css-checkbox:checked + label.css-label:after {
+  background-position: none !important;
+  background: url("../images/checked.png") no-repeat !important;
+}
 .quickview-modal .quickview-inner .media .media-body .heart-icon {
   cursor: pointer;
   display: inline-block;
@@ -10518,6 +10688,13 @@ header.header .top-links li .child-box ul li a.highlight {
 .main .wrap-checkout .schedule .payment-one-month-checkbox input[type=checkbox].css-checkbox:checked + label.css-label:after {
   background-position: none !important;
   background: url("../images/checked.png") no-repeat !important;
+}
+.main .wrap-checkout .payment-methods label {
+  color: #515252;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  margin-right: 10px;
 }
 .main .wrap-checkout .payment-methods #payment-methods-select {
   width: 300px;

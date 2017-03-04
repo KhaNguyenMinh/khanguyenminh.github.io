@@ -24,9 +24,6 @@
     <link rel="shortcut icon" href="dist/images/favicon.png"/>
 
     <link rel="stylesheet" type="text/css" href="dist/styles/main.css?v=1.0.1"/>
-
-    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-
     
     <!--[if lt IE 9]>
     <script src="dist/scripts/html5shiv.js"></script>
@@ -115,6 +112,56 @@
                     <p class="note">Bằng việc đăng ký và sử dụng website, bạn đồng ý với các Điều khoản & Quy chế</p>
                     <button class="submit-btn">Đăng ký</button>
                 </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade verify-code-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close-icon" data-dismiss="modal">
+                    <img src="dist/images/close-3-icon.png" alt="img">
+                </span>
+                <img src="dist/images/verify-code.png" alt="">
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text">TOWNDELI đã gởi đến số điện thoại <span>090 xxx xxxx</span> mã xác nhận gồm 4 ký số vì đây là lần sử dụng đầu tiên. Vui lòng nhập đúng 4 ký số bạn nhận được vào ô bên dưới:</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <input type="text" class="form-control code-input">
+                        <label class="error">Mã xác thực không đúng</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a class="re-send-code">Tôi chưa nhận được mã, hãy gởi lại</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="update-phone-mumber">
+                            <input type="radio" name="update-phone-number" value="yes" id="update-phone-mumber" class="css-checkbox" />
+                            <label for="update-phone-mumber" class="css-label">Tôi muốn cập nhật số điện thoại này</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="no-update-phone-mumber">
+                            <input type="radio" name="update-phone-number" value="no" id="no-update-phone-mumber" class="css-checkbox" />
+                            <label for="no-update-phone-mumber" class="css-label">Không cập nhật số điện thoại này</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="btn btn-send">Gởi xác nhận</button>
             </div>
         </div>
     </div>
@@ -552,7 +599,7 @@
                         </div>
                         <div class="row mgt-15">
                             <div class="col-md-2">
-                                <label>MESSAGE</label>
+                                <label>MESSAGE (Optional)</label>
                             </div>
                             <div class="col-md-10">
                                 <textarea id="" placeholder="Need to send a message? Add here..."></textarea>
@@ -606,11 +653,11 @@
                     <h3>payment methods</h3>
                     <span class="question-icon" data-toggle="tooltip" data-placement="right" title="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa cum ducimus earum excepturi, fugit laudantium necessitatibus nostrum obcaecati perferendis repellendus."><i class="fa fa-question-circle"></i></span>
                 </div>
-                <div class="form-group">
-                    <div class="left-form">
+                <div class="row">
+                    <div class="col-md-3">
                         <label for="payment-methods-select">PAYMENT METHODS</label>
                     </div>
-                    <div class="right-form">
+                    <div class="col-md-9">
                         <select id="payment-methods-select" class="custom-select no-search">
                             <option value="">Select payment method</option>
                             <option value="1">Method 1</option>
@@ -619,15 +666,17 @@
                         </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="left-form">
+                <div class="row mgt-15">
+                    <div class="col-md-3">
                         <label for="additional-note-input">ADDITIONAL NOTE</label>
                     </div>
-                    <div class="right-form">
+                    <div class="col-md-9">
                         <textarea id="additional-note-input" placeholder="Please add your note here"></textarea>
                     </div>
                 </div>
-                <div class="text-right"><button class="payment-btn">Hoàn thành</button></div>
+                <div class="text-right mgt-15">
+                    <button class="payment-btn" data-toggle="modal" data-target=".verify-code-modal">Hoàn thành</button>
+                </div>
             </div>
         </div>
         <!-- /.wrap-checkout -->

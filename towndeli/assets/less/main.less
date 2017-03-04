@@ -1131,6 +1131,12 @@ header.header {
     }
     .modal-header {
         background-color:  #ffffff;
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
         .modal-title {
             text-transform: none;
             text-transform: none;
@@ -1315,6 +1321,12 @@ header.header {
     }
     .modal-header {
         background-color:  #ffffff;
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
         .modal-title {
             text-transform: none;
             text-transform: none;
@@ -1376,6 +1388,16 @@ header.header {
         display: inline-block;
         text-align: left;
         vertical-align: middle;
+    }
+    .modal-header {
+        background-color:  #ffffff;
+        min-height: 10px !important;
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
     }
     .modal-body {
         padding-top: 0;
@@ -1513,6 +1535,7 @@ header.header {
     }
     .modal-header {
         background-color:  #ffffff;
+        min-height: 10px !important;
         .modal-title {
             text-transform: none;
             text-transform: none;
@@ -1521,6 +1544,12 @@ header.header {
             font-weight: 400;
             line-height: 30px;
             text-align: left;
+        }
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 10px;
         }
     }
     .modal-body {
@@ -1585,6 +1614,16 @@ header.header {
         text-align: left;
         vertical-align: middle;
     }
+    .modal-header {
+        background-color:  #ffffff;
+        min-height: 10px !important;
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
     .modal-body {
         .remove-icon {
             text-align: center;
@@ -1616,6 +1655,111 @@ header.header {
             font-size: 15.99px;
             font-weight: 400;
             border-radius: 0;
+        }
+    }
+}
+
+.verify-code-modal {
+    text-align: center;
+    padding: 0 !important;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        margin-right: -4px;
+    }
+    .modal-dialog {
+        @media (max-width: 858px) {
+            min-width: 310px;
+        }
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+    .modal-header {
+        background-color:  #ffffff;
+        text-align: center;
+        .close-icon {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+    }
+    .modal-body {
+        .text {
+            color:  #181718;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 25px;
+            text-align: center;
+            span {
+                font-weight: 700;
+            }
+        }
+        .error {
+            color:  #eb0202;
+            font-size: 12px;
+            font-style: italic;
+            line-height: 25px;
+            text-align: center;
+        }
+        .code-input {
+            border-radius: 0 !important;
+        }
+        .re-send-code {
+            color:  #02b691;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 25px;
+            text-decoration: underline;
+        }
+        .update-phone-mumber, .no-update-phone-mumber {
+            label {
+                cursor: pointer;
+                padding-left: 30px;
+                padding-top: 5px;
+                color:  #999999;
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 25px;
+                &:after {
+                    border-radius: 50%;
+                    border-width: 1px;
+                    border-color:  #02b691;
+                    border-style: solid;
+                    content: "";
+                    height: 22px;
+                    width: 22px;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            input[type=radio] {
+                width: 0;
+                height: 0;
+            }
+            input[type=radio].css-checkbox:checked + label.css-label {
+                color:  #02b691;
+                &:after {
+                    background-image: url("../images/check1.png") !important;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    .modal-footer {
+        text-align: center;
+        .btn-send {
+            border-radius: 5px;
+            color:  #ffffff;
+            background-color:  #02b691;
+            width: 110px;
+            height: 40px;
         }
     }
 }
@@ -2564,6 +2708,31 @@ header.header {
                             padding: 4px 18px;
                         }
                     }
+
+                    .add-topping-checkbox, .require-checkbox {
+                        label {
+                            padding-left: 30px;
+                            padding-top: 5px;
+                            &:after {
+                                border-width: 2px;
+                                border-color:  #02b691;
+                                border-style: solid;
+                                content: "";
+                                height: 21px;
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 22px;
+                            }
+                        }
+                        input[type=checkbox].css-checkbox:checked + label.css-label {
+                            &:after {
+                                background-position: none !important;
+                                background: url("../images/checked.png") no-repeat !important;
+                            }
+                        }
+                    }
                 }
                 .heart-icon {
                     cursor: pointer;
@@ -3280,6 +3449,13 @@ header.header {
             }
         }
         .payment-methods {
+            label {
+                color:  #515252;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: left;
+                margin-right: 10px;
+            }
             #payment-methods-select {
                 width: 300px;
             }
