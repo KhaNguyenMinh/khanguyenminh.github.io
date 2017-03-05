@@ -342,14 +342,14 @@
         /* =================================
          ===  Product Page              ====
          =================================== */
-        $(this).on('change', '.wrap-product #add-topping-checkbox', function () {
+        $(this).on('change', '.quickview-modal #add-topping-checkbox', function () {
             if(this.checked) {
                 $('.add-topping-content').removeClass('hidden');
             } else {
                 $('.add-topping-content').addClass('hidden');
             }
         });
-        $(this).on('change', '.wrap-product #require-checkbox', function () {
+        $(this).on('change', '.quickview-modal #require-checkbox', function () {
             if(this.checked) {
                 $('.require-content').removeClass('hidden');
             } else {
