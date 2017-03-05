@@ -529,7 +529,94 @@
         <div class="row mgb-30">
             <div class="col-sm-6">
                 <label for="date-input">DATE</label>
-                <input id="date-input" class="custom-input" type="text"/>
+                <div class="custom-date-select">
+                    <!-- <input type="text" id= "date-input" class="custom-input dropdown-toggle" data-toggle="dropdown"> -->
+                    <span id= "date-input" class="custom-input dropdown-toggle" data-toggle="dropdown">Vui lòng chọn ngày</span>
+                    <div class="dropdown-menu">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="mon-fr" id="option1" class="css-checkbox" />
+                                    <label for="option1" class="css-label">Ngày trong tuần (T2 - T6)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="sa-su" id="option2" class="css-checkbox" />
+                                    <label for="option2" class="css-label">Ngày cuối tuần (T7 - CN)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="everday" id="option3" class="css-checkbox" />
+                                    <label for="option3" class="css-label">Mỗi ngày</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="custom" id="option4" class="css-checkbox" />
+                                    <label for="option4" class="css-label">Tùy chỉnh</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-content hidden">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox1" class="css-checkbox" value="mo" data-text="Thứ 2"/>
+                                        <label for="date-checkbox1" class="css-label">Thứ 2</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox2" class="css-checkbox" value="tu" data-text="Thứ 3"/>
+                                        <label for="date-checkbox2" class="css-label">Thứ 3</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox3" class="css-checkbox" value="we" data-text="Thứ 4"/>
+                                        <label for="date-checkbox3" class="css-label">Thứ 4</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox4" class="css-checkbox" value="th" data-text="Thứ 5"/>
+                                        <label for="date-checkbox4" class="css-label">Thứ 5</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox5" class="css-checkbox" value="fr" data-text="Thứ 6"/>
+                                        <label for="date-checkbox5" class="css-label">Thứ 6</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox6" class="css-checkbox" value="sa" data-text="Thứ 7"/>
+                                        <label for="date-checkbox6" class="css-label">Thứ 7</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox7" class="css-checkbox" value="su" data-text="Chủ nhật"/>
+                                        <label for="date-checkbox7" class="css-label">Chủ nhật</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-3 col-xs-7">
                 <label for="time-select">TIME</label>
@@ -997,26 +1084,26 @@
                                 </div>
                                 <div class="row hidden add-topping-content mgt-15">
                                     <div class="col-xs-12">
-                                        <div id="addToppingTab"> 
+                                        <div id="addToppingTabOnHome" class="add-topping-tab"> 
                                                 <ul  class="nav nav-pills">
                                                     <li class="active">
-                                                        <a  href="#option1" data-toggle="tab">TOPPING</a>
+                                                        <a  href="#home-option1" data-toggle="tab">TOPPING</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#option2" data-toggle="tab">THẠCH</a>
+                                                        <a href="#home-option2" data-toggle="tab">THẠCH</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#option3" data-toggle="tab">HƯƠNG</a>
+                                                        <a href="#home-option3" data-toggle="tab">HƯƠNG</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#option4" data-toggle="tab">FLAN</a>
+                                                        <a href="#home-option4" data-toggle="tab">FLAN</a>
                                                     </li>
                                                     <li>
-                                                        <a href="#option5" data-toggle="tab">ĐẶC BIỆT</a>
+                                                        <a href="#home-option5" data-toggle="tab">ĐẶC BIỆT</a>
                                                     </li>
                                                 </ul>
                                                 <div class="tab-content clearfix">
-                                                    <div class="tab-pane active" id="option1">
+                                                    <div class="tab-pane active" id="home-option1">
                                                         <div class="row">
                                                             <div class="col-xs-12 col-sm-4">
                                                                 <div class="topping-checkbox">
@@ -1098,7 +1185,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane" id="option2">
+                                                    <div class="tab-pane" id="home-option2">
                                                         <div class="row">
                                                             <div class="col-xs-12 col-sm-4">
                                                                 <div class="topping-checkbox">
@@ -1120,7 +1207,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane" id="option3">
+                                                    <div class="tab-pane" id="home-option3">
                                                         <div class="row">
                                                             <div class="col-xs-12 col-sm-4">
                                                                 <div class="topping-checkbox">
@@ -1142,7 +1229,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane" id="option4">
+                                                    <div class="tab-pane" id="home-option4">
                                                         <div class="row">
                                                             <div class="col-xs-12 col-sm-4">
                                                                 <div class="topping-checkbox">
@@ -1164,7 +1251,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="tab-pane" id="option5">
+                                                    <div class="tab-pane" id="home-option5">
                                                         <div class="row">
                                                             <div class="col-xs-12 col-sm-4">
                                                                 <div class="topping-checkbox">

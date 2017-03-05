@@ -1985,6 +1985,9 @@ header.header {
         background-color: transparent;
         border-color: #fff;
         color: #fff;
+        display: inline-block;
+        padding-top: 9px;
+        cursor: pointer;
     }
     .wrap-want-desk {
         padding-top: 37px;
@@ -2038,6 +2041,86 @@ header.header {
             vertical-align: middle;
         }
     }
+    .custom-date-select {
+        .dropdown-menu {
+            width: ~"calc(100% - 20px)" !important;
+            margin-left: 10px !important;
+            margin-right: 10px !important;
+            color:  #515252;
+            font-size: 16px;
+            font-weight: 400;
+            .custom-radio {
+                margin-left: 10px;
+                label {
+                    cursor: pointer;
+                    padding-left: 30px;
+                    padding-top: 5px;
+                    color:  #999999;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    &:after {
+                        border-radius: 50%;
+                        border-width: 1px;
+                        border-color:  #02b691;
+                        border-style: solid;
+                        content: "";
+                        height: 22px;
+                        width: 22px;
+                        position: absolute;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+                }
+                input[type=radio] {
+                    width: 0;
+                    height: 0;
+                }
+                input[type=radio].css-checkbox:checked + label.css-label {
+                    color:  #02b691;
+                    &:after {
+                        background-image: url("../images/check1.png") !important;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            .custom-content {
+                margin-left: 45px;
+                .date-checkbox{
+                    label {
+                        padding-left: 30px;
+                        // padding-top: 5px;
+                        color:  #515252;
+                        font-size: 16px;
+                        font-weight: 400;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);  
+                            border-width: 1px;
+                            border-color:  #999999;
+                            border-style: solid;
+                            width: 18px;
+                            height: 18px;
+                        }
+                        &:before {
+                            display: none;
+                        }
+                    }
+                    input[type=checkbox].css-checkbox:checked + label.css-label {
+                        &:after {
+                            background-position: none !important;
+                            background: url("../images/checked.png") no-repeat !important;
+                        }
+                    }
+                }
+            }
+        }
+    } 
 }
 
 /* ---------------------------------------
@@ -2716,7 +2799,7 @@ header.header {
                         }
                     }
                     .add-topping-content {
-                        #addToppingTab {
+                        .add-topping-tab {
                             border: 1px solid #e0e0e0;
                             .nav-pills {
                                 border-bottom: 1px solid #e0e0e0;
