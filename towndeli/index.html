@@ -530,8 +530,10 @@
             <div class="col-sm-6">
                 <label for="date-input">DATE</label>
                 <div class="custom-date-select">
-                    <!-- <input type="text" id= "date-input" class="custom-input dropdown-toggle" data-toggle="dropdown"> -->
-                    <span id= "date-input" class="custom-input dropdown-toggle" data-toggle="dropdown">Vui lòng chọn ngày</span>
+                    <span class="selected-wrap dropdown-toggle" data-toggle="dropdown">
+                        <span id= "date-input" class="text-value">Vui lòng chọn ngày</span> 
+                        <span class="arrow"></span>
+                    </span>
                     <div class="dropdown-menu">
                         <div class="row">
                             <div class="col-md-12">
@@ -586,7 +588,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mgt-10">
                                 <div class="col-md-4">
                                     <div class="date-checkbox">
                                         <input type="checkbox" id="date-checkbox4" class="css-checkbox" value="th" data-text="Thứ 5"/>
@@ -606,7 +608,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row mgt-10">
                                 <div class="col-md-4">
                                     <div class="date-checkbox">
                                         <input type="checkbox" id="date-checkbox7" class="css-checkbox" value="su" data-text="Chủ nhật"/>

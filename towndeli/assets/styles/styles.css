@@ -9255,14 +9255,6 @@ header.header .top-links li .child-box ul li a.highlight {
     margin-bottom: 5px;
   }
 }
-.pick-coffee .custom-input {
-  background-color: transparent;
-  border-color: #fff;
-  color: #fff;
-  display: inline-block;
-  padding-top: 9px;
-  cursor: pointer;
-}
 .pick-coffee .wrap-want-desk {
   padding-top: 37px;
   position: relative;
@@ -9315,6 +9307,37 @@ header.header .top-links li .child-box ul li a.highlight {
   margin: -5px 0 0 10px;
   vertical-align: middle;
 }
+.pick-coffee .custom-date-select.open .selected-wrap .arrow:after {
+  content: "\f106";
+}
+.pick-coffee .custom-date-select .selected-wrap {
+  position: relative;
+  border: 1px solid #fff;
+  border-radius: 6px;
+  height: 44px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+}
+.pick-coffee .custom-date-select .selected-wrap .text-value {
+  color: #fff;
+  font-size: 18px;
+  line-height: 42px;
+  padding: 0 42px 0 15px;
+  display: block;
+}
+.pick-coffee .custom-date-select .selected-wrap .arrow {
+  position: absolute;
+  right: 10px;
+  top: -7px;
+  height: auto;
+  width: auto;
+}
+.pick-coffee .custom-date-select .selected-wrap .arrow:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  font-size: 40px;
+}
 .pick-coffee .custom-date-select .dropdown-menu {
   width: calc(100% - 20px) !important;
   margin-left: 10px !important;
@@ -9322,6 +9345,9 @@ header.header .top-links li .child-box ul li a.highlight {
   color: #515252;
   font-size: 16px;
   font-weight: 400;
+  margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .pick-coffee .custom-date-select .dropdown-menu .custom-radio {
   margin-left: 10px;
@@ -9347,6 +9373,9 @@ header.header .top-links li .child-box ul li a.highlight {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+.pick-coffee .custom-date-select .dropdown-menu .custom-radio label:before {
+  display: none;
 }
 .pick-coffee .custom-date-select .dropdown-menu .custom-radio input[type=radio] {
   width: 0;

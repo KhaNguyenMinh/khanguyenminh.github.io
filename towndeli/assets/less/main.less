@@ -1981,14 +1981,6 @@ header.header {
             margin-bottom: 5px;
         }
     }
-    .custom-input {
-        background-color: transparent;
-        border-color: #fff;
-        color: #fff;
-        display: inline-block;
-        padding-top: 9px;
-        cursor: pointer;
-    }
     .wrap-want-desk {
         padding-top: 37px;
         position: relative;
@@ -2042,6 +2034,44 @@ header.header {
         }
     }
     .custom-date-select {
+        &.open {
+            .selected-wrap {
+                .arrow {
+                    &:after {
+                        content: "\f106";
+                   }
+                }
+            }
+        }
+        .selected-wrap {
+            position: relative;
+            border: 1px solid #fff;
+            border-radius: 6px;
+            height: 44px;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            .text-value {
+                color: #fff;
+                font-size: 18px;
+                line-height: 42px;
+                padding: 0 42px 0 15px;
+                display: block;
+            }
+            .arrow {
+                position: absolute;
+                right: 10px;
+                top: -7px;
+                height: auto;
+                width: auto;
+                &:after {
+                    content: "\f107";
+                    font-family: FontAwesome;
+                    font-size: 40px;
+                }
+            }
+        }
+        
         .dropdown-menu {
             width: ~"calc(100% - 20px)" !important;
             margin-left: 10px !important;
@@ -2049,6 +2079,9 @@ header.header {
             color:  #515252;
             font-size: 16px;
             font-weight: 400;
+            margin-top: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
             .custom-radio {
                 margin-left: 10px;
                 label {
@@ -2071,6 +2104,9 @@ header.header {
                         left: 0;
                         top: 50%;
                         transform: translateY(-50%);
+                    }
+                    &:before {
+                        display: none;  
                     }
                 }
                 input[type=radio] {

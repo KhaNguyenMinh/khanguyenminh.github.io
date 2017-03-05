@@ -366,14 +366,14 @@
             if (checkedVal === 'custom') {
                 event.preventDefault();
                 $('.custom-date-select').addClass("open");
-                $('.custom-date-select #date-input').attr("aria-expanded","true");
+                $('.custom-date-select .text-value').attr("aria-expanded","true");
                 $('.custom-date-select .custom-content').removeClass('hidden');
-                $('.custom-date-select #date-input').text('');
+                $('.custom-date-select .text-value').text('');
                 return;
             } else {
                 var label = $(this).parent().find('.css-label');
 
-                $('.custom-date-select #date-input').text(label.text());
+                $('.custom-date-select .text-value').text(label.text());
                 $('.custom-date-select .custom-content').addClass('hidden');
                 $('.custom-date-select .date-checkbox input').prop('checked', false);
             }
@@ -387,7 +387,7 @@
                 selectDate = selectDate + dataText + ' ';
             }
 
-            $('.custom-date-select #date-input').text(selectDate);
+            $('.custom-date-select .text-value').text(selectDate);
         });
 
         /* =================================
