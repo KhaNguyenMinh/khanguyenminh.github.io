@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]>
+<html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="ie ie9 ie-lt10 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Pragma" content="no-cache">
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <![endif]-->
+    <title>TownDeli - Home</title>
+    <meta name="keywords" content="keywords"/>
+    <meta name="description" content="description"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="dist/images/favicon.png"/>
+
+    <link rel="stylesheet" type="text/css" href="dist/styles/main.css?v=1.1.1"/>
+
+    <!--[if lt IE 9]>
+    <script src="dist/scripts/html5shiv.js"></script>
+    <script src="dist/scripts/respond.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="modal fade subscribe-modal" id="subscribe-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="subscribe-inner">
+                <div class="img-container">
+                    <img class="img-responsive center-block" src="dist/images/sale-40.png" alt="img" />
+                </div>
+                <p class="label"><img src="dist/images/airplane-icon.png" alt="img" /> Subscribe and get 40% off !</p>
+                <button class="subscribe-btn">SUBSCRIBE NOW !</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade login-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng nhập</h3>
+                <p>Cần tạo tài khoản? <a data-toggle="modal" data-target=".register-modal">Đăng ký</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc</span></div>
+                <form>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <div class="clearfix mgt-10 mgb-10">
+                        <div class="remember">
+                            <label for="remember-chk">Ghi nhớ</label>
+                            <input id="remember-chk" type="checkbox" />
+                        </div>
+                        <a class="forgot-password-link">Quên mật khẩu ?</a>
+                    </div>
+                    <button class="submit-btn">Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade register-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="login-header">
+                <h3>Đăng ký</h3>
+                <p>Bạn đã có tài khoản? <a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></p>
+            </div>
+            <div class="login-details">
+                <div class="socials-login">
+                    <a class="facebook"><i class="fa fa-facebook"></i>Đăng nhập với Facebook</a>
+                    <a class="google-plus"><i class="fa fa-google-plus"></i></a>
+                    <a class="twitter"><i class="fa fa-twitter"></i></a>
+                </div>
+                <div class="devider"><span>hoặc đăng kí tài khoản trên Towndeli</span></div>
+                <form>
+                    <div class="row">
+                        <div class="col-xs-6 pdr-5">
+                            <div class="wrap-input">
+                                <span><img src="dist/images/user-icon.png" alt="img" /></span>
+                                <input type="text" placeholder="Tên" />
+                            </div>
+                        </div>
+                        <div class="col-xs-6 pdl-5">
+                            <div class="wrap-input">
+                                <input type="text" placeholder="Họ" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap-input">
+                        <input type="text" placeholder="Số điện thoại" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/airplane-icon.png" alt="img" /></span>
+                        <input type="email" placeholder="Email" />
+                    </div>
+                    <div class="wrap-input">
+                        <span><img src="dist/images/key-icon.png" alt="img" /></span>
+                        <input type="password" placeholder="Mật khẩu" />
+                    </div>
+                    <p class="note">Bằng việc đăng ký và sử dụng website, bạn đồng ý với các Điều khoản & Quy chế</p>
+                    <button class="submit-btn">Đăng ký</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="topbar">
+    <div class="container">
+        <h4><strong>boost up your monday ! 50% off</strong> for espresso every monday from 09:00-12:00. <a>see more</a>
+        </h4>
+        <span class="close-icon"><img src="dist/images/close-icon.png" alt="img" /></span>
+    </div>
+</div>
+<!-- /.topbar -->
+
+<header class="header">
+    <div class="container">
+        <div class="wrap-cat-menu">
+            <span class="menu-icon"></span>
+            <!-- /.menu-icon -->
+            <div class="cat-menu">
+                <h3>Categories</h3>
+                <div class="popular-links">
+                   <h4><a>Deals</a></h4>
+                   <h4><a>Popular</a></h4>
+                   <h4><a>Recently Viewed</a></h4>
+                </div>
+                <ul class="cat-menu-details">
+                    <li class="has-child">
+                        <a>Produce</a>
+                        <ul>
+                            <li>
+                                <a>Produce 1</a>
+                            </li>
+                            <li>
+                                <a>Produce 2</a>
+                            </li>
+                            <li>
+                                <a>Produce 3</a>
+                            </li>
+                            <li>
+                                <a>Produce 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Meat & Seafood</a>
+                        <ul>
+                            <li>
+                                <a>Meat & Seafood 1</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 2</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 3</a>
+                            </li>
+                            <li>
+                                <a>Meat & Seafood 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Deli</a>
+                        <ul>
+                            <li>
+                                <a>Deli 1</a>
+                            </li>
+                            <li>
+                                <a>Deli 2</a>
+                            </li>
+                            <li>
+                                <a>Deli 3</a>
+                            </li>
+                            <li>
+                                <a>Deli 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-child">
+                        <a>Bakery</a>
+                        <ul>
+                            <li>
+                                <a>Bakery 1</a>
+                            </li>
+                            <li>
+                                <a>Bakery 2</a>
+                            </li>
+                            <li>
+                                <a>Bakery 3</a>
+                            </li>
+                            <li>
+                                <a>Bakery 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Alcohol</a>
+                    </li>
+                    <li>
+                        <a>Dairy & Eggs</a>
+                    </li>
+                    <li>
+                        <a>Bulk</a>
+                    </li>
+                    <li class="has-child">
+                        <a>Canned Goods</a>
+                        <ul>
+                            <li>
+                                <a>Canned Goods 1</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 2</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 3</a>
+                            </li>
+                            <li>
+                                <a>Canned Goods 4</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a>Dry Goods & Pasta</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.cat-menu -->
+        </div>
+        <!-- /.wrap-cat-menu -->
+        <h1 class="logo">
+            <a href="index.html" title="TownDeli">TownDeli</a>
+        </h1>
+        <!-- /.logo -->
+        <ul class="menu">
+            <li>
+                <a><span class="glass-icon"></span>Menu</a>
+            </li>
+            <li>
+                <a href="index.html#pick-coffee" class="scroll"><span class="calendar-icon"></span>Schedule</a>
+            </li>
+            <li class="cart-menu">
+                <a><span class="cart-icon" data-value="10"></span>Your cart</a>
+                <div class="cart-box">
+                    <div class="table-responsive">
+                        <table class="table checkout-table">
+                            <tbody>
+                                <tr>
+                                    <td><h3>Cart</h3></td>
+                                    <td><a class="more-link">Drink more</a></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a class="product-name"><img class="close-icon" src="dist/images/close-2-icon.png" alt="img" />Espresso</a>
+                                    </td>
+                                    <td>Std.size Cookie, Strawberry...</td>
+                                    <td>
+                                        <div class="wrap-quantity">
+                                            <span class="plus-icon"><i class="fa fa-plus"></i></span>
+                                            <input class="onlynumber" type="text" value="5" maxlength="2" />
+                                            <span class="minus-icon"><i class="fa fa-minus"></i></span>
+                                        </div>
+                                    </td>
+                                    <td class="text-center">50.000 VNĐ</td>
+                                    <td class="text-right">
+                                        <a class="edit-icon" data-toggle="modal" data-target=".quickview-modal"><i class="fa fa-pencil-square-o"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="bottom-cart-box">
+                        <div class="info">
+                            <p><strong>TOTAL:</strong></p>
+                            <p><strong>180.000 VNĐ / DAY</strong></p>
+                            <p>150.000 VNĐ: Coffee & Dessert</p>
+                            <p>30.000 VNĐ: Shipping Fee</p>
+                        </div>
+                        <button class="checkout-btn">CHECKOUT <i class="fa fa-angle-right"></i></button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <!-- /.menu -->
+        <ul class="top-links">
+            <li class="user">
+                <a><img src="dist/images/avatar.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li><a data-toggle="modal" data-target=".register-modal">Đăng ký</a></li>
+                        <li class="devider no-mg"></li>
+                        <li><a data-toggle="modal" data-target=".login-modal">Đăng nhập</a></li>
+                    </ul>
+                </div>
+                <!-- Dropdown dưới là khi user đã login -->
+                <!--
+                <div class="child-box big">
+                    <ul>
+                        <li><a class="highlight">Schedule</a></li>
+                        <li><a class="highlight">Reward points</a></li>
+                        <li class="devider"></li>
+                        <li><a>Profile</a></li>
+                        <li><a>Log out</a></li>
+                    </ul>
+                </div>
+                -->
+            </li>
+            <li class="lang">
+                <a><img src="dist/images/en-flag.png" alt="img"/></a>
+                <div class="child-box">
+                    <ul>
+                        <li class="active"><a>English</a></li>
+                        <li class="devider no-mg"></li>
+                        <li><a>Tiếng Việt</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- /.top-links -->
+    </div>
+</header>
+<!-- /.header -->
+
+<div class="hero">
+    <div class="wrap-sliders">
+        <div id="home-sliders" class="master-slider ms-skin-default">
+            <div class="ms-slide">
+                <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
+                <div class="ms-layer ms-caption" data-effect="left(200)"
+                     data-duration="700"
+                     data-delay="0"
+                     data-hide-effect="fade">
+                    <div class="slider-text">
+                        <h4>This summer too hot ?<br/> buy 1 get 1 today</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat
+                            faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar
+                            pulvinar leo eget pretium.</p>
+                        <a class="more-btn">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-slide">
+                <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
+                <div class="ms-layer ms-caption" data-effect="skewright(20|30,100|200)"
+                     data-duration="700"
+                     data-delay="0"
+                     data-hide-effect="fade">
+                    <div class="slider-text">
+                        <h4>This summer too hot ?<br/> buy 1 get 1 today</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat
+                            faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar
+                            pulvinar leo eget pretium.</p>
+                        <a class="more-btn">See more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-slide">
+                <img src="dist/images/blank.gif" data-src="dist/images/slideshow.jpg" alt="img"/>
+                <div class="ms-layer ms-caption" data-effect="front(300)"
+                     data-duration="700"
+                     data-delay="0"
+                     data-hide-effect="fade">
+                    <div class="slider-text">
+                        <h4>This summer too hot ?<br/> buy 1 get 1 today</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id volutpat
+                            faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam pulvinar
+                            pulvinar leo eget pretium.</p>
+                        <a class="more-btn">See more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#home-sliders -->
+    </div>
+    <div class="wrap-works">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-responsive center-block" src="dist/images/two-glass.jpg" alt="img"/>
+                </div>
+                <div class="col-sm-6">
+                    <h2>HOW TOWNDELI WORKS ?</h2>
+                    <ul>
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="glass-icon"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h4>1. PICK A COFFEE</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim
+                                        id volutpat faucibudui vel nulla.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="calendar-icon"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h4>2. PICK DELIVERY DATES</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim
+                                        id volutpat faucibudui vel nulla.</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="media">
+                                <div class="media-left">
+                                    <span class="desk-icon"></span>
+                                </div>
+                                <div class="media-body">
+                                    <h4>3. REMAIN IN COMFORT ZONE & ENJOY COFFEE</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim
+                                        id volutpat faucibudui vel nulla.</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.hero -->
+
+<div id="pick-coffee" class="pick-coffee">
+    <div class="container">
+        <h3>1.PICK A COFFEE</h3>
+        <div class="row mgb-30">
+            <div class="col-md-3 col-sm-6">
+                <label for="coffee-select">COFFEE</label>
+                <select id="coffee-select" class="home-custom-select" style="width:100%">
+                    <option value="1">COFFEE 1</option>
+                    <option value="2">COFFEE 2</option>
+                    <option value="3">COFFEE 3</option>
+                    <option value="4">COFFEE 4</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <label for="size-select">SIZE</label>
+                <select id="size-select" class="home-custom-select" style="width:100%">
+                    <option value="1">SIZE 1</option>
+                    <option value="2">SIZE 2</option>
+                    <option value="3">SIZE 3</option>
+                    <option value="4">SIZE 4</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <label for="topping-select">TOPPING</label>
+                <select id="topping-select" class="home-custom-select" style="width:100%">
+                    <option value="1">TOPPING 1</option>
+                    <option value="2">TOPPING 2</option>
+                    <option value="3">TOPPING 3</option>
+                    <option value="4">TOPPING 4</option>
+                </select>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <label for="quantity-input">QUANTITY</label>
+                <input id="quantity-input" class="custom-input onlynumber" type="text" value="1" maxlength="2" />
+            </div>
+        </div>
+        <h3>2.DELIVERY DATES</h3>
+        <div class="row mgb-30">
+            <div class="col-sm-6">
+                <label for="date-input">DATE</label>
+                <div class="custom-date-select">
+                    <span class="selected-wrap dropdown-toggle" data-toggle="dropdown">
+                        <span id= "date-input" class="text-value">Vui lòng chọn ngày</span> 
+                        <span class="arrow"></span>
+                    </span>
+                    <div class="dropdown-menu">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="mon-fr" id="option1" class="css-checkbox" />
+                                    <label for="option1" class="css-label">Ngày trong tuần (T2 - T6)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="sa-su" id="option2" class="css-checkbox" />
+                                    <label for="option2" class="css-label">Ngày cuối tuần (T7 - CN)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="everday" id="option3" class="css-checkbox" />
+                                    <label for="option3" class="css-label">Mỗi ngày</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="custom-radio">
+                                    <input type="radio" name="delivery-date" value="custom" id="option4" class="css-checkbox" />
+                                    <label for="option4" class="css-label">Tùy chỉnh</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="custom-content hidden">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox1" class="css-checkbox" value="mo" data-text="Thứ 2"/>
+                                        <label for="date-checkbox1" class="css-label">Thứ 2</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox2" class="css-checkbox" value="tu" data-text="Thứ 3"/>
+                                        <label for="date-checkbox2" class="css-label">Thứ 3</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox3" class="css-checkbox" value="we" data-text="Thứ 4"/>
+                                        <label for="date-checkbox3" class="css-label">Thứ 4</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mgt-10">
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox4" class="css-checkbox" value="th" data-text="Thứ 5"/>
+                                        <label for="date-checkbox4" class="css-label">Thứ 5</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox5" class="css-checkbox" value="fr" data-text="Thứ 6"/>
+                                        <label for="date-checkbox5" class="css-label">Thứ 6</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox6" class="css-checkbox" value="sa" data-text="Thứ 7"/>
+                                        <label for="date-checkbox6" class="css-label">Thứ 7</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mgt-10">
+                                <div class="col-md-4">
+                                    <div class="date-checkbox">
+                                        <input type="checkbox" id="date-checkbox7" class="css-checkbox" value="su" data-text="Chủ nhật"/>
+                                        <label for="date-checkbox7" class="css-label">Chủ nhật</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3 col-xs-7">
+                <label for="time-select">TIME</label>
+                <select id="time-select" class="home-custom-select" style="width:100%">
+                    <option value="08:30:00">08:30:00</option>
+                    <option value="09:00:00">09:00:00</option>
+                    <option value="09:30:00">09:30:00</option>
+                    <option value="10:00:00">10:00:00</option>
+                    <option value="10:30:00">10:30:00</option>
+                </select>
+            </div>
+            <div class="col-sm-3 col-xs-5">
+                <div class="wrap-want-desk">
+                    <span>new</span>
+                    <input type="checkbox" id="want-desk-checkbox" class="css-checkbox" />
+                    <label for="want-desk-checkbox" class="css-label">I WANT <br/><strong>DESK DELI&trade; *</strong></label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                <hr class="mgt-0" />
+                <div class="media">
+                    <div class="media-left">
+                        <img src="dist/images/question-mark.png" alt="img" />
+                    </div>
+                    <div class="media-body">
+                        <h4><strong>*DESK DELI&trade;</strong> DELIVERY</h4>
+                        <h5>Delivery at your desk may take extra cost, please check our current <a>Delivery Pricing</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <button class="checkout-btn">CHECKOUT <i class="fa fa-angle-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.pick-coffee -->
+
+<div class="discount-banner parallax">
+    <h4>Order 3+ cups at towndeli discount 10%</h4>
+</div>
+<!-- /.discount-banner -->
+
+<div class="hot-trends">
+    <div class="container">
+        <h2>Hot trends</h2>
+        <div class="combo-trends mgb-40">
+            <div class="trends-header">
+                <h3>Combo</h3>
+                <a class="more-link">SEE MORE</a>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/coffee-img-1.jpg" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam
+                                pulvinar pulvinar leo eget pretium.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/coffee-img-1.jpg" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla. Etiam
+                                pulvinar pulvinar leo eget pretium.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coffee-trends mgb-40">
+            <div class="trends-header">
+                <h3>Coffee sáng</h3>
+                <a class="more-link">SEE MORE</a>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/coffee-img-2.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/coffee-img-2.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/coffee-img-2.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/coffee-img-2.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dessert-trends">
+            <div class="trends-header">
+                <h3>Dessert</h3>
+                <a class="more-link">SEE MORE</a>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/dessert-img-1.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/dessert-img-1.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/dessert-img-1.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="main-img">
+                            <img src="dist/images/dessert-img-1.png" alt="img"/>
+                        </div>
+                        <div class="content">
+                            <h4>Espresso</h4>
+                            <span class="price">10.000 đ</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor, enim id
+                                volutpat faucibus, nisl elit maximus erat, sit amet pretium tellus dui vel nulla.</p>
+                        </div>
+                        <div class="bottom-info">
+                            <div class="static-content">
+                                <h4>Espresso</h4>
+                                <span class="price">10.000 đ</span>
+                                <span class="product-btn">Add</span>
+                            </div>
+                            <div class="hover-content">
+                                <ul>
+                                    <li>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">STANDARD</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+5.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA</a>
+                                    </li>
+                                    <li class="price-extra">
+                                        <span>+10.000 đ</span>
+                                        <a class="product-btn" data-toggle="modal" data-target=".quickview-modal">EXTRA BIG</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade quickview-modal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="quickview-inner">
+                    <span class="close-icon" data-dismiss="modal"><img src="dist/images/close-3-icon.png" alt="img" /></span>
+                    <div class="row content">
+                        <div class="col-sm-4">
+                            <div class="text-center">
+                                <img src="dist/images/product-img.png" alt="img" class="img-responsive center-block"/>
+                            </div>
+                        </div>
+                        <div class="body col-sm-8">
+                            <div class="quickview-header">
+                                <h4>ESPRESSO</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor indi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                                <div class="share-icons">
+                                    <a><img src="dist/images/facebook-icon.png" alt="img" /></a>
+                                    <a><img src="dist/images/google-plus-icon.png" alt="img" /></a>
+                                </div>
+                            </div>
+                            <div class="quickview-options">
+                                <div class="clearfix">
+                                    <ul class="list-size">
+                                        <li><a>STANDARD</a></li>
+                                        <li><a>EXTRA</a></li>
+                                        <li><a>EXTRA-BIG</a></li>
+                                    </ul>
+                                    <div class="wrap-quantity">
+                                        <label for="quickview-quantity-input">QUANTITY</label>
+                                        <input id="quickview-quantity-input" class="onlynumber" type="text" value="1" />
+                                    </div>
+                                </div>
+                                <div class="row mgt-15">
+                                    <div class="col-md-12">
+                                        <div class="add-topping-checkbox">
+                                            <input type="checkbox" id="add-topping-checkbox" class="css-checkbox" />
+                                            <label for="add-topping-checkbox" class="css-label">THÊM TOPPING</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row hidden add-topping-content mgt-15">
+                                    <div class="col-xs-12">
+                                        <div id="addToppingTabOnHome" class="add-topping-tab"> 
+                                                <ul  class="nav nav-pills">
+                                                    <li class="active">
+                                                        <a  href="#home-option1" data-toggle="tab">TOPPING</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#home-option2" data-toggle="tab">THẠCH</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#home-option3" data-toggle="tab">HƯƠNG</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#home-option4" data-toggle="tab">FLAN</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#home-option5" data-toggle="tab">ĐẶC BIỆT</a>
+                                                    </li>
+                                                </ul>
+                                                <div class="tab-content clearfix">
+                                                    <div class="tab-pane active" id="home-option1">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option1-topping-checkbox1" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox1" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox2" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox2" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox3" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox3" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox4" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox4" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox5" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox5" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox6" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox6" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option1-topping-checkbox7" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox7" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox8" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox8" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox9" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox9" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox10" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox10" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox11" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox11" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox12" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox12" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option1-topping-checkbox13" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox13" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="topping-checkbox14" class="css-checkbox" />
+                                                                    <label for="topping-checkbox14" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox15" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox15" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox16" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox16" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox17" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox17" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                                <div class="topping-checkbox mgt-15">
+                                                                    <input type="checkbox" id="option1-topping-checkbox18" class="css-checkbox" />
+                                                                    <label for="option1-topping-checkbox18" class="css-label">Mini Taro Ball</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="home-option2">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option2-topping-checkbox1" class="css-checkbox" />
+                                                                    <label for="option2-topping-checkbox1" class="css-label">Thạch option</label>
+                                                                </div> 
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option2-topping-checkbox2" class="css-checkbox" />
+                                                                    <label for="option2-topping-checkbox2" class="css-label">Thạch option</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option2-topping-checkbox3" class="css-checkbox" />
+                                                                    <label for="option2-topping-checkbox3" class="css-label">Thạch option</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="home-option3">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option3-topping-checkbox1" class="css-checkbox" />
+                                                                    <label for="topping-checkbox1" class="css-label">Hương option</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option3-topping-checkbox2" class="css-checkbox" />
+                                                                    <label for="option3-topping-checkbox2" class="css-label">Hương option</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option3-topping-checkbox3" class="css-checkbox" />
+                                                                    <label for="option3-topping-checkbox3" class="css-label">Hương option</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="home-option4">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option4-topping-checkbox1" class="css-checkbox" />
+                                                                    <label for="option4-topping-checkbox1" class="css-label">Flan option</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option4-topping-checkbox2" class="css-checkbox" />
+                                                                    <label for="option4-topping-checkbox2" class="css-label">Flan option</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option4-topping-checkbox3" class="css-checkbox" />
+                                                                    <label for="option4-topping-checkbox3" class="css-label">Flan option</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tab-pane" id="home-option5">
+                                                        <div class="row">
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option5-topping-checkbox1" class="css-checkbox" />
+                                                                    <label for="option5-topping-checkbox1" class="css-label">Đặc biệt option</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option5-topping-checkbox2" class="css-checkbox" />
+                                                                    <label for="option5-topping-checkbox2" class="css-label">Đặc biệt option</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xs-12 col-sm-4">
+                                                                <div class="topping-checkbox">
+                                                                    <input type="checkbox" id="option5-topping-checkbox3" class="css-checkbox" />
+                                                                    <label for="option5-topping-checkbox3" class="css-label">Đặc biệt option</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                          </div>
+                                    </div>
+                                </div>
+                                <div class="row mgt-15">
+                                    <div class="col-md-12">
+                                        <div class="require-checkbox">
+                                            <input type="checkbox" id="require-checkbox" class="css-checkbox" />
+                                            <label for="require-checkbox" class="css-label">YÊU CẦU CHO MÓN</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row hidden require-content mgt-15">
+                                    <div class="col-xs-12">
+                                        <textarea class="note" placeholder="Bạn hãy để lại yêu cầu cho món"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="heart-icon"></span>
+                                <ul class="total">
+                                    <li>20.000 đ</li>
+                                    <li><button class="add-btn"><i class="fa fa-plus"></i></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.quickview-modal -->
+</div>
+<!-- /.hot-trends -->
+
+<div class="testimonial parallax">
+    <div class="container">
+        <div id="testimonial-sliders" class="master-slider ms-skin-default">
+            <div class="ms-slide">
+                <div class="media">
+                    <div class="media-left">
+                        <img width="170" src="dist/images/avatar-2.png" alt="img"/>
+                    </div>
+                    <div class="media-body">
+                        <div class="mgb-30">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam architecto cupiditate debitis deleniti, doloremque dolores ducimus eaque earum eius eligendi et ex hic iure nisi nobis non omnis optio pariatur perferendis placeat praesentium quasi qui, reprehenderit repudiandae sequi totam veritatis vero voluptas voluptates. Architecto fugit laborum nemo odit vero.</p>
+                        </div>
+                        <p>Mikhail Tuan Duong, Freelance Creative</p>
+                        <div class="stars">
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ms-slide">
+                <div class="media">
+                    <div class="media-left">
+                        <img width="170" src="dist/images/avatar-2.png" alt="img"/>
+                    </div>
+                    <div class="media-body">
+                        <div class="mgb-30">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda at aut commodi cupiditate deserunt dicta, eos, esse illo ipsa molestias neque porro qui quisquam recusandae, suscipit tempore ut vel. Adipisci autem consectetur delectus ea, est expedita labore laudantium magnam magni mollitia officiis optio quidem quis temporibus totam ut vero voluptate!</p>
+                        </div>
+                        <p>Mikhail Tuan Duong, Freelance Creative</p>
+                        <div class="stars">
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                            <img src="dist/images/star-icon.png" alt="img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#testimonial-sliders -->
+    </div>
+</div>
+<!-- /.testimonial -->
+
+<div class="get-app">
+    <div class="container">
+        <img class="two-mobile" src="dist/images/two-mobile.png" alt="img"/>
+        <h3>Pay with your phone. And do so much more.</h3>
+        <ul>
+            <li>
+                <a>
+                    <img src="dist/images/app-store.png" alt="img"/>
+                </a>
+            </li>
+            <li>
+                <a>
+                    <img src="dist/images/google-play.png" alt="img"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /.get-app -->
+
+<div class="social-section">
+    <div class="container">
+        <ul class="list-socials">
+            <li>
+                <a><i class="fa fa-facebook"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-twitter"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-google-plus"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-pinterest"></i></a>
+            </li>
+            <li>
+                <a><i class="fa fa-instagram"></i></a>
+            </li>
+        </ul>
+        <!-- /.list-socials -->
+        <div class="get-email">
+            <form>
+                <label for="join-our-input">Join our email list</label>
+                <input id="join-our-input" type="email" placeholder="Email address"/>
+                <button class="submit-btn">Get started</button>
+            </form>
+        </div>
+        <!-- /.get-email -->
+    </div>
+</div>
+<!-- /.social-section -->
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-sm-3">
+                <h3>About us</h3>
+                <p>Địa chỉ</p>
+                <p>Email: youremail</p>
+                <p>Phone: yourphone</p>
+                <p>Fax: fax</p>
+                <ul class="list-socials">
+                    <li>
+                        <a><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-google-plus"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-pinterest"></i></a>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-instagram"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <h3>Latest our from blog</h3>
+                <ul class="footer-blogs">
+                    <li>
+                        <p><a>Our Blog 1</a></p>
+                        <span>November 29, 2016</span>
+                    </li>
+                    <li>
+                        <p><a>Our Blog 2</a></p>
+                        <span>November 29, 2016</span>
+                    </li>
+                    <li>
+                        <p><a>Our Blog 3</a></p>
+                        <span>November 29, 2016</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <h3>Further links</h3>
+                <ul class="further-links">
+                    <li>
+                        <a>Further Link 1</a>
+                    </li>
+                    <li>
+                        <a>Further Link 2</a>
+                    </li>
+                    <li>
+                        <a>Further Link 3</a>
+                    </li>
+                    <li>
+                        <a>Further Link 4</a>
+                    </li>
+                    <li>
+                        <a>Further Link 5</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-6 col-sm-3">
+                <h3>Photo stream</h3>
+                <img class="img-responsive" src="dist/images/flickr.jpg" alt="img"/>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- /.footer -->
+
+<script type="text/javascript" src="dist/scripts/main.js?v=1.1.1"></script>
+
+</body>
+</html>
