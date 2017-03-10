@@ -19,25 +19,108 @@
 ----------------------------------------- */
 @import "utilities/pagination.less";
 
+
+/* ---------------------------------------
+    BODY
+----------------------------------------- */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    line-height: 1.5em;
+    color: #333;
+    text-align: center;
+}
+
 /* ---------------------------------------
     TOP BANNER
 ----------------------------------------- */
 .top-banner {
-    background-color: red;
+    height: 200px;
+    embed {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 /* ---------------------------------------
     MAIN MENU
 ----------------------------------------- */
 .main-menu {
-    
+    .nav {
+        li {
+            a {
+                &:hover {
+                  background-color: transparent !important;
+                  color: #fee900 !important;
+                }
+                &:focus {
+                    background-color: transparent !important; 
+                    color: #fee900 !important;
+                }
+            }
+        } 
+    }
+    .custom-nav {
+        border-radius: 0;
+        min-height: auto;
+        background-color: #F90000;
+        .container-fluid {
+            @media (min-width: 1200px) {
+                padding: 0;
+            }
+            .navbar-toggle {
+                background-color: #fff;
+                border-radius: 0;
+                .icon-bar {
+                    background-color: #333;
+                }
+            }
+            .navbar-collapse {
+                @media (min-width: 1200px) {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+
+                ul {
+                    li {
+                        &.active {
+                            a {
+                                color: #fee900 !important;
+                            }
+                        }
+                        &.dropdown {
+                            .dropdown-menu {
+                                background-color: #F90000 !important;
+                                li {
+                                    a {
+                                        
+                                    }
+                                }
+                            }
+                        }
+                        a {
+                            padding: 0 5px;
+                            line-height: 38px;
+                            font-weight: 600;
+                            font-size: 10.5px;
+                            text-align: left;
+                            color: #fff;
+                            &.uppercase {
+                                text-transform: uppercase;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
 }
 
 /* ---------------------------------------
     MAIN SLIDER
 ----------------------------------------- */
 .main-slider {
-    background-color: blue;
+    // background-color: blue;
 }
 
 /* ---------------------------------------
