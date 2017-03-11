@@ -7271,6 +7271,7 @@ body {
   color: #fee900 !important;
 }
 .main-menu .custom-nav {
+  margin-bottom: 0;
   border-radius: 0;
   min-height: auto;
   background-color: #F90000;
@@ -7311,20 +7312,285 @@ body {
   text-transform: uppercase;
 }
 /* ---------------------------------------
+    SEARCH BOX
+----------------------------------------- */
+.search-box {
+  padding-bottom: 10px;
+  background-color: #fffcc5;
+}
+.search-box marquee {
+  font-size: 16px;
+  margin-top: 20px;
+  color: red;
+  font-weight: 700;
+}
+.search-box .custom-search-input {
+  margin: 0;
+  margin-top: 10px;
+}
+.search-box .custom-search-input .search-query {
+  border-radius: 0;
+  box-shadow: none;
+}
+.search-box .custom-search-input .input-group-btn {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+}
+.search-box .custom-search-input button {
+  position: absolute;
+  right: 5px;
+  border: 0;
+  background: transparent;
+  border: none;
+}
+.search-box .custom-search-input button span {
+  color: #F90000;
+}
+/* ---------------------------------------
     MAIN SLIDER
 ----------------------------------------- */
+.main-slider .master-slider .ms-slide .title {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 18px;
+  margin: 0;
+  width: 100%;
+  bottom: 0;
+  z-index: 10;
+  font-size: 15px;
+  color: #fff;
+}
 /* ---------------------------------------
     CONTENT WRAPPER
 ----------------------------------------- */
-.content-wrapper .main-content {
-  background-color: grey;
+.content-wrapper {
+  padding-top: 10px;
 }
-.content-wrapper .right-content {
-  background-color: red;
+.content-wrapper .main-content .section1 .box {
+  border: none;
+  margin-bottom: 0;
+}
+.content-wrapper .main-content .section1 .box .panel-heading {
+  border: none;
+  background-color: #dd0000;
+  height: 38px;
+}
+.content-wrapper .main-content .section1 .box .panel-heading .box-header {
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
+.content-wrapper .main-content .section1 .box .box-content {
+  border: 1px solid #ddd;
+  border-top: none;
+}
+.content-wrapper .main-content .section1 .box .box-content .title-item h5 {
+  color: red;
+  font-weight: 500;
+  text-align: left;
+}
+.content-wrapper .main-content .section1 .box .box-content .text {
+  text-align: left;
+}
+.content-wrapper .main-content .section1 .box .box-content .related-item {
+  text-align: left;
+  padding-top: 15px;
+}
+.content-wrapper .main-content .section1 .box .box-content .related-item ul li {
+  padding: 5px 0;
+  display: block;
+}
+.content-wrapper .main-content .section1 .box .box-content .related-item ul li a {
+  color: #058041;
+  text-transform: uppercase;
+}
+.content-wrapper .main-content .section1 .box .box-content .related-item ul li a:hover {
+  color: red;
+}
+.content-wrapper .main-content .section1 .box .box-content .related-item ul li .fa {
+  color: red;
+  padding-right: 10px;
+}
+.content-wrapper .main-content .section1 .box .box-content .read-more {
+  text-align: right;
+  padding-right: 10px;
+}
+.content-wrapper .main-content .section1 .box .box-content .read-more a {
+  color: red;
+  font-weight: 600;
+}
+.content-wrapper .main-content .section2 {
+  padding-top: 10px;
+}
+.content-wrapper .main-content .section2 .banner {
+  padding-left: 0;
+  padding-right: 0;
+}
+.content-wrapper .main-content .section2 .banner img {
+  width: inherit;
+}
+.content-wrapper .main-content .section3 {
+  padding-top: 10px;
+}
+.content-wrapper .main-content .section3 .box {
+  border: none;
+  margin-bottom: 0;
+}
+.content-wrapper .main-content .section3 .box .panel-heading {
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #dd0000;
+}
+.content-wrapper .main-content .section3 .box .panel-heading .nav li.active a {
+  background-color: transparent;
+  color: #fee900;
+}
+.content-wrapper .main-content .section3 .box .panel-heading .nav li a {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  padding-right: 0;
+  padding-left: 0;
+}
+.content-wrapper .main-content .section3 .box .panel-heading .nav li a:hover {
+  color: #fee900;
+}
+.content-wrapper .main-content .section3 .box .box-content {
+  border: 1px solid #ddd;
+}
+.content-wrapper .main-content .section3 .box .box-content .title-item h5 {
+  color: red;
+  font-weight: 500;
+  text-align: left;
+}
+.content-wrapper .main-content .section3 .box .box-content .text {
+  text-align: left;
+}
+.content-wrapper .main-content .section3 .box .box-content .related-item {
+  text-align: left;
+  padding-top: 15px;
+}
+.content-wrapper .main-content .section3 .box .box-content .related-item ul li {
+  padding: 5px 0;
+  display: block;
+}
+.content-wrapper .main-content .section3 .box .box-content .related-item ul li a {
+  color: #058041;
+  text-transform: uppercase;
+}
+.content-wrapper .main-content .section3 .box .box-content .related-item ul li a:hover {
+  color: red;
+}
+.content-wrapper .main-content .section3 .box .box-content .related-item ul li .fa {
+  color: red;
+  padding-right: 10px;
+}
+.content-wrapper .main-content .section3 .box .box-content .read-more {
+  text-align: right;
+  padding-right: 10px;
+}
+.content-wrapper .main-content .section3 .box .box-content .read-more a {
+  color: red;
+  font-weight: 600;
+}
+.content-wrapper .main-content .section4 {
+  padding-top: 10px;
+}
+.content-wrapper .main-content .section4 .box {
+  border: none;
+  margin-bottom: 0;
+}
+.content-wrapper .main-content .section4 .box .panel-heading {
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: #dd0000;
+}
+.content-wrapper .main-content .section4 .box .panel-heading .nav li.active a {
+  background-color: transparent;
+  color: #fee900;
+}
+.content-wrapper .main-content .section4 .box .panel-heading .nav li a {
+  background-color: transparent;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 700;
+  padding-right: 0;
+  padding-left: 0;
+}
+.content-wrapper .main-content .section4 .box .panel-heading .nav li a:hover {
+  color: #fee900;
+}
+.content-wrapper .main-content .section4 .box .box-content {
+  border: 1px solid #ddd;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item {
+  text-align: left;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item ul li {
+  padding: 10px 0;
+  border-bottom: 1px dotted #ccc;
+  display: block;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item ul li:last-child {
+  border: none;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item ul li a {
+  color: #515151;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item ul li a:hover {
+  color: red;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item ul li .fa {
+  color: red;
+  padding-right: 10px;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item .read-more {
+  text-align: right;
+  padding-right: 10px;
+}
+.content-wrapper .main-content .section4 .box .box-content .list-item .read-more a {
+  color: red;
+  font-weight: 600;
+}
+.content-wrapper .main-content .section4 .box .box-content .img-banner img {
+  width: 100%;
 }
 /* ---------------------------------------
     MAIN FOOTER
 ----------------------------------------- */
-.main-footer {
-  background-color: antiquewhite;
+.main-footer .title {
+  text-align: left;
+  text-transform: uppercase;
+  background-color: #d00;
+  color: white;
+  width: 205px;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.main-footer .ms-staff-carousel {
+  max-width: 100%;
+}
+.main-footer .site-info {
+  text-align: center;
+  background-color: #ff0000;
+  padding: 10px;
+  color: white;
+}
+.main-footer .site-info h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.main-footer .site-info span {
+  display: block;
+  font-size: 15px;
+  font-style: italic;
 }

@@ -26,6 +26,7 @@ gulp.task('css', ['less'], function () {
         'assets/styles/animate.min.css',
         'assets/styles/select2.min.css',
         'assets/masterslider/style/masterslider.css',
+        'assets/masterslider/style/ms-staff-style.css',
         'assets/masterslider/skins/default/style.css',
         'assets/styles/styles.css'
     ])
