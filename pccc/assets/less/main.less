@@ -13,7 +13,7 @@
 /* ---------------------------------------
     SELECT2
 ----------------------------------------- */
-@import "utilities/select2.less";
+// @import "utilities/select2.less";
 /* ---------------------------------------
     PAGINATION
 ----------------------------------------- */
@@ -371,6 +371,7 @@ body {
                 }
                 .box-content {
                     border: 1px solid #ddd;
+                    min-height: 436px;
                     .list-item {
                         text-align: left;
                         ul {
@@ -413,7 +414,183 @@ body {
         }
     }
     .right-content {
-        // background-color: red;
+        padding-right: 0;
+        .box-inform {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    height: 353px;
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .list-item {
+                        text-align: left;
+                        ul {
+                            li {
+                                padding: 10px 0;
+                                border-bottom: 1px dotted #ccc;
+                                &:last-child {
+                                    border: none;
+                                }
+                                a {
+                                    color: #515151;
+                                    &:hover {
+                                        color: red;
+                                    }
+                                }
+                                .fa {
+                                    color: red;
+                                    padding-right: 10px;
+                                }
+                                display: block;
+                            }
+                        }
+                        .read-more {
+                            text-align: right;
+                            padding-right: 10px;
+                            a {
+                                color: red;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .box-video {
+            padding-top: 10px;
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .video-content {
+                        height: 200px;
+                        width: 100%;
+                    }
+                    .thumb-list {
+                        ul {
+                            li {
+                                display: inline-block;
+                                margin-right: 6px;
+                                &:last-child {
+                                    margin-right: 0;
+                                }
+                                .img-thumb {
+                                    width: 50px;
+                                    height: 37px; 
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .hcm-banner, .pccc-banner {
+            padding-top: 10px;
+            img {
+                width: 100%;
+            }
+        }
+        .hot-line {
+            color: #ffea00;
+            font-weight: 700;
+            font-style: italic;
+            background: #dd0000;
+            margin-top: 10px;
+            border-radius: 4px;
+            .tile {
+                padding-top: 10px;
+            }
+            .number {
+                font-size: 35px;
+                line-height: 44px;
+                margin-bottom: 0;
+            }
+        }
+        .box-link-site {
+            padding-top: 10px;
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .select2-container--default {
+                        .select2-selection--single {
+                            border-radius: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+        .box-count-viewer {
+            padding-top: 10px;
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .title {
+                        color: #058041;
+                    }
+                    .count-viewer {
+                        padding: 10px;   
+                    }
+                    .number {
+                        strong {
+                            font-size: 24px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
