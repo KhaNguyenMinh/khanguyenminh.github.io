@@ -7785,89 +7785,222 @@ body {
   padding-top: 0;
 }
 /* ---------------------------------------
-    DOCUMENTs PAGE
+    DOCUMENTS PAGE, STANDARDS PAGE
 ----------------------------------------- */
-.content-wrapper.documents-page .main-content .box {
+.content-wrapper.documents-page .main-content .box,
+.content-wrapper.standards-page .main-content .box {
   border: none;
   margin-bottom: 0;
 }
-.content-wrapper.documents-page .main-content .box .panel-heading {
+.content-wrapper.documents-page .main-content .box .panel-heading,
+.content-wrapper.standards-page .main-content .box .panel-heading {
   border: none;
   background-color: #dd0000;
   height: 38px;
 }
-.content-wrapper.documents-page .main-content .box .panel-heading .box-header {
+.content-wrapper.documents-page .main-content .box .panel-heading .box-header,
+.content-wrapper.standards-page .main-content .box .panel-heading .box-header {
   color: #fff;
   text-align: left;
   font-size: 14px;
   font-weight: 700;
 }
-.content-wrapper.documents-page .main-content .box .box-content {
+.content-wrapper.documents-page .main-content .box .box-content,
+.content-wrapper.standards-page .main-content .box .box-content {
   border: 1px solid #ddd;
   border-top: none;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item {
   padding-bottom: 10px;
   border-bottom: 1px solid #d6d6d6;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .left-content {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .left-content,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .left-content {
+  padding-top: 13px;
+}
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .left-content .img-wrapper,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .left-content .img-wrapper {
   border: 1px solid #d6d6d6;
-  padding: 0;
+  width: 142px;
+  height: 142px;
+  margin: auto;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .left-content img {
-  width: 100%;
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .left-content img,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .left-content img {
+  width: 139px;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .right-content {
   text-align: left;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content .title h5 {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content .title h5,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .right-content .title h5 {
   color: #000;
   font-weight: 600;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content .date {
-  font-style: italic;
-  color: #000;
-  font-size: 13px;
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content .text-content,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .right-content .text-content {
+  min-height: 75px;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content .content {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .right-content .text-content .content,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .right-content .text-content .content {
   color: #000;
   font-size: 13px;
   font-family: 'Arial';
   margin-top: 10px;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .read-more {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .read-more,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .read-more {
   text-align: left;
+  padding-top: 10px;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .read-more a {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .read-more a,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .read-more a {
   color: #ff0000;
   font-size: 13px;
   font-style: italic;
-  padding-left: 10px;
 }
-.content-wrapper.documents-page .main-content .box .box-content .list-item .item .read-more a .fa {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .read-more a .fa,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .read-more a .fa {
   font-size: 10px;
   padding-left: 5px;
 }
-.content-wrapper.documents-page .main-content .box .box-content .pagination {
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .btn-actions,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .btn-actions {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 24px;
+}
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .btn-actions a,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .btn-actions a {
+  margin: 15px;
+}
+.content-wrapper.documents-page .main-content .box .box-content .list-item .item .btn-actions a span:hover,
+.content-wrapper.standards-page .main-content .box .box-content .list-item .item .btn-actions a span:hover {
+  color: red;
+}
+.content-wrapper.documents-page .main-content .box .box-content .pagination,
+.content-wrapper.standards-page .main-content .box .box-content .pagination {
   margin: 15px 0;
   float: right;
 }
 .content-wrapper.documents-page .main-content .box .box-content .pagination li a,
-.content-wrapper.documents-page .main-content .box .box-content .pagination li span {
+.content-wrapper.standards-page .main-content .box .box-content .pagination li a,
+.content-wrapper.documents-page .main-content .box .box-content .pagination li span,
+.content-wrapper.standards-page .main-content .box .box-content .pagination li span {
   border-radius: 50%;
   margin: 0 5px;
   color: #6b6b6b;
 }
-.content-wrapper.documents-page .main-content .box .box-content .pagination li.active a {
+.content-wrapper.documents-page .main-content .box .box-content .pagination li.active a,
+.content-wrapper.standards-page .main-content .box .box-content .pagination li.active a {
   background-color: #dd0000;
   border-color: #dd0000;
   color: #FFF;
 }
-.content-wrapper.documents-page .main-content .box .box-content .pagination li:hover a {
+.content-wrapper.documents-page .main-content .box .box-content .pagination li:hover a,
+.content-wrapper.standards-page .main-content .box .box-content .pagination li:hover a {
   background-color: #dd0000;
   border-color: #dd0000;
   color: #FFF;
 }
-.content-wrapper.documents-page .right-content .box-video {
+.content-wrapper.documents-page .right-content .box-video,
+.content-wrapper.standards-page .right-content .box-video {
+  padding-top: 0;
+}
+/* ---------------------------------------
+ADMINISTRATIVE PROCEEDS PAGE
+----------------------------------------- */
+.content-wrapper.administrative-proceeds-page .main-content .box {
+  border: none;
+  margin-bottom: 0;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .panel-heading {
+  border: none;
+  background-color: #dd0000;
+  height: 38px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .panel-heading .box-header {
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content {
+  border: 1px solid #ddd;
+  border-top: none;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d6d6d6;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .left-content {
+  padding-top: 13px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .left-content .img-wrapper {
+  border: 1px solid #d6d6d6;
+  width: 142px;
+  height: 142px;
+  margin: auto;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .left-content img {
+  width: 139px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .right-content {
+  text-align: left;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .right-content .title-wrapper {
+  min-height: 127px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .right-content .title-wrapper .title h5 {
+  color: #000;
+  font-weight: 600;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .read-more {
+  text-align: left;
+  padding-top: 10px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .read-more a {
+  color: #ff0000;
+  font-size: 13px;
+  font-style: italic;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .read-more a .fa {
+  font-size: 10px;
+  padding-left: 5px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .btn-actions {
+  text-align: right;
+  padding-right: 30px;
+  font-size: 24px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .btn-actions a {
+  margin: 15px;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .list-item .item .btn-actions a span:hover {
+  color: red;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .pagination {
+  margin: 15px 0;
+  float: right;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .pagination li a,
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .pagination li span {
+  border-radius: 50%;
+  margin: 0 5px;
+  color: #6b6b6b;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .pagination li.active a {
+  background-color: #dd0000;
+  border-color: #dd0000;
+  color: #FFF;
+}
+.content-wrapper.administrative-proceeds-page .main-content .box .box-content .pagination li:hover a {
+  background-color: #dd0000;
+  border-color: #dd0000;
+  color: #FFF;
+}
+.content-wrapper.administrative-proceeds-page .right-content .box-video {
   padding-top: 0;
 }

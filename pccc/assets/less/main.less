@@ -798,11 +798,11 @@ body {
 }
 
 /* ---------------------------------------
-    DOCUMENTs PAGE
+    DOCUMENTS PAGE, STANDARDS PAGE
 ----------------------------------------- */
 
 .content-wrapper {
-    &.documents-page {
+    &.documents-page, &.standards-page {
         .main-content {
             .box {
                 border: none;
@@ -826,10 +826,15 @@ body {
                             padding-bottom: 10px;
                             border-bottom: 1px solid #d6d6d6;
                             .left-content {
-                                border: 1px solid #d6d6d6;;
-                                padding: 0;
+                                padding-top: 13px;
+                                .img-wrapper {
+                                    border: 1px solid #d6d6d6;
+                                    width: 142px;
+                                    height: 142px;
+                                    margin: auto;
+                                } 
                                 img {
-                                    width: 100%;
+                                    width: 139px;
                                 }
                             }
                             .right-content {
@@ -840,28 +845,158 @@ body {
                                         font-weight: 600;
                                     }
                                 }
-                                .date {
-                                    font-style: italic;
-                                    color: #000;
-                                    font-size: 13px;
-                                }
-                                .content {
-                                    color: #000;
-                                    font-size: 13px;
-                                    font-family: 'Arial';
-                                    margin-top: 10px;
+                                .text-content {
+                                    min-height: 75px;
+                                    .content {
+                                        color: #000;
+                                        font-size: 13px;
+                                        font-family: 'Arial';
+                                        margin-top: 10px;
+                                    }
                                 }
                             }
                             .read-more {
                                 text-align: left;
+                                padding-top: 10px;
                                 a {
                                     color: #ff0000;
                                     font-size: 13px;
                                     font-style: italic;
-                                    padding-left: 10px;
                                     .fa {
                                         font-size: 10px;
                                         padding-left: 5px;
+                                    }
+                                }
+                            }
+                            .btn-actions {
+                                text-align: right;
+                                padding-right: 30px;
+                                font-size: 24px;
+                                a {
+                                    margin: 15px;
+                                    span {
+                                        &:hover {
+                                            color: red;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pagination {
+                        margin: 15px 0;
+                        float: right;
+                        li {
+                            a, span {
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                color: #6b6b6b;
+                            }
+                            &.active {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                    
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                }   
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            .box-video {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+ADMINISTRATIVE PROCEEDS PAGE
+----------------------------------------- */
+
+.content-wrapper {
+    &.administrative-proceeds-page {
+        .main-content {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .list-item {
+                        .item {
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid #d6d6d6;
+                            .left-content {
+                                padding-top: 13px;
+                                .img-wrapper {
+                                    border: 1px solid #d6d6d6;
+                                    width: 142px;
+                                    height: 142px;
+                                    margin: auto;
+                                } 
+                                img {
+                                    width: 139px;
+                                }
+                            }
+                            .right-content {
+                                text-align: left;
+                                .title-wrapper {
+                                    min-height: 127px;
+                                    .title {
+                                        h5 {
+                                            color: #000;
+                                            font-weight: 600;
+                                        }
+                                    }
+                                }
+                                
+                            }
+                            .read-more {
+                                text-align: left;
+                                padding-top: 10px;
+                                a {
+                                    color: #ff0000;
+                                    font-size: 13px;
+                                    font-style: italic;
+                                    .fa {
+                                        font-size: 10px;
+                                        padding-left: 5px;
+                                    }
+                                }
+                            }
+                            .btn-actions {
+                                text-align: right;
+                                padding-right: 30px;
+                                font-size: 24px;
+                                a {
+                                    margin: 15px;
+                                    span {
+                                        &:hover {
+                                            color: red;
+                                        }
                                     }
                                 }
                             }
