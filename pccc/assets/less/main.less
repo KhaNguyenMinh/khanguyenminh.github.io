@@ -17,7 +17,7 @@
 /* ---------------------------------------
     PAGINATION
 ----------------------------------------- */
-@import "utilities/pagination.less";
+// @import "utilities/pagination.less";
 
 
 /* ---------------------------------------
@@ -29,20 +29,13 @@ body {
     line-height: 1.5em;
     color: #333;
     text-align: center;
-    // .clearfix {
-    //     &:after {
-    //         display: block;
-    //         content: '';
-    //         clear: both;
-    //     }
-    // }
 }
 
 /* ---------------------------------------
     TOP BANNER
 ----------------------------------------- */
 .top-banner {
-    height: 200px;
+    height: 160px;
     embed {
         width: 100%;
         height: 100%;
@@ -100,8 +93,11 @@ body {
                             .dropdown-menu {
                                 background-color: #F90000 !important;
                                 li {
-                                    a {
-                                        
+                                    &.active {
+                                        a {
+                                            color: #fee900 !important;
+                                            background-color: #F90000 !important;
+                                        }
                                     }
                                 }
                             }
@@ -182,6 +178,15 @@ body {
                 color: #fff;
             }
         }
+    }
+}
+
+/* ---------------------------------------
+    MAIN BANNER
+----------------------------------------- */
+.main-banner {
+    img {
+        width: 100%;
     }
 }
 
@@ -302,6 +307,9 @@ body {
                             text-align: left;
                         }
                     }
+                    img {
+                        width: 100%;
+                    }
                     .text {
                         text-align: left;
                     }
@@ -405,6 +413,9 @@ body {
                     }
                     
                     .img-banner {
+                        @media (max-width: 860px) {
+                            padding-top: 10px;
+                        }
                         img {
                             width: 100%;
                         }
@@ -415,6 +426,10 @@ body {
     }
     .right-content {
         padding-right: 0;
+        @media (max-width: 860px) {
+            padding-left: 0;
+            padding-top: 10px;
+        }
         .box-inform {
             .box {
                 border: none;
@@ -624,6 +639,268 @@ body {
             display: block;
             font-size: 15px;
             font-style: italic;
+        }
+    }
+}
+
+/* ---------------------------------------
+    INTRO PAGE
+----------------------------------------- */
+
+.content-wrapper {
+    &.intro-page {
+        .main-content {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .title {
+                        color: #000;
+                        line-height: 20px;
+                        font-weight: 600;
+                        font-size: 16px;
+                    }
+                    p {
+                        color: #000;
+                        font-size: 13px;
+                        font-family: 'Arial';
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        .right-content {
+            .box-video {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+    NEWS AND EVENTS PAGE
+----------------------------------------- */
+
+.content-wrapper {
+    &.news-and-events-page {
+        .main-content {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .list-item {
+                        .item {
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid #d6d6d6;
+                            .left-content {
+                                img {
+                                    width: 100%;
+                                    padding-top: 12px;
+                                }
+                            }
+                            .right-content {
+                                text-align: left;
+                                .title {
+                                    h5 {
+                                        color: #000;
+                                        font-weight: 600;
+                                    }
+                                }
+                                .date {
+                                    font-style: italic;
+                                    color: #000;
+                                    font-size: 13px;
+                                }
+                                .content {
+                                    color: #000;
+                                    font-size: 13px;
+                                    font-family: 'Arial';
+                                    margin-top: 10px;
+                                }
+                            }
+                            .read-more {
+                                text-align: left;
+                                a {
+                                    color: #ff0000;
+                                    font-size: 13px;
+                                    font-style: italic;
+                                    padding-left: 10px;
+                                    .fa {
+                                        font-size: 10px;
+                                        padding-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pagination {
+                        margin: 15px 0;
+                        float: right;
+                        li {
+                            a, span {
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                color: #6b6b6b;
+                            }
+                            &.active {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                    
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                }   
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            .box-video {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+    DOCUMENTs PAGE
+----------------------------------------- */
+
+.content-wrapper {
+    &.documents-page {
+        .main-content {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .list-item {
+                        .item {
+                            padding-bottom: 10px;
+                            border-bottom: 1px solid #d6d6d6;
+                            .left-content {
+                                border: 1px solid #d6d6d6;;
+                                padding: 0;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            .right-content {
+                                text-align: left;
+                                .title {
+                                    h5 {
+                                        color: #000;
+                                        font-weight: 600;
+                                    }
+                                }
+                                .date {
+                                    font-style: italic;
+                                    color: #000;
+                                    font-size: 13px;
+                                }
+                                .content {
+                                    color: #000;
+                                    font-size: 13px;
+                                    font-family: 'Arial';
+                                    margin-top: 10px;
+                                }
+                            }
+                            .read-more {
+                                text-align: left;
+                                a {
+                                    color: #ff0000;
+                                    font-size: 13px;
+                                    font-style: italic;
+                                    padding-left: 10px;
+                                    .fa {
+                                        font-size: 10px;
+                                        padding-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .pagination {
+                        margin: 15px 0;
+                        float: right;
+                        li {
+                            a, span {
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                color: #6b6b6b;
+                            }
+                            &.active {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                    
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                }   
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            .box-video {
+                padding-top: 0;
+            }
         }
     }
 }
