@@ -8122,3 +8122,86 @@ CONTACT PAGE
 .content-wrapper.contact-page .right-content .box-video {
   padding-top: 0;
 }
+/* ---------------------------------------
+DETAIL PAGE
+----------------------------------------- */
+.content-wrapper.detail-page .main-content .box {
+  border: none;
+  margin-bottom: 0;
+}
+.content-wrapper.detail-page .main-content .box .panel-heading {
+  border: none;
+  background-color: #dd0000;
+  height: 38px;
+}
+.content-wrapper.detail-page .main-content .box .panel-heading .box-header {
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
+.content-wrapper.detail-page .main-content .box .box-content {
+  border: 1px solid #ddd;
+  border-top: none;
+  color: #000;
+  font-size: 13px;
+  text-align: left;
+  font-family: 'Arial';
+}
+.content-wrapper.detail-page .main-content .box .box-content .detail-content .title {
+  font-weight: 700;
+  color: #000;
+}
+.content-wrapper.detail-page .main-content .box .box-content .detail-content .date {
+  font-style: italic;
+  color: #000;
+  font-size: 13px;
+  line-height: 36px;
+}
+.content-wrapper.detail-page .main-content .box .box-content .detail-content .img-wrapper {
+  text-align: center;
+}
+.content-wrapper.detail-page .main-content .box .box-content .detail-content .img-wrapper img {
+  width: 100%;
+}
+.content-wrapper.detail-page .main-content .box .box-content .detail-content .img-wrapper em {
+  line-height: 36px;
+}
+.content-wrapper.detail-page .main-content .box .box-content .detail-content .author {
+  float: right;
+  font-weight: 700;
+}
+.content-wrapper.detail-page .main-content .box .box-content .related .title {
+  font-family: Verdana, Geneva, sans-serif;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #6b6b6b;
+  color: #ff0000;
+  font-weight: 500;
+}
+.content-wrapper.detail-page .main-content .box .box-content .related .related-item {
+  text-align: left;
+  padding-top: 15px;
+}
+.content-wrapper.detail-page .main-content .box .box-content .related .related-item ul li {
+  padding: 10px 0;
+  border-bottom: dashed 1px #ddd;
+  line-height: 20px;
+  display: block;
+}
+.content-wrapper.detail-page .main-content .box .box-content .related .related-item ul li a {
+  color: #058041;
+  text-transform: uppercase;
+}
+.content-wrapper.detail-page .main-content .box .box-content .related .related-item ul li a:hover {
+  color: red;
+}
+.content-wrapper.detail-page .main-content .box .box-content .related .related-item ul li .fa {
+  padding-right: 10px;
+  color: #058041;
+  font-size: 8px;
+}
+.content-wrapper.detail-page .right-content .box-video {
+  padding-top: 0;
+}
