@@ -44,6 +44,7 @@ gulp.task('js', function () {
         'assets/scripts/libs/please-wait.min.js',
         'assets/scripts/libs/jquery.min.js',
         'assets/scripts/libs/jquery.easing.1.3.js',
+        'assets/scripts/libs/jquery.sticky.js',
         'assets/scripts/libs/bootstrap.min.js',
         'assets/scripts/libs/modernizr.js',
         'assets/scripts/libs/onlynumber.js',

@@ -29,6 +29,40 @@ body {
     line-height: 1.5em;
     color: #333;
     text-align: center;
+    
+    p {
+        font-family: 'Arial';
+        line-height: 20px;
+        color: #000;
+        font-size: 13px;
+    }
+}
+
+.left-banner-wrapper {
+    width: 140px;
+    position: absolute;
+    left: 20px;
+    top: 160px;
+    img {
+        width: 140px;
+        margin-bottom: 10px;
+    }
+    @media (max-width: 1360px) {
+        display: none;
+    }
+}
+.right-banner-wrapper {
+    width: 140px;
+    position: absolute;
+    right: 20px;
+    top: 160px;
+    img {
+        width: 140px;
+        margin-bottom: 10px;
+    }
+    @media (max-width: 1360px) {
+        display: none;
+    }
 }
 
 /* ---------------------------------------
@@ -37,19 +71,16 @@ body {
 .scrollToTop{
     display:none;
     position: fixed;
-    right: 50px;
+    right: 70px;
     bottom: 50px;
     margin: 0;
     z-index: 9999;
-    a {
-        color: #ff0000;
-        font-weight: bold;
-        font-size: 11px;
-        text-decoration: none;
-        text-transform: uppercase;
-        padding-top: 35px;
-        background: url('../images/totop.png') center top no-repeat;
-    }
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-image: url(../images/scrolltop.png);
+    background-repeat: no-repeat;
+    background-size: 50px;
 }
 
 /* ---------------------------------------
@@ -89,6 +120,7 @@ body {
         border-radius: 0;
         min-height: auto;
         background-color: #F90000;
+        z-index: 999 !important;
         .container-fluid {
             @media (min-width: 1200px) {
                 padding: 0;
@@ -450,6 +482,7 @@ body {
     }
     .right-content {
         padding-right: 0;
+        right: -1px;
         @media (max-width: 860px) {
             padding-left: 0;
             padding-top: 10px;
@@ -719,7 +752,7 @@ body {
 ----------------------------------------- */
 
 .content-wrapper {
-    &.news-and-events-page {
+    &.news-and-events-page, &.knowledge-page {
         .main-content {
             .box {
                 border: none;

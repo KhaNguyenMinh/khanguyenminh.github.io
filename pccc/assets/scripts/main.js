@@ -22,4 +22,62 @@
         $('body').css('opacity', 1);
     });
 
+    var slider = new MasterSlider();
+    slider.setup('mainMasterslider' , {
+         width:1000,
+         height:500, 
+         space:5,
+         autoplay: true,
+         fullwidth:true
+    });
+    slider.control('arrows');
+
+    //-----------------
+    var footerSlider = new MasterSlider();
+    footerSlider.setup('footerMasterslider' ,{
+        loop:true,
+        width:238,
+        height:122,
+        speed:20,
+        view:'fadeBasic',
+        preload:0,
+        space:0,
+        wheel:true,
+        autoplay: true
+    });
+    footerSlider.control('arrows');
+    
+    //----------------
+    $('#externallink').select2({
+        placeholder: "[Hãy chọn 1 liên kết]",
+    });
+
+    $('#externallink').on('select2:select', function (e) {
+        // Do something
+        var selected_element = $(e.currentTarget);
+        var select_val = selected_element.val();
+        console.log('selected...');
+        console.log(select_val);
+    });
+
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function(){
+        if ($(this).scrollTop() > 100) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
+    
+    //Click event to scroll to top
+    $('.scrollToTop').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+
+    // Sticky
+    $('.left-banner').sticky({topSpacing:0});
+    $('.right-banner').sticky({topSpacing:0});
+    $('.custom-nav').sticky({topSpacing:0});
+
 })(window.jQuery);
