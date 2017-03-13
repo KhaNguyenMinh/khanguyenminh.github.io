@@ -32,12 +32,22 @@
 
 </head>
 <body>
-<!--     <div id="left-sticky">
-        <img src="dist/images/sticky1.png" alt="">
-    </div> -->
     <div class="container">
         <div class=" row top-banner">
-            <embed src="dist/images/banner_pccc_0810.swf" play="true"/>
+            <object width="100%" height="100%" align="middle">
+            <param name="movie" value="dist/images/banner_pccc_0810.swf"/>
+            <!--[if !IE]>-->
+            <object type="application/x-shockwave-flash" data="dist/images/banner_pccc_0810.swf" width="800" height="600">
+                <param name="wmode" value="transparent"/>
+                <param name="movie" value="assets/images/flash-demo.swf"/>
+                <!--<![endif]-->
+                <a href="//www.adobe.com/go/getflash">
+                    <img src="//www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player"/>
+                </a>
+            <!--[if !IE]>-->
+            </object>
+            <!--<![endif]-->
+            </object>
         </div>
 
         <div class=" row main-menu">
@@ -274,24 +284,38 @@
                 <div class="master-slider" id="footerMasterslider">
                     <div class="ms-slide">
                         <img src="dist/masterslider/style/blank.gif" data-src="dist/images/gallery1.jpg" alt="lorem ipsum dolor sit"/>   
+                        <!-- linked slide -->
+                        <a href="images-gallery.html"></a>
                     </div>
                     <div class="ms-slide">
                         <img src="dist/masterslider/style/blank.gif" data-src="dist/images/gallery2.jpg" alt="lorem ipsum dolor sit"/>
+                        <!-- linked slide -->
+                        <a href="images-gallery.html"></a>
                     </div>
                     <div class="ms-slide">
                         <img src="dist/masterslider/style/blank.gif" data-src="dist/images/gallery3.jpg" alt="lorem ipsum dolor sit"/>
+                        <!-- linked slide -->
+                        <a href="images-gallery.html"></a>
                     </div>
                     <div class="ms-slide">
                         <img src="dist/masterslider/style/blank.gif" data-src="dist/images/gallery4.jpg" alt="lorem ipsum dolor sit"/>
+                        <!-- linked slide -->
+                        <a href="images-gallery.html"></a>
                     </div>
                     <div class="ms-slide">
                         <img src="dist/masterslider/style/blank.gif" data-src="dist/images/gallery4.jpg" alt="lorem ipsum dolor sit"/>
+                        <!-- linked slide -->
+                        <a href="images-gallery.html"></a>
                     </div>
                     <div class="ms-slide">
                         <img src="dist/masterslider/style/blank.gif" data-src="dist/images/gallery5.jpg" alt="lorem ipsum dolor sit"/>
+                        <!-- linked slide -->
+                        <a href="images-gallery.html"></a>
                     </div>
                     <div class="ms-slide">
                         <img src="dist/masterslider/style/blank.gif" data-src="dist/images/gallery6.jpg" alt="lorem ipsum dolor sit"/>
+                        <!-- linked slide -->
+                        <a href="images-gallery.html"></a>
                     </div>
                 </div>
                 <!-- end of masterslider -->
@@ -305,46 +329,64 @@
             </div>
         </div>
     </div>
+
+    <p class="scrollToTop"><a>Lên đầu trang</a></p>
 <script type="text/javascript" src="dist/scripts/main.js?v=1.1.1"></script>
 <script type="text/javascript">     
-        var slider = new MasterSlider();
-        slider.setup('mainMasterslider' , {
-             width:1000,
-             height:500, 
-             space:5,
-             autoplay: true
-        });
-        slider.control('arrows');
+    var slider = new MasterSlider();
+    slider.setup('mainMasterslider' , {
+         width:1000,
+         height:500, 
+         space:5,
+         autoplay: true,
+         fullwidth:true
+    });
+    slider.control('arrows');
 
-        //-----------------
-        var footerSlider = new MasterSlider();
-        footerSlider.setup('footerMasterslider' , {
-            loop:true,
-            width:238,
-            height:122,
-            speed:20,
-            view:'wave',
-            preload:0,
-            space:0,
-            wheel:true,
-            autoplay: true
-        });
-        footerSlider.control('arrows');
-        //----------------
-        $('#externallink').select2({
-            placeholder: "[Hãy chọn 1 liên kết]",
-        });
+    //-----------------
+    var footerSlider = new MasterSlider();
+    footerSlider.setup('footerMasterslider' , {
+        loop:true,
+        width:238,
+        height:122,
+        speed:20,
+        view:'fadeBasic',
+        preload:0,
+        space:0,
+        wheel:true,
+    autoplay: true
+    });
+    footerSlider.control('arrows');
+    //----------------
+    $('#externallink').select2({
+        placeholder: "[Hãy chọn 1 liên kết]",
+    });
 
-        $('#externallink').on('select2:select', function (e) {
-            // Do something
-            var selected_element = $(e.currentTarget);
-            var select_val = selected_element.val();
-            console.log('selected...');
-            console.log(select_val);
-        });
+    $('#externallink').on('select2:select', function (e) {
+        // Do something
+        var selected_element = $(e.currentTarget);
+        var select_val = selected_element.val();
+        console.log('selected...');
+        console.log(select_val);
+    }); 
 
-        // ----------------
-        // $("#left-sticky").makeFixed();
-    </script>
+    //----------
+    $(function() {
+        //Check to see if the window is top if not then display button
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $('.scrollToTop').fadeIn();
+            } else {
+                $('.scrollToTop').fadeOut();
+            }
+        });
+        
+        //Click event to scroll to top
+        $('.scrollToTop').click(function(){
+            $('html, body').animate({scrollTop : 0},800);
+            return false;
+        });
+    });   
+</script>
 </body>
 </html>

@@ -32,6 +32,27 @@ body {
 }
 
 /* ---------------------------------------
+    SCROLL TOP
+----------------------------------------- */
+.scrollToTop{
+    display:none;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    margin: 0;
+    z-index: 9999;
+    a {
+        color: #ff0000;
+        font-weight: bold;
+        font-size: 11px;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding-top: 35px;
+        background: url('../images/totop.png') center top no-repeat;
+    }
+}
+
+/* ---------------------------------------
     TOP BANNER
 ----------------------------------------- */
 .top-banner {
@@ -1039,4 +1060,138 @@ ADMINISTRATIVE PROCEEDS PAGE
         }
     }
 }
+
+/* ---------------------------------------
+IMAGES GALLERY PAGE
+----------------------------------------- */
+
+.content-wrapper {
+    &.images-gallery-page {
+        .main-content {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .item {
+                        .img {
+                            padding-bottom: 10px;
+                        }
+                        .title {
+                            color: #058041;
+                            line-height: 17px;
+                            font-size: 13px;
+                            &:hover {
+                                color: red;
+                            }
+                        }
+                    }
+                    .pagination {
+                        margin: 15px 0;
+                        float: right;
+                        li {
+                            a, span {
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                color: #6b6b6b;
+                            }
+                            &.active {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                    
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                }   
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            .box-video {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+/* ---------------------------------------
+CONTACT PAGE
+----------------------------------------- */
+
+.content-wrapper {
+    &.contact-page {
+        .main-content {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    .title {
+                        font-weight: 700;
+                        color: #ff0000;
+                    }
+                    color: #000;
+                    font-size: 13px;
+                    .table-title {
+                        font-weight: 700;
+                        color: #000;
+                    }
+                    table {
+                        thead {
+                            th {
+                                text-align: center;
+                                width: 33%;
+                            }
+                        }
+                        tbody {
+                            td {
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            .box-video {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
 
