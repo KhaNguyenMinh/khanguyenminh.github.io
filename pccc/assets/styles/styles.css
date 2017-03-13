@@ -8210,3 +8210,74 @@ DETAIL PAGE
 .content-wrapper.detail-page .right-content .box-video {
   padding-top: 0;
 }
+/* ---------------------------------------
+SEARCH RESULT PAGE
+----------------------------------------- */
+.content-wrapper.search-result-page .main-content .box {
+  border: none;
+  margin-bottom: 0;
+}
+.content-wrapper.search-result-page .main-content .box .panel-heading {
+  border: none;
+  background-color: #dd0000;
+  height: 38px;
+}
+.content-wrapper.search-result-page .main-content .box .panel-heading .box-header {
+  color: #fff;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+}
+.content-wrapper.search-result-page .main-content .box .box-content {
+  border: 1px solid #ddd;
+  border-top: none;
+  color: #000;
+  font-size: 13px;
+  text-align: left;
+  font-family: 'Arial';
+}
+.content-wrapper.search-result-page .main-content .box .box-content .search-result {
+  text-align: left;
+  padding-top: 15px;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .search-result ul li {
+  padding: 5px 0;
+  display: block;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .search-result ul li a {
+  color: #058041;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .search-result ul li a:hover {
+  color: red;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .search-result ul li .fa {
+  color: #333333;
+  font-size: 8px;
+  padding-right: 10px;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .pagination {
+  margin: 15px 0;
+  float: right;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .pagination li a,
+.content-wrapper.search-result-page .main-content .box .box-content .pagination li span {
+  border-radius: 50%;
+  margin: 0 5px;
+  color: #6b6b6b;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .pagination li.active a {
+  background-color: #dd0000;
+  border-color: #dd0000;
+  color: #FFF;
+}
+.content-wrapper.search-result-page .main-content .box .box-content .pagination li:hover a {
+  background-color: #dd0000;
+  border-color: #dd0000;
+  color: #FFF;
+}
+.content-wrapper.search-result-page .right-content .box-video {
+  padding-top: 0;
+}

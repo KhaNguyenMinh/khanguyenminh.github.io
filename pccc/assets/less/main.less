@@ -1297,4 +1297,94 @@ DETAIL PAGE
     }
 }
 
+/* ---------------------------------------
+SEARCH RESULT PAGE
+----------------------------------------- */
+
+.content-wrapper {
+    &.search-result-page {
+        .main-content {
+            .box {
+                border: none;
+                margin-bottom: 0;
+                .panel-heading {
+                    border: none;
+                    background-color: #dd0000;
+                    height: 38px;
+                    .box-header {
+                        color: #fff;
+                        text-align: left;
+                        font-size: 14px;
+                        font-weight: 700;
+                    }
+                }
+                .box-content{
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    color: #000;
+                    font-size: 13px;
+                    text-align: left;
+                    font-family: 'Arial';
+                    .search-result {
+                        text-align: left;
+                        padding-top: 15px;
+                        ul {
+                            li {
+                                padding: 5px 0;
+                                a {
+                                    color: #058041;
+                                    text-transform: uppercase;
+                                    font-size: 12px;
+                                    font-family: Verdana, Geneva, sans-serif;
+                                    &:hover {
+                                        color: red;
+                                    }
+                                }
+                                .fa {
+                                    color: #333333;
+                                    font-size: 8px;
+                                    padding-right: 10px;
+                                }
+                                display: block;
+                            }
+                        }
+                    }
+                    .pagination {
+                        margin: 15px 0;
+                        float: right;
+                        li {
+                            a, span {
+                                border-radius: 50%;
+                                margin: 0 5px;
+                                color: #6b6b6b;
+                            }
+                            &.active {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                    
+                                }
+                            }
+                            &:hover {
+                                a {
+                                    background-color: #dd0000;
+                                    border-color: #dd0000;
+                                    color: #FFF;
+                                }   
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .right-content {
+            .box-video {
+                padding-top: 0;
+            }
+        }
+    }
+}
+
 
