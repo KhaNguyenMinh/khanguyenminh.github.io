@@ -44,7 +44,7 @@ body {
 .scrollToTop{
     display:none;
     position: fixed;
-    right: 70px;
+    right: 50px;
     bottom: 50px;
     margin: 0;
     z-index: 9999;
@@ -113,6 +113,19 @@ body {
                 }
 
                 ul {
+                    @media (min-width: 860px) {
+                        li {
+                            &.dropdown {
+                                &:hover {
+                                    ul {
+                                        &.dropdown-menu {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                     li {
                         &.active {
                             a {

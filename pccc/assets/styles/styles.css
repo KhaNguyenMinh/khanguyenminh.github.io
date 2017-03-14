@@ -7136,7 +7136,7 @@ body p {
 .scrollToTop {
   display: none;
   position: fixed;
-  right: 70px;
+  right: 50px;
   bottom: 50px;
   margin: 0;
   z-index: 9999;
@@ -7199,6 +7199,11 @@ body p {
   .main-menu .custom-nav .container-fluid .navbar-collapse {
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media (min-width: 860px) {
+  .main-menu .custom-nav .container-fluid .navbar-collapse ul li.dropdown:hover ul.dropdown-menu {
+    display: block;
   }
 }
 .main-menu .custom-nav .container-fluid .navbar-collapse ul li.active a {
