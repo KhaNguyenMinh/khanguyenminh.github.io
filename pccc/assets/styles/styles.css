@@ -7229,6 +7229,11 @@ body p {
   left: -160px;
   z-index: 999;
 }
+@media (max-width: 1360px) {
+  .main-menu .left-banner {
+    display: none;
+  }
+}
 .main-menu .left-banner img {
   max-width: 100%;
   margin-bottom: 10px;
@@ -7239,6 +7244,11 @@ body p {
   top: 0;
   right: -160px;
   z-index: 999;
+}
+@media (max-width: 1360px) {
+  .main-menu .right-banner {
+    display: none;
+  }
 }
 .main-menu .right-banner img {
   max-width: 100%;
@@ -7519,6 +7529,7 @@ body p {
   .content-wrapper .right-content {
     padding-left: 0;
     padding-top: 10px;
+    right: 0;
   }
 }
 .content-wrapper .right-content .box-inform .box {
