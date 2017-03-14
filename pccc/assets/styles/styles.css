@@ -7130,36 +7130,6 @@ body p {
   color: #000;
   font-size: 13px;
 }
-.main-container .left-banner-wrapper {
-  width: 140px;
-  position: absolute;
-  right: 1190px;
-  top: 160px;
-}
-.main-container .left-banner-wrapper img {
-  width: 140px;
-  margin-bottom: 10px;
-}
-@media (max-width: 1360px) {
-  .main-container .left-banner-wrapper {
-    display: none;
-  }
-}
-.main-container .right-banner-wrapper {
-  width: 140px;
-  position: absolute;
-  left: 1190px;
-  top: 160px;
-}
-.main-container .right-banner-wrapper img {
-  width: 140px;
-  margin-bottom: 10px;
-}
-@media (max-width: 1360px) {
-  .main-container .right-banner-wrapper {
-    display: none;
-  }
-}
 /* ---------------------------------------
     SCROLL TOP
 ----------------------------------------- */
@@ -7195,6 +7165,9 @@ body p {
 /* ---------------------------------------
     MAIN MENU
 ----------------------------------------- */
+.main-menu {
+  position: relative;
+}
 .main-menu .nav li a:hover {
   background-color: transparent !important;
   color: #fee900 !important;
@@ -7248,6 +7221,28 @@ body p {
 }
 .main-menu .custom-nav .container-fluid .navbar-collapse ul li a.uppercase {
   text-transform: uppercase;
+}
+.main-menu .left-banner {
+  width: 140px;
+  position: absolute;
+  top: 0;
+  left: -160px;
+  z-index: 999;
+}
+.main-menu .left-banner img {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+.main-menu .right-banner {
+  width: 140px;
+  position: absolute;
+  top: 0;
+  right: -160px;
+  z-index: 999;
+}
+.main-menu .right-banner img {
+  max-width: 100%;
+  margin-bottom: 10px;
 }
 /* ---------------------------------------
     SEARCH BOX

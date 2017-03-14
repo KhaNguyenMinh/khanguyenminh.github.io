@@ -38,36 +38,6 @@ body {
     }
 }
 
-.main-container {
-    .left-banner-wrapper {
-        width: 140px;
-        position: absolute;
-        right: 1190px;
-        top: 160px;
-        img {
-            width: 140px;
-            margin-bottom: 10px;
-        }
-        @media (max-width: 1360px) {
-            display: none;
-        }
-    }
-    .right-banner-wrapper {
-        width: 140px;
-        position: absolute;
-        left: 1190px;
-        top: 160px;
-        img {
-            width: 140px;
-            margin-bottom: 10px;
-        }
-        @media (max-width: 1360px) {
-            display: none;
-        }
-    }
-}
-
-
 /* ---------------------------------------
     SCROLL TOP
 ----------------------------------------- */
@@ -104,6 +74,7 @@ body {
     MAIN MENU
 ----------------------------------------- */
 .main-menu {
+    position: relative;
     .nav {
         li {
             a {
@@ -175,6 +146,28 @@ body {
                     }
                 }
             } 
+        }
+    }
+    .left-banner {
+        width: 140px;
+        position: absolute;
+        top: 0;
+        left: -160px;
+        z-index: 999;
+        img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .right-banner {
+        width: 140px;
+        position: absolute;
+        top: 0;
+        right: -160px;
+        z-index: 999;
+        img {
+            max-width: 100%;
+            margin-bottom: 10px;
         }
     }
 }
