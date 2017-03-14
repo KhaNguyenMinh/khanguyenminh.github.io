@@ -7636,11 +7636,13 @@ body p {
 }
 .content-wrapper .right-content .hot-line .tile {
   padding-top: 10px;
+  color: #ffea00;
 }
 .content-wrapper .right-content .hot-line .number {
   font-size: 35px;
   line-height: 44px;
   margin-bottom: 0;
+  color: #ffea00;
 }
 .content-wrapper .right-content .box-link-site {
   padding-top: 10px;
