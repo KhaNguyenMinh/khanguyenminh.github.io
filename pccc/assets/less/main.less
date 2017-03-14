@@ -38,32 +38,35 @@ body {
     }
 }
 
-.left-banner-wrapper {
-    width: 140px;
-    position: absolute;
-    left: 20px;
-    top: 160px;
-    img {
+.main-container {
+    .left-banner-wrapper {
         width: 140px;
-        margin-bottom: 10px;
+        position: absolute;
+        right: 1190px;
+        top: 160px;
+        img {
+            width: 140px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 1360px) {
+            display: none;
+        }
     }
-    @media (max-width: 1360px) {
-        display: none;
+    .right-banner-wrapper {
+        width: 140px;
+        position: absolute;
+        left: 1190px;
+        top: 160px;
+        img {
+            width: 140px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 1360px) {
+            display: none;
+        }
     }
 }
-.right-banner-wrapper {
-    width: 140px;
-    position: absolute;
-    right: 20px;
-    top: 160px;
-    img {
-        width: 140px;
-        margin-bottom: 10px;
-    }
-    @media (max-width: 1360px) {
-        display: none;
-    }
-}
+
 
 /* ---------------------------------------
     SCROLL TOP

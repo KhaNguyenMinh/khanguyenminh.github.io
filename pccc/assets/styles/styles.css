@@ -7130,33 +7130,33 @@ body p {
   color: #000;
   font-size: 13px;
 }
-.left-banner-wrapper {
+.main-container .left-banner-wrapper {
   width: 140px;
   position: absolute;
-  left: 20px;
+  right: 1190px;
   top: 160px;
 }
-.left-banner-wrapper img {
+.main-container .left-banner-wrapper img {
   width: 140px;
   margin-bottom: 10px;
 }
 @media (max-width: 1360px) {
-  .left-banner-wrapper {
+  .main-container .left-banner-wrapper {
     display: none;
   }
 }
-.right-banner-wrapper {
+.main-container .right-banner-wrapper {
   width: 140px;
   position: absolute;
-  right: 20px;
+  left: 1190px;
   top: 160px;
 }
-.right-banner-wrapper img {
+.main-container .right-banner-wrapper img {
   width: 140px;
   margin-bottom: 10px;
 }
 @media (max-width: 1360px) {
-  .right-banner-wrapper {
+  .main-container .right-banner-wrapper {
     display: none;
   }
 }
