@@ -3,6 +3,8 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton';
 
+import { Link } from 'react-router';
+
 class SileBarComponent extends Component {
   constructor() {
     super();
@@ -11,6 +13,7 @@ class SileBarComponent extends Component {
     };
   }
   close = () => {
+    console.log('close');
     this.setState((prevState, props) => {
       return { open: false };
     });
@@ -27,8 +30,8 @@ class SileBarComponent extends Component {
       <div>
         <Drawer open={this.state.open}>
           <IconButton iconClassName="muidocs-icon-custom-github" onTouchTap={this.close}>Close</IconButton>
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
+          <MenuItem containerElement={<Link to="/home" />}>Home</MenuItem>
+          <MenuItem containerElement={<Link to="/campaigns" />}>Campaigns</MenuItem>
         </Drawer>
       </div>
     );
