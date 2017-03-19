@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 // import logo from './logo.svg';
 import './App.css';
+import _ from 'lodash';
 
 import TopNavComponent from './components/top-nav/top-nav';
 import BottomNavComponent from './components/bottom-nav/bottom-nav';
