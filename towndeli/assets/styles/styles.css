@@ -8323,6 +8323,10 @@ header.header .top-links li .child-box ul li a.highlight {
 .register-modal .login-details .wrap-input input {
   padding-left: 30px !important;
 }
+.register-modal .login-details .wrap-input span .fa-mobile {
+  font-size: 28px;
+  color: #939393;
+}
 .register-modal .login-details input[type="text"],
 .register-modal .login-details input[type="email"],
 .register-modal .login-details input[type="password"] {
