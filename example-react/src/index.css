@@ -1,10 +1,13 @@
+@import url("./assets/fonts/iconfont/material-icons.css");
+@import url("./assets/libs/materialize/css/materialize.css");
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
-.footer {
-	position: fixed;
+
+.main-content {
 	width: 100%;
-	bottom: 0;
+    margin-top: 64px;
 }

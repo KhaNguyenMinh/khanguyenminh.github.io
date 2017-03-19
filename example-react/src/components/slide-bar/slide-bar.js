@@ -1,37 +1,38 @@
 import React, {Component} from 'react';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
-import IconButton from 'material-ui/IconButton';
 
 import { Link } from 'react-router';
 
 class SileBarComponent extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      open: false
+      open: props.openSlideBar
     };
   }
-  close = () => {
-    console.log('close');
-    this.setState((prevState, props) => {
-      return { open: false };
-    });
-  }
+
+  // testEvent = () => {
+  //   let self = this;
+
+  //   console.log('hihi');
+  //   self.setState({open: false, flag: true});
+  //   console.log('state:', self.state);
+  // }
 
   componentWillReceiveProps(nextProps, nextState) {
-      this.setState((prevState, props) => {
-        return { open:  nextProps.open};
-      });
+    console.log('change', nextProps);
+    let flag = (nextProps.openSlideBar) ? true : false;
+    this.setState({ open:  flag});
+    return;
   }
 
   render() {
     return (
       <div>
-        <Drawer open={this.state.open}>
-          <IconButton iconClassName="muidocs-icon-custom-github" onTouchTap={this.close}>Close</IconButton>
-          <MenuItem containerElement={<Link to="/home" />}>Home</MenuItem>
-          <MenuItem containerElement={<Link to="/campaigns" />}>Campaigns</MenuItem>
+        <Drawer open={this.state.open} docked={false} onRequestChange={(open) => this.setState({open})}>
+          <MenuItem onTouchTap={this.props.chilOnChange} containerElement={<Link to="/home" />}>Home</MenuItem>
+          <MenuItem onTouchTap={this.props.chilOnChange} containerElement={<Link to="/campaigns" />}>Campaigns</MenuItem>
         </Drawer>
       </div>
     );

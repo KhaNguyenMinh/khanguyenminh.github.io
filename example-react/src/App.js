@@ -15,8 +15,9 @@ class App extends Component {
         <div>
 	        <TopNavComponent/>
 	        <SileBarComponent/>
-	        {this.props.children}
-	        <BottomNavComponent/>
+          <div className="main-content">
+            {this.props.children}
+          </div>
         </div>
     );
   }

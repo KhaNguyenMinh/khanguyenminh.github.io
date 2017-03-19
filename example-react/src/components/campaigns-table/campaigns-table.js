@@ -3,6 +3,11 @@ import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow,
 
 import Campaign from '../../models/campaign';
 import CampaignService from '../../services/campaign-service';
+import Toggle from 'material-ui/Toggle';
+import RaisedButton from 'material-ui/RaisedButton';
+import IconButton from 'material-ui/IconButton';
+import ActionHome from 'material-ui/svg-icons/action/home';
+import FontIcon from 'material-ui/FontIcon';
 
 const campiagn = new Campaign('123456789', 'test campaign name');
 
@@ -14,7 +19,7 @@ export default class CampaignTableComponent extends React.Component {
     super(props);
 
     this.state = {
-      fixedHeader: true,
+      fixedHeader: false,
       fixedFooter: true,
       stripedRows: false,
       showRowHover: false,
@@ -23,7 +28,7 @@ export default class CampaignTableComponent extends React.Component {
       enableSelectAll: false,
       deselectOnClickaway: true,
       showCheckboxes: false,
-      height: '100%',
+      height: '500px',
       dataTable: []
     };
   }
@@ -31,7 +36,7 @@ export default class CampaignTableComponent extends React.Component {
   componentDidMount() {
     let self = this;
 
-    console.log('event triger!');
+    // console.log('event triger!');
     let service = new CampaignService();
 
     service.getCampaignList().then(function(response) {
@@ -44,7 +49,7 @@ export default class CampaignTableComponent extends React.Component {
 
   formatDate(time) {
     let d = new Date(time);
-    console.log('1');
+    // console.log('1');
     return d.toLocaleDateString();
   }
 
@@ -58,30 +63,28 @@ export default class CampaignTableComponent extends React.Component {
     this.setState({height: event.target.value});
   };
 
+  customWidth = {
+    width: 12
+  };
+
   render() {
     return (
         <div>
-            <Table
-                height={this.state.height}
-                fixedHeader={this.state.fixedHeader}
-                fixedFooter={this.state.fixedFooter}
-                selectable={this.state.selectable}
-                multiSelectable={this.state.multiSelectable}>
+            <Table height={this.state.height}
+                    fixedFooter={this.state.fixedFooter}>
                 <TableHeader
                     displaySelectAll={this.state.showCheckboxes}
                     adjustForCheckbox={this.state.showCheckboxes}
                     enableSelectAll={this.state.enableSelectAll}>
                     <TableRow>
-                        <TableHeaderColumn colSpan="5" tooltip="Super Header" style={{textAlign: 'center'}}>
-                            Campangs List
-                        </TableHeaderColumn>
-                    </TableRow>
-                    <TableRow>
-                        <TableHeaderColumn tooltip="The ID">ID</TableHeaderColumn>
+                        <TableHeaderColumn tooltip="The index" style={{width: '50px'}}>Index</TableHeaderColumn>
+                        <TableHeaderColumn tooltip="The status" style={{width: '80px'}}>Status</TableHeaderColumn>
                         <TableHeaderColumn tooltip="The Name">Name</TableHeaderColumn>
                         <TableHeaderColumn tooltip="The Name">Type</TableHeaderColumn>
                         <TableHeaderColumn tooltip="The Date">Create date</TableHeaderColumn>
-                        <TableHeaderColumn tooltip="The Status">Status</TableHeaderColumn>
+                        <TableHeaderColumn tooltip="The Date">Cost</TableHeaderColumn>
+                        <TableHeaderColumn tooltip="The Date">Click</TableHeaderColumn>
+                        <TableHeaderColumn tooltip="The Date">Action</TableHeaderColumn>
                     </TableRow>
                 </TableHeader>
                 <TableBody
@@ -91,18 +94,32 @@ export default class CampaignTableComponent extends React.Component {
                     stripedRows={this.state.stripedRows}>
                     {this.state.dataTable.map( (row, index) => (
                       <TableRow key={index} selected={row.selected}>
-                        <TableRowColumn>{row.id}</TableRowColumn>
+                        <TableRowColumn style={{width: '50px'}}>{index + 1}</TableRowColumn>
+                        <TableRowColumn style={{width: '80px'}}>
+                          <Toggle
+                          defaultToggled={true}/>
+                        </TableRowColumn>
                         <TableRowColumn>{row.name}</TableRowColumn>
                         <TableRowColumn>{row.adType}</TableRowColumn>
                         <TableRowColumn>{this.formatDate(row.createdAt)}</TableRowColumn>
-                        <TableRowColumn>{row.campaignStatus}</TableRowColumn>
+                        <TableRowColumn>0</TableRowColumn>
+                        <TableRowColumn>0</TableRowColumn>
+                        <TableRowColumn>0</TableRowColumn>
                       </TableRow>
                     ))}
                 </TableBody>
                 <TableFooter>
                     <TableRow>
                         <TableRowColumn colSpan="5" style={{textAlign: 'center'}}>
-                            <h3>Pagination content</h3>
+                              <ul className="pagination">
+                                <li className="waves-effect"><a href="#!"><i className="material-icons">chevron_left</i></a></li>
+                                <li className="active"><a href="#!">1</a></li>
+                                <li className="waves-effect"><a href="#!">2</a></li>
+                                <li className="waves-effect"><a href="#!">3</a></li>
+                                <li className="waves-effect"><a href="#!">4</a></li>
+                                <li className="waves-effect"><a href="#!">5</a></li>
+                                <li className="waves-effect"><a href="#!"><i className="material-icons">chevron_right</i></a></li>
+                              </ul>
                         </TableRowColumn>
                     </TableRow>
                 </TableFooter>

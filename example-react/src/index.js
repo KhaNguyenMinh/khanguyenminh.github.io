@@ -7,6 +7,8 @@ import { browserHistory, Router, Route,} from 'react-router'
 import CampaignTableComponent from './components/campaigns-table/campaigns-table';
 import HomeComponent from './components/home/home';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 
 // ReactDOM.render(
 //   <App />,
@@ -14,6 +16,14 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 // );
 
 // const history = createBrowserHistory();
+
+const muiTheme = getMuiTheme({
+  fontFamily: 'Roboto, sans-serif',
+  palette: {
+    // primary1Color: '#0288D1',
+    // accent1Color: "#FFC107",
+  }
+});
 ReactDOM.render((
 	<MuiThemeProvider>
 	  <Router history={browserHistory}>
