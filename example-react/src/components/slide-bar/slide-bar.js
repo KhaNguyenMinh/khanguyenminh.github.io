@@ -31,7 +31,7 @@ class SileBarComponent extends Component {
     return (
       <div>
         <Drawer open={this.state.open} docked={false} onRequestChange={(open) => this.setState({open})}>
-          <MenuItem onTouchTap={this.props.chilOnChange} containerElement={<Link to="/home" />}>Home</MenuItem>
+          <MenuItem onTouchTap={this.props.chilOnChange} containerElement={<Link to="/todo" />}>Home</MenuItem>
           <MenuItem onTouchTap={this.props.chilOnChange} containerElement={<Link to="/campaigns" />}>Campaigns</MenuItem>
         </Drawer>
       </div>
