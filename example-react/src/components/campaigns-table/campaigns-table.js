@@ -1,21 +1,41 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-
+import './campaigns-table.less'
 import Campaign from '../../models/campaign';
-import CampaignService from '../../services/campaign-service';
+import capaignTableReducer from '../../containers/campaigns-table/campaigns-table-reducer';
 import Toggle from 'material-ui/Toggle';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
 import FontIcon from 'material-ui/FontIcon';
+import store from '../../store'
+
+import {Provider} from 'react-redux'
+import {createStore, applyMiddleware, compose} from 'redux'
 
 const campiagn = new Campaign('123456789', 'test campaign name');
 
-console.log('campaign obj', campiagn);
+console.log('campaign obj', campiagn)
+
+
+
+// const CampaignTableComponent = ({ camList, onTodoClick }) => (
+//   <ul>
+    
+//   </ul>
+// )
+
+// CampaignTableComponent.propTypes = {
+//   camList: PropTypes.arrayOf(PropTypes.shape({
+//     id: PropTypes.number.isRequired,
+//   }).isRequired).isRequired,
+//   onTodoClick: PropTypes.func.isRequired
+// }
 
 export default class CampaignTableComponent extends React.Component {
 
   constructor(props) {
+  	store.dispatch({type: 'GET_CAMPAIGN_DATA'})
     super(props);
 
     this.state = {
@@ -29,7 +49,7 @@ export default class CampaignTableComponent extends React.Component {
       deselectOnClickaway: true,
       showCheckboxes: false,
       height: '500px',
-      dataTable: []
+      camList: []
     };
   }
 
@@ -37,14 +57,14 @@ export default class CampaignTableComponent extends React.Component {
     let self = this;
 
     // console.log('event triger!');
-    let service = new CampaignService();
+    // let service = new CampaignService();
 
-    service.getCampaignList().then(function(response) {
-      console.log('data', response);
-      self.setState({
-        dataTable: response.data
-      });
-    });
+    // service.getCampaignList().then(function(response) {
+    //   console.log('data', response);
+    //   self.setState({
+    //     dataTable: response.data
+    //   });
+    // });
   }
 
   formatDate(time) {
@@ -69,8 +89,8 @@ export default class CampaignTableComponent extends React.Component {
 
   render() {
     return (
-        <div>
-            <Table height={this.state.height}
+        <div className="test-class">
+            <Table className="table-cam" height={this.state.height}
                     fixedFooter={this.state.fixedFooter}>
                 <TableHeader
                     displaySelectAll={this.state.showCheckboxes}
@@ -92,7 +112,7 @@ export default class CampaignTableComponent extends React.Component {
                     deselectOnClickaway={this.state.deselectOnClickaway}
                     showRowHover={this.state.showRowHover}
                     stripedRows={this.state.stripedRows}>
-                    {this.state.dataTable.map( (row, index) => (
+                    {this.props.camList.map( (row, index) => (
                       <TableRow key={index} selected={row.selected}>
                         <TableRowColumn style={{width: '50px'}}>{index + 1}</TableRowColumn>
                         <TableRowColumn style={{width: '80px'}}>
