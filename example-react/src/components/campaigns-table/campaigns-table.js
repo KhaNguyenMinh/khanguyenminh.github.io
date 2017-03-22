@@ -10,6 +10,7 @@ export default class CampaignTableComponent extends React.Component {
     constructor(props) {
       	store.dispatch({type: 'GET_CAMPAIGN_DATA'})
         super(props)
+        let loadingFlag = (props.camList.length > 0) ? false : true
         this.state = {
             fixedHeader: false,
             fixedFooter: true,
@@ -22,7 +23,7 @@ export default class CampaignTableComponent extends React.Component {
             showCheckboxes: false,
             height: '500px',
             camList: [],
-            loading: true,
+            loading: loadingFlag,
             currentPage: 1
         }
     }
