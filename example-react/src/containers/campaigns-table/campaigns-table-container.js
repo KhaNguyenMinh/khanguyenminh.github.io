@@ -1,17 +1,5 @@
 import { connect } from 'react-redux'
-// import { toggleTodo } from './actions'
 import CampaignTableComponent from '../../components/campaigns-table/campaigns-table'
-
-const getVisibleTodos = (todos, filter) => {
-  switch (filter) {
-    case 'SHOW_ALL':
-      return todos
-    case 'SHOW_COMPLETED':
-      return todos.filter(t => t.completed)
-    case 'SHOW_ACTIVE':
-      return todos.filter(t => !t.completed)
-  }
-}
 
 const mapStateToProps = (state) => {
   return {

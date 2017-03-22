@@ -1,7 +1,7 @@
 import { createStore, applyMiddleware } from 'redux'
-import todoApp from './containers/'
+import App from './containers/'
 import CampaignService from './services/campaign-service'
 
-const store = createStore(todoApp, {}, applyMiddleware(CampaignService))
+const store = createStore(App, {}, applyMiddleware(CampaignService))
 
 export default store;

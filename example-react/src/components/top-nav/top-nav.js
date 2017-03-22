@@ -4,64 +4,57 @@ import RaisedButton from 'material-ui/RaisedButton';
 import IconButton from 'material-ui/IconButton';
 import IconMenu from 'material-ui/IconMenu';
 import MenuItem from 'material-ui/MenuItem';
-import FlatButton from 'material-ui/FlatButton';
-import Toggle from 'material-ui/Toggle';
+
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
-import NavigationClose from 'material-ui/svg-icons/navigation/close';
 
 import SileBarComponent from '../slide-bar/slide-bar'
 
 class Login extends Component {
-  render() {
-    return (
-      <RaisedButton onTouchTap={this.props.loginOnclick} label="Login" secondary={true} />
-    );
-  }
+    render() {
+        return (
+            <RaisedButton onTouchTap={this.props.loginOnclick} label="Login" secondary={true} />
+        )
+    }
 }
 
 class Logged extends Component {
-  render() {
-    return (
-      <IconMenu
-        iconButtonElement = {
-          <IconButton ><MoreVertIcon /></IconButton>
-        }
-        targetOrigin={{horizontal: 'right', vertical: 'top'}}
-        anchorOrigin={{horizontal: 'right', vertical: 'top'}} >
-        <MenuItem primaryText="Refresh" />
-        <MenuItem primaryText="Help" />
-        <MenuItem onTouchTap={this.props.signOutOnclick} primaryText="Sign out" />
-      </IconMenu>
-    );
-  }
+    render() {
+        return (
+            <IconMenu
+                iconButtonElement={
+                  <IconButton ><MoreVertIcon /></IconButton>
+                }
+                targetOrigin={{horizontal: 'right', vertical: 'top'}}
+                anchorOrigin={{horizontal: 'right', vertical: 'top'}} >
+                <MenuItem primaryText="Refresh" />
+                <MenuItem primaryText="Help" />
+                <MenuItem onTouchTap={this.props.signOutOnclick} primaryText="Sign out" />
+            </IconMenu>
+        )
+    }
 }
-
 
 class TopNavComponent extends Component {
 
-      constructor() {
-        super();
+    constructor() {
+        super()
         this.state = {
             logged: false,
             openSlideBar : false
-        };
-      }
+        }
+    }
     
-
-
-      handleChange = (event, logged) => {
-        this.setState({logged: logged});
-      };
+    handleChange = (event, logged) => {
+        this.setState({logged: logged})
+    }
 
     handleToggle = () => {
-        console.log('kkk');
-        // this.openSlideBar = true;
-        this.setState({ openSlideBar: true });
-    };
+        this.setState({ openSlideBar: true })
+    }
 
     chilOnChange = (data) => {
-        console.log('data from chil', data);
-        this.setState({openSlideBar: false});
+        console.log('data from chil', data)
+        this.setState({openSlideBar: false})
     }
 
     loginOnclick = () => {
@@ -74,17 +67,17 @@ class TopNavComponent extends Component {
 
     render() {
         return (
-          <div>
-            <AppBar
-                style={{position: 'fixed', top: '0'}}
-                title="This is my site"
-                onLeftIconButtonTouchTap={this.handleToggle.bind(this)}
-                iconElementRight={this.state.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
-            />
-            <SileBarComponent openSlideBar={this.state.openSlideBar} chilOnChange={this.chilOnChange}/>
-          </div>
-        );
+            <div>
+                <AppBar
+                    style={{position: 'fixed', top: '0'}}
+                    title="This is my site"
+                    onLeftIconButtonTouchTap={this.handleToggle.bind(this)}
+                    iconElementRight={this.state.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
+                />
+                <SileBarComponent openSlideBar={this.state.openSlideBar} chilOnChange={this.chilOnChange}/>
+            </div>
+        )
     }
 }
 
-export default TopNavComponent;
+export default TopNavComponent

@@ -2,9 +2,9 @@
 @import url("./assets/libs/materialize/css/materialize.css");
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
 }
 
 .main-content {
