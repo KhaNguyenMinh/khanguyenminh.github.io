@@ -1,68 +1,48 @@
-import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
-import FlatButton from 'material-ui/FlatButton';
-// import ReactUltimatePagination from 'react-ultimate-pagination'
+import React from 'react'
+import FlatButton from 'material-ui/FlatButton'
 
-    let ReactUltimatePagination = require('react-ultimate-pagination')
+let ReactUltimatePagination = require('react-ultimate-pagination')
 
-    // constructor() {
-    //     super()
-    //     this.state = {
-    //         logged: false,
-    //         openSlideBar : false
-    //     }
-    // }
+let page = (props) => {
+  return <FlatButton onTouchTap={props.onClick} label={props.value} primary={props.isActive} style={{minWidth: 40}}/>
+}
 
-    // reactUltimatePagination = new ReactUltimatePagination()
+let ellipsis = (props) => {
+  return <FlatButton onTouchTap={props.onClick} label="..." style={{minWidth: 40}}/>
+}
 
-    let page = (props) => {
-      return <FlatButton onTouchTap={props.onClick} label={props.value} />
-    }
-     
-    let ellipsis = (props) => {
-      return <FlatButton onTouchTap={props.onClick} label="..."/>
-    }   
-     
-    let firstPageLink = (props) => {
-      return <FlatButton onTouchTap={props.onClick} label="First"/>
-    }
-     
-    let previousPageLink = (props) => {
-      return <FlatButton onTouchTap={props.onClick} label="Previous"/>
-    }
-     
-    let nextPageLink = (props) => {
-      return <FlatButton onTouchTap={props.onClick} label="Next"/>
-    }
-     
-    let lastPageLink = (props) => {
-      return <FlatButton onTouchTap={props.onClick} label="Last"/>
-    }
-     
-    let wrapper = (props) => {
-      return <div className="pagination">{props.children}</div>
-    }
+let firstPageLink = (props) => {
+  return <FlatButton onTouchTap={props.onClick} icon={<i className="material-icons">first_page</i>} style={{minWidth: 40}}/>
+}
 
-    let itemTypeToComponent = {
-      'PAGE': page,
-      'ELLIPSIS': ellipsis,
-      'FIRST_PAGE_LINK': firstPageLink,
-      'PREVIOUS_PAGE_LINK': previousPageLink,
-      'NEXT_PAGE_LINK': nextPageLink,
-      'LAST_PAGE_LINK': lastPageLink
-    }
+let previousPageLink = (props) => {
+  return <FlatButton onTouchTap={props.onClick} icon={<i className="material-icons">chevron_left</i>} style={{minWidth: 40}}/>
+}
 
-    let UltimatePagination = ReactUltimatePagination.createUltimatePagination({
-      itemTypeToComponent: itemTypeToComponent,
-      WrapperComponent: wrapper
-    })
+let nextPageLink = (props) => {
+  return <FlatButton onTouchTap={props.onClick} icon={<i className="material-icons">chevron_right</i>} style={{minWidth: 40}}/>
+}
 
-    // render() {
-    //     return (
-    //         <div>
-    //             {this.UltimatePagination}
-    //         </div>
-    //     );
-    // }
+let lastPageLink = (props) => {
+  return <FlatButton onTouchTap={props.onClick} icon={<i className="material-icons">last_page</i>} style={{minWidth: 40}}/>
+}
 
-export default UltimatePagination;
+let wrapper = (props) => {
+  return <div className="pagination">{props.children}</div>
+}
+
+let itemTypeToComponent = {
+  'PAGE': page,
+  'ELLIPSIS': ellipsis,
+  'FIRST_PAGE_LINK': firstPageLink,
+  'PREVIOUS_PAGE_LINK': previousPageLink,
+  'NEXT_PAGE_LINK': nextPageLink,
+  'LAST_PAGE_LINK': lastPageLink
+}
+
+let UltimatePagination = ReactUltimatePagination.createUltimatePagination({
+  itemTypeToComponent: itemTypeToComponent,
+  WrapperComponent: wrapper
+})
+
+export default UltimatePagination

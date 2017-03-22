@@ -12,7 +12,7 @@ class App extends Component {
     render() {
         return (
             <div>
-    	        <TopNavComponent/>
+                <div className="top-nav"><TopNavComponent/></div>
     	        <SileBarComponent/>
                 <div className="main-content">
                     {this.props.children}

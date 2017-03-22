@@ -1,7 +1,6 @@
 import React from 'react'
 import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table'
 import CircularProgress from 'material-ui/CircularProgress';
-import { Pagination } from 'react-materialize';
 import './campaigns-table.less'
 import Toggle from 'material-ui/Toggle'
 import store from '../../store'
@@ -23,7 +22,8 @@ export default class CampaignTableComponent extends React.Component {
             showCheckboxes: false,
             height: '500px',
             camList: [],
-            loading: true
+            loading: true,
+            currentPage: 1
         }
     }
 
@@ -57,6 +57,7 @@ export default class CampaignTableComponent extends React.Component {
 
     pageOnSelect = (event) => {
         console.log('page selected', event)
+        this.setState({currentPage: event})
     }
 
     render() {
@@ -123,7 +124,7 @@ export default class CampaignTableComponent extends React.Component {
                     <TableFooter>
                         <TableRow>
                             <TableRowColumn colSpan="5" style={{textAlign: 'center'}}>
-                                    <UltimatePagination currentPage={1} totalPages={10} boundaryPagesRange={1} siblingPagesRange={1} onChange={this.pageOnSelect} hideFirstAndLastPageLink={true}/>
+                                    <UltimatePagination currentPage={this.state.currentPage} totalPages={10} boundaryPagesRange={1} siblingPagesRange={1} onChange={this.pageOnSelect}/>
                             </TableRowColumn>
                         </TableRow>
                     </TableFooter>
