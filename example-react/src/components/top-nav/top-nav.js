@@ -1,13 +1,15 @@
-import React, {Component} from 'react';
-import AppBar from 'material-ui/AppBar';
-import RaisedButton from 'material-ui/RaisedButton';
-import IconButton from 'material-ui/IconButton';
-import IconMenu from 'material-ui/IconMenu';
-import MenuItem from 'material-ui/MenuItem';
+import React, {Component} from 'react'
+import AppBar from 'material-ui/AppBar'
+import RaisedButton from 'material-ui/RaisedButton'
+import IconButton from 'material-ui/IconButton'
+import IconMenu from 'material-ui/IconMenu'
+import MenuItem from 'material-ui/MenuItem'
 
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
+import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 
 import SileBarComponent from '../slide-bar/slide-bar'
+
+import LoginModalComponent from '../login/login'
 
 class Login extends Component {
     render() {
@@ -40,7 +42,8 @@ class TopNavComponent extends Component {
         super()
         this.state = {
             logged: false,
-            openSlideBar : false
+            openSlideBar : false,
+            openLoginModal: false
         }
     }
     
@@ -58,7 +61,8 @@ class TopNavComponent extends Component {
     }
 
     loginOnclick = () => {
-        this.setState({logged: true})
+        // this.setState({logged: true})
+        this.setState({openLoginModal: true})
     }
 
     signOutOnclick = () => {
@@ -75,6 +79,7 @@ class TopNavComponent extends Component {
                     iconElementRight={this.state.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
                 />
                 <SileBarComponent openSlideBar={this.state.openSlideBar} chilOnChange={this.chilOnChange}/>
+                <LoginModalComponent openLoginModal={this.state.openLoginModal}/>
             </div>
         )
     }

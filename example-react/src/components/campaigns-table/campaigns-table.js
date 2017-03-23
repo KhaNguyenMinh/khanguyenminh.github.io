@@ -5,10 +5,11 @@ import './campaigns-table.less'
 import Toggle from 'material-ui/Toggle'
 import store from '../../store'
 import UltimatePagination from '../commons/pagination'
+import {loadCampaignList} from '../../containers/campaigns-table/actions'
 
 export default class CampaignTableComponent extends React.Component {
     constructor(props) {
-      	store.dispatch({type: 'GET_CAMPAIGN_DATA'})
+      	store.dispatch(loadCampaignList())
         super(props)
         let loadingFlag = (props.camList.length > 0) ? false : true
         this.state = {

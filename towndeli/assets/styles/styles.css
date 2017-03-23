@@ -10082,9 +10082,19 @@ header.header .top-links li .child-box ul li a.highlight {
     margin-top: 10px;
   }
 }
+@media (max-width: 768px) {
+  .quickview-modal .quickview-inner .content .img {
+    display: none;
+  }
+}
 @media (max-width: 860px) {
   .quickview-modal .quickview-inner .content .body {
     margin-top: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .quickview-modal .quickview-inner .content .body {
+    width: 100%;
   }
 }
 .quickview-modal .quickview-inner .content .body .quickview-header {
