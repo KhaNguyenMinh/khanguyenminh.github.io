@@ -6,10 +6,12 @@ import IconMenu from 'material-ui/IconMenu'
 import MenuItem from 'material-ui/MenuItem'
 
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
-
 import SileBarComponent from '../slide-bar/slide-bar'
 
-import LoginModalComponent from '../login/login'
+// import LoginModalComponent from '../login/login'
+import LoginContainer from '../../containers/login/login-container'
+import {openLoginModal} from '../../containers/login/actions'
+import store from '../../store'
 
 class Login extends Component {
     render() {
@@ -62,7 +64,8 @@ class TopNavComponent extends Component {
 
     loginOnclick = () => {
         // this.setState({logged: true})
-        this.setState({openLoginModal: true})
+        // this.setState({openLoginModal: true})
+        store.dispatch(openLoginModal())
     }
 
     signOutOnclick = () => {
@@ -79,7 +82,7 @@ class TopNavComponent extends Component {
                     iconElementRight={this.state.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
                 />
                 <SileBarComponent openSlideBar={this.state.openSlideBar} chilOnChange={this.chilOnChange}/>
-                <LoginModalComponent openLoginModal={this.state.openLoginModal}/>
+                <LoginContainer />
             </div>
         )
     }
