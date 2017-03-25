@@ -5,6 +5,10 @@ import FlatButton from 'material-ui/FlatButton'
 import store from '../../store'
 import {login} from '../../containers/login/actions'
 
+const customContentStyle = {
+  maxWidth: '500px',
+}
+
 class LoginModalComponent extends React.Component {
 	constructor(props){
 	    super(props);
@@ -43,7 +47,6 @@ class LoginModalComponent extends React.Component {
 		    password: this.state.password,
 		    rememberMe: false
 	    }
-	    // this.props.actions.addEvent(newChore)
 	    this.handleClose()
 	    this.setState({nameName: '', password: ''})
 	    store.dispatch(login(loginData))
@@ -69,10 +72,26 @@ class LoginModalComponent extends React.Component {
 		        actions={actions}
 		        modal={true}
 		        open={this.state.open}
+		        contentStyle={customContentStyle}
 		        bodyStyle={{maxHeight: 'auto', overflowX: 'auto'}}>
 		        <form>
-		          	<TextField hintText="User name" value={this.state.userName} onChange={this.handleUserName} multiLine={true}/><br/>
-		          	<TextField hintText="Password" value={this.state.password} onChange={this.handlePassword} multiLine={true}/>
+		          	<TextField
+		          		name="userName"
+		          		value={this.state.userName}
+		          		onChange={this.handleUserName}
+		          		fullWidth={true}
+		          		floatingLabelText="UserName"
+		          		floatingLabelFixed={true}
+				    /><br/>
+		          	<TextField
+		          		name="password"
+		          		value={this.state.password}
+		          		onChange={this.handlePassword}
+		          		fullWidth={true}
+				      	type="password"
+				      	floatingLabelText="Password"
+		          		floatingLabelFixed={true}
+				    />
 		        </form>
 		     </Dialog>
 	    )

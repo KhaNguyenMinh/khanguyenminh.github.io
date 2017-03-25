@@ -97,7 +97,7 @@ class AddChoreForm extends React.Component {
         modal={true}
         open={this.state.open}>
         <form>
-          <TextField hintText="Hint Text" value={this.state.name} onChange={this.handleName} multiLine={true}/>
+          abfbad
         </form>
       </Dialog>
       </div>
