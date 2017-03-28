@@ -9,6 +9,7 @@ import {loadCampaignList} from '../../containers/campaigns-table/actions'
 
 export default class CampaignTableComponent extends React.Component {
     constructor(props) {
+        console.log('create component')
       	store.dispatch(loadCampaignList())
         super(props)
         let loadingFlag = (props.camList.length > 0) ? false : true

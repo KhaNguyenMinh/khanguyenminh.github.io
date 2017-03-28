@@ -4087,6 +4087,31 @@ header.header {
                         padding: 7px 14px;
                         transition-duration: 0.1s;
                     }
+                    &.has-chil {
+                        ul {
+                            li {
+                                a {
+                                    border-left: none;
+                                    padding-left: 22px;
+                                    font-size: 18px;
+                                    font-weight: 500;
+                                    padding-right: 10px;
+                                }
+                                i {
+                                    font-size: 12px;
+                                    padding: 3px 7px;
+                                    border-radius: 50%;
+                                    color: white;
+                                    background-color: #27b99b;
+                                }
+                                &.active {
+                                    a {
+                                        color: #02b691 !important;
+                                    }  
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
