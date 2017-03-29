@@ -2,6 +2,7 @@ import { connect } from 'react-redux'
 import CampaignTableComponent from '../../components/campaigns-table/campaigns-table'
 
 const mapStateToProps = (state) => {
+  console.log('map store event')
   return {
     // This 'todos' data will be inject to 'TodoList' component
     camList: state.capaignTableReducer

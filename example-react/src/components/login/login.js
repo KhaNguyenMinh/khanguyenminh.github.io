@@ -23,9 +23,7 @@ class LoginModalComponent extends React.Component {
   	}
   	componentWillReceiveProps(nextProps) {
         console.log('user data', nextProps)
-        if (nextProps && nextProps.open) {
-        	this.setState({open: nextProps.open})
-        }
+        this.setState({open: nextProps.open})
     }
 
   	handleUserName(event) {
@@ -47,7 +45,7 @@ class LoginModalComponent extends React.Component {
 		    password: this.state.password,
 		    rememberMe: false
 	    }
-	    this.handleClose()
+	    // this.handleClose()
 	    this.setState({nameName: '', password: ''})
 	    store.dispatch(login(loginData))
   	}

@@ -8,9 +8,9 @@ import MenuItem from 'material-ui/MenuItem'
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert'
 import SileBarComponent from '../slide-bar/slide-bar'
 
-// import LoginModalComponent from '../login/login'
 import LoginContainer from '../../containers/login/login-container'
 import {openLoginModal} from '../../containers/login/actions'
+import {logout} from '../../containers/top-nav/actions'
 import store from '../../store'
 
 class Login extends Component {
@@ -48,10 +48,6 @@ class TopNavComponent extends Component {
             openLoginModal: false
         }
     }
-    
-    handleChange = (event, logged) => {
-        this.setState({logged: logged})
-    }
 
     handleToggle = () => {
         this.setState({ openSlideBar: true })
@@ -63,13 +59,11 @@ class TopNavComponent extends Component {
     }
 
     loginOnclick = () => {
-        // this.setState({logged: true})
-        // this.setState({openLoginModal: true})
         store.dispatch(openLoginModal())
     }
 
     signOutOnclick = () => {
-        this.setState({logged: false})
+        store.dispatch(logout())
     }
 
     render() {
@@ -79,7 +73,7 @@ class TopNavComponent extends Component {
                     style={{position: 'fixed', top: '0'}}
                     title="This is my site"
                     onLeftIconButtonTouchTap={this.handleToggle.bind(this)}
-                    iconElementRight={this.state.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
+                    iconElementRight={this.props.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
                 />
                 <SileBarComponent openSlideBar={this.state.openSlideBar} chilOnChange={this.chilOnChange}/>
                 <LoginContainer />
