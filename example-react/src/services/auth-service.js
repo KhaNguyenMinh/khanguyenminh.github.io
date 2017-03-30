@@ -10,6 +10,9 @@ const AuthService = store => next => action => {
         case 'LOGIN':
             baseService.callAPI('post', '/authenticate/credentials', action.data).then (res=>{
                 let data = res.data
+                // Store
+                localStorage.setItem("userData", data);
+                console.log('user data', res.data)
                 next({
                     type: 'LOGIN_SUCCESS',
                     data
