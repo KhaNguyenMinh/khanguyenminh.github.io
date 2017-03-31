@@ -141,21 +141,9 @@ body {
         }
 
         ul {
-          // @media (min-width: 860px) {
-          //   li {
-          //     &.dropdown {
-          //       &:hover {
-          //         ul {
-          //           &.dropdown-menu {
-          //             display: block;
-          //           }
-          //         }
-          //       }
-          //     }
-          //   }
-          // }
-          li {
-            &.dropdown {
+          @media (min-width: 860px) {
+            li {
+              &.dropdown {
                 &:hover {
                   ul {
                     &.dropdown-menu {
@@ -164,6 +152,9 @@ body {
                   }
                 }
               }
+            }
+          }
+          li {
             &.active {
               a {
                 color: #fee900 !important;

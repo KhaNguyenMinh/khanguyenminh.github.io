@@ -7231,8 +7231,10 @@ body p {
     padding-right: 0;
   }
 }
-.main-menu .custom-nav .container-fluid .navbar-collapse ul li.dropdown:hover ul.dropdown-menu {
-  display: block;
+@media (min-width: 860px) {
+  .main-menu .custom-nav .container-fluid .navbar-collapse ul li.dropdown:hover ul.dropdown-menu {
+    display: block;
+  }
 }
 .main-menu .custom-nav .container-fluid .navbar-collapse ul li.active a {
   color: #fee900 !important;

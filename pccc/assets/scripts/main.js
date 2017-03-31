@@ -89,16 +89,29 @@
         $('.main-menu .navbar-collapse .navbar-nav .menu-item-has-children > a').addClass('dropdown-toggle').attr('role', 'button').attr('aria-haspopup', 'true').attr('aria-expanded', 'false');
         $('.main-menu .navbar-collapse .navbar-nav .menu-item-has-children .sub-menu').addClass('dropdown-menu');
         $('.main-menu .navbar-collapse .navbar-nav > li > a').addClass('uppercase');
-        // $('.main-menu .navbar-collapse .navbar-nav > .menu-item > a').click(function(){
-        //     if ($(this).parent().hasClass('open')) {
-        //         $(this).parent().removeClass('open');
-        //         $(this).attr('aria-expanded', 'false');
-        //     } else {
-        //         $('.main-menu .navbar-collapse .navbar-nav .menu-item-has-children').removeClass('open');
-        //         $(this).parent().addClass('open');
-        //         $(this).attr('aria-expanded', 'true');
-        //     }
-        // });
+
+        $(window).on('load resize', function() {
+            if (Modernizr.mq("screen and (max-width:859px)")) {
+                console.log('click');
+                $('.main-menu .navbar-collapse .navbar-nav > .menu-item-has-children > a').click(function(event){
+                    event.preventDefault();
+                    if ($(this).parent().hasClass('open')) {
+                        $(this).parent().removeClass('open');
+                        $(this).attr('aria-expanded', 'false');
+                    } else {
+                        $('.main-menu .navbar-collapse .navbar-nav .menu-item-has-children').removeClass('open');
+                        $(this).parent().addClass('open');
+                        $(this).attr('aria-expanded', 'true');
+                    }
+                });
+            }
+            if (Modernizr.mq("screen and (min-width:860px)")) {
+                console.log('hover');
+                $('.main-menu .navbar-collapse .navbar-nav > .menu-item-has-children > a').click(function(){
+                    return;
+                });
+            }
+        });
     });
 
 })(window.jQuery);
