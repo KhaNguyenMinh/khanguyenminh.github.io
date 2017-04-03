@@ -92,7 +92,6 @@
 
         $(window).on('load resize', function() {
             if (Modernizr.mq("screen and (max-width:859px)")) {
-                console.log('click');
                 $('.main-menu .navbar-collapse .navbar-nav > .menu-item-has-children > a').click(function(event){
                     event.preventDefault();
                     if ($(this).parent().hasClass('open')) {
@@ -106,7 +105,6 @@
                 });
             }
             if (Modernizr.mq("screen and (min-width:860px)")) {
-                console.log('hover');
                 $('.main-menu .navbar-collapse .navbar-nav > .menu-item-has-children > a').click(function(){
                     return;
                 });
