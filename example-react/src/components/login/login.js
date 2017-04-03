@@ -46,7 +46,7 @@ class LoginModalComponent extends React.Component {
 		    rememberMe: false
 	    }
 	    // this.handleClose()
-	    this.setState({nameName: '', password: ''})
+	    // this.setState({nameName: '', password: ''})
 	    store.dispatch(login(loginData))
   	}
 	render() {

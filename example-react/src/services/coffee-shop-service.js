@@ -1,20 +1,17 @@
 import BaseService from './base-service'
 
 const baseService = new BaseService();
-const AuthService = store => next => action => {
+const CoffeeShopService = store => next => action => {
     /*
     Pass all actions through by default
     */
     next(action)
     switch (action.type) {
-        case 'LOGIN':
-            baseService.callAPI('post', '/authenticate/credentials', action.data).then (res=>{
+        case 'CREAT_COFFEE_SHOP':
+            baseService.callAPI('post', 'api/CoffeeShops', action.data).then (res=>{
                 let data = res.data
-                // Store
-                localStorage.setItem("userData", JSON.stringify(data));
-                console.log('user data', res.data)
                 next({
-                    type: 'LOGIN_SUCCESS',
+                    type: 'CREATE_COFFEE_SHOP_SUCCESS',
                     data
                 })
             })
@@ -27,4 +24,4 @@ const AuthService = store => next => action => {
     }
 };
 
-export default AuthService
+export default CoffeeShopService
