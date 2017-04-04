@@ -8743,7 +8743,7 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .download-order-modal .modal-header {
   background-color: #ffffff;
-  min-height: 10px !important;
+  min-height: 30px !important;
 }
 .download-order-modal .modal-header .close-icon {
   cursor: pointer;
@@ -8884,7 +8884,7 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .edit-schedule-modal .modal-header {
   background-color: #ffffff;
-  min-height: 10px !important;
+  min-height: 30px !important;
 }
 .edit-schedule-modal .modal-header .modal-title {
   text-transform: none;
@@ -8967,7 +8967,7 @@ header.header .top-links li .child-box ul li a.highlight {
 }
 .remove-schedule-modal .modal-header {
   background-color: #ffffff;
-  min-height: 10px !important;
+  min-height: 30px !important;
 }
 .remove-schedule-modal .modal-header .close-icon {
   cursor: pointer;
@@ -10507,6 +10507,12 @@ header.header .top-links li .child-box ul li a.highlight {
   position: relative;
   padding-top: 20px;
 }
+@media (max-width: 1200px) {
+  .main .wrap-profile .lv-bagde {
+    margin: auto;
+    margin-top: 10px;
+  }
+}
 .main .wrap-profile .lv-bagde strong {
   color: #000;
 }
@@ -10694,19 +10700,8 @@ header.header .top-links li .child-box ul li a.highlight {
 .main .wrap-profile .profile-content .profile-form .wrap-sex {
   width: 150px;
 }
-.main .wrap-profile .profile-content .profile-form .wrap-date {
-  width: 150px;
-  float: left;
-  margin-right: 10px;
-}
-.main .wrap-profile .profile-content .profile-form .wrap-month {
-  width: calc(100% - 320px);
-  float: left;
-  margin-right: 10px;
-}
-.main .wrap-profile .profile-content .profile-form .wrap-year {
-  width: 150px;
-  float: left;
+.main .wrap-profile .profile-content .profile-form .change-password-link {
+  line-height: 36px;
 }
 .main .wrap-profile .profile-content .profile-form .select2-container--default .select2-selection--single {
   border: 2px solid #515252;

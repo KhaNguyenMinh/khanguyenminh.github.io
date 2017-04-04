@@ -428,6 +428,19 @@
                 $(this).addClass('star-yellow');
             }
         });
+
+        /* =================================
+         ===  Profile Page             ====
+         =================================== */
+        $(this).on('click', '.wrap-profile .profile-content .change-password-link', function () {
+            var changeProfileElm = $('.wrap-profile .profile-content .change-pass');
+
+            if(changeProfileElm.hasClass("hidden")) {
+                changeProfileElm.removeClass('hidden');
+            } else {
+                changeProfileElm.addClass('hidden');
+            }
+        });
     });
 
 })(window.jQuery);
