@@ -1490,7 +1490,7 @@ header.header {
     }
     .modal-header {
         background-color:  #ffffff;
-        min-height: 10px !important;
+        min-height: 30px !important;
         .close-icon {
             cursor: pointer;
             position: absolute;
@@ -1636,7 +1636,7 @@ header.header {
     }
     .modal-header {
         background-color:  #ffffff;
-        min-height: 10px !important;
+        min-height: 30px !important;
         .modal-title {
             text-transform: none;
             text-transform: none;
@@ -1719,7 +1719,7 @@ header.header {
     }
     .modal-header {
         background-color:  #ffffff;
-        min-height: 10px !important;
+        min-height: 30px !important;
         .close-icon {
             cursor: pointer;
             position: absolute;
@@ -3234,6 +3234,10 @@ header.header {
             }
         }
         .lv-bagde {
+            @media (max-width: 1200px) {
+                margin: auto;
+                margin-top: 10px;
+            }
             width: 260px;
             background-color: #02b691;
             height: 80px;
@@ -3447,19 +3451,8 @@ header.header {
                 .wrap-sex {
                     width: 150px;
                 }
-                .wrap-date {
-                    width: 150px;
-                    float: left;
-                    margin-right: 10px;
-                }
-                .wrap-month {
-                    width: ~"calc(100% - 320px)";
-                    float: left;
-                    margin-right: 10px;
-                }
-                .wrap-year {
-                    width: 150px;
-                    float: left;
+                .change-password-link {
+                    line-height: 36px;
                 }
                 .select2-container--default {
                     .select2-selection--single {
