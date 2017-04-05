@@ -36,7 +36,7 @@ class LoginModalComponent extends React.Component {
 	      password: event.target.value
 	    })
 	}
-	handleClose = () => {
+	handleClose (){
 	    this.setState({open: false})
 	}
 	handleSubmit(event){
@@ -54,7 +54,7 @@ class LoginModalComponent extends React.Component {
 	      	<FlatButton
 		        label="Cancel"
 		        primary={true}
-		        onTouchTap={this.handleClose}
+		        onTouchTap={this.handleClose.bind(this)}
 	      	/>,
 	      	<FlatButton
 		        label="Submit"
