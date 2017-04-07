@@ -6,6 +6,7 @@ import Toggle from 'material-ui/Toggle'
 import store from '../../store'
 import UltimatePagination from '../commons/pagination'
 import {loadCampaignList} from '../../containers/campaigns-table/actions'
+import ToolbarComponent from '../tool-bar/tool-bar'
 
 export default class CampaignTableComponent extends React.Component {
     constructor(props) {
@@ -66,6 +67,8 @@ export default class CampaignTableComponent extends React.Component {
     render() {
         return (
             <div className="test-class">
+                <h5>Danh sách chiến dịch</h5>
+                <ToolbarComponent />
                 <Table className="table-cam" height={this.state.height}
                         fixedFooter={this.state.fixedFooter}>
                     <TableHeader

@@ -12,11 +12,12 @@ import LoginContainer from '../../containers/login/login-container'
 import {openLoginModal} from '../../containers/login/actions'
 import {logout} from '../../containers/top-nav/actions'
 import store from '../../store'
+import {browserHistory} from 'react-router'
 
 class Login extends Component {
     render() {
         return (
-            <RaisedButton onTouchTap={this.props.loginOnclick} label="Login" secondary={true} />
+            <RaisedButton style= {{marginTop: 6, marginRight: 16}} onTouchTap={this.props.loginOnclick} label="Login" secondary={true} />
         )
     }
 }
@@ -66,14 +67,19 @@ class TopNavComponent extends Component {
         store.dispatch(logout())
     }
 
+    createCampaignOnClick = () => {
+        browserHistory.push('/create-campaign')
+    }
+
     render() {
         return (
             <div>
                 <AppBar
                     style={{position: 'fixed', top: '0'}}
-                    title="This is my site"
+                    title="Bigbom.com"
                     onLeftIconButtonTouchTap={this.handleToggle.bind(this)}
-                    iconElementRight={this.props.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
+                    // iconElementRight={this.props.logged ? <Logged signOutOnclick={this.signOutOnclick}/> : <Login loginOnclick={this.loginOnclick}/>}
+                    iconElementRight={<RaisedButton style= {{marginTop: 6, marginRight: 16}} onTouchTap={this.createCampaignOnClick} label="Tạo chiến dịch" secondary={true} />}
                 />
                 <SileBarComponent openSlideBar={this.state.openSlideBar} chilOnChange={this.chilOnChange}/>
                 <LoginContainer />
