@@ -7,16 +7,10 @@ import {
 } from 'material-ui/Stepper';
 import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
+import CreateCampaignStep1Component from '../create-campaign-step1/create-campaign-step1'
+import CreateCampaignStep2Component from '../create-campaign-step2/create-campaign-step2'
 
 console.log(process.env.NODE_ENV);
-
-const style = {
-  height: '100%',
-  width: '100%',
-  textAlign: 'center',
-  display: 'inline-block',
-  minWidth: 600
-};
 
 class CreateCampaignComponent extends Component {
 	state = {
@@ -42,9 +36,9 @@ class CreateCampaignComponent extends Component {
   getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return 'Tạo chiến dịch...'
+        return <CreateCampaignStep1Component />
       case 1:
-        return 'Nhóm & Đối tượng...'
+        return <CreateCampaignStep2Component />
       case 2:
         return 'Tạo quảng cáo...'
       case 3:
@@ -53,12 +47,11 @@ class CreateCampaignComponent extends Component {
   }
     render() {
     	const {finished, stepIndex} = this.state;
-    	const contentStyle = {margin: '0 16px'};
+    	const contentStyle = {margin: '15px 15px 0 15px'};
         return (
         	<div>
         		<h5>Tạo chiến dịch</h5>
-        		<Paper style={style} zDepth={1}>
-	        		<div style={{width: '100%', maxWidth: 700, margin: 'auto', paddingBottom: 20}}>
+	        		<div style={{width: '100%', maxWidth: 900, margin: 'auto', paddingBottom: 20}}>
 				        <Stepper activeStep={stepIndex}>
 				          <Step>
 				            <StepLabel>Tạo chiến dịch</StepLabel>
@@ -88,16 +81,16 @@ class CreateCampaignComponent extends Component {
 				            </p>
 				          ) : (
 				            <div>
-				              <p>{this.getStepContent(stepIndex)}</p>
-				              <div style={{marginTop: 12}}>
+				              <div>{this.getStepContent(stepIndex)}</div>
+				              <div style={{marginTop: 12, float: 'right', marginBottom: 20}}>
 				                <FlatButton
-				                  label="Back"
+				                  label="Quay lại"
 				                  disabled={stepIndex === 0}
 				                  onTouchTap={this.handlePrev}
 				                  style={{marginRight: 12}}
 				                />
 				                <RaisedButton
-				                  label={stepIndex === 2 ? 'Finish' : 'Next'}
+				                  label={stepIndex === 3 ? 'Hoàn thành' : 'Tiếp tục'}
 				                  primary={true}
 				                  onTouchTap={this.handleNext}
 				                />
@@ -105,8 +98,7 @@ class CreateCampaignComponent extends Component {
 				            </div>
 				          )}
 				        </div>
-				      </div>
-	        	</Paper>
+				    </div>
         	</div>
         	
         );
