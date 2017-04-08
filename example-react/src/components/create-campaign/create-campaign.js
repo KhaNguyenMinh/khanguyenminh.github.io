@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import store from '../../store'
 import Paper from 'material-ui/Paper'
 import {
   Step,
@@ -9,6 +10,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 import FlatButton from 'material-ui/FlatButton';
 import CreateCampaignStep1Component from '../create-campaign-step1/create-campaign-step1'
 import CreateCampaignStep2Component from '../create-campaign-step2/create-campaign-step2'
+import {showNotify} from '../../containers/system-notify/actions'
 
 console.log(process.env.NODE_ENV);
 
@@ -24,6 +26,8 @@ class CreateCampaignComponent extends Component {
       stepIndex: stepIndex + 1,
       finished: stepIndex >= 3,
     });
+
+    store.dispatch(showNotify('test mgs bla bla bla bla bla bla bla bla', undefined , true))
   };
 
   handlePrev = () => {
