@@ -30,7 +30,8 @@
              height:500, 
              space:5,
              autoplay: true,
-             fullwidth:true
+             fullwidth:true,
+             loop: true
         });
         slider.control('arrows');
 
