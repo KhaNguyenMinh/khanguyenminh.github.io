@@ -21,7 +21,7 @@
           navigation: true,
           slidesNavigation: true,
           controlArrows: false,
-          anchors: ['home', 'main'],
+          anchors: ['home', 'content'],
           menu: '#menu',
 
           // afterLoad: function(anchorLink, index) {
