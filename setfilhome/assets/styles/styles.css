@@ -6714,52 +6714,94 @@ body {
   line-height: 1.5em;
   color: #333;
   text-align: center;
+  transition: background-color 0.5s;
 }
-#fullpage .section-1 {
+#projectPage .section-1 {
   background: url("../images/bg1.jpg") center top no-repeat;
   background-size: cover;
 }
-#fullpage .section-1 .scroll-icon {
+#projectPage .section-1 .scroll-icon {
   position: absolute;
   width: 100%;
   bottom: 0;
 }
-#fullpage .section-1 .scroll-icon span {
+#projectPage .section-1 .scroll-icon span {
   display: block;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.75);
   cursor: pointer;
 }
-#fullpage .section-1 .scroll-icon span i {
+#projectPage .section-1 .scroll-icon span i {
   font-size: 36px;
 }
-#fullpage .section-2 .fp-tableCell {
+#projectPage .section-2 .fp-tableCell {
   vertical-align: top;
 }
-#fullpage .section-2 .nav-wrapper {
+.top-nav {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 60px;
+  background-color: #fff;
+}
+.top-nav .nav-wrapper {
+  position: relative;
   background-color: #FFF;
 }
-#fullpage .section-2 .nav-wrapper .brand-logo {
+.top-nav .nav-wrapper .brand-logo {
   color: black;
 }
-#fullpage .section-2 .nav-wrapper .left-content {
+.top-nav .nav-wrapper .left-content {
   position: absolute;
   left: 30px;
 }
-#fullpage .section-2 .nav-wrapper .left-content .menu-icon {
+.top-nav .nav-wrapper .left-content .menu-icon {
   color: black;
 }
-#fullpage .section-2 .nav-wrapper .left-content .title {
+.top-nav .nav-wrapper .left-content .title {
   color: black;
   position: absolute;
   top: 0;
   left: 40px;
 }
-#fullpage .section-2 .nav-wrapper .right-content {
+.top-nav .nav-wrapper .right-content {
   position: absolute;
   right: 30px;
 }
-#fullpage .section-2 .nav-wrapper .right-content a {
+.top-nav .nav-wrapper .right-content a {
   color: black;
   padding-left: 10px;
+}
+.main-sile-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  text-align: left;
+}
+.main-sile-nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+.main-sile-nav a:hover {
+  color: rgba(51, 51, 51, 0.66);
+}
+.main-content {
+  transition: margin-left 0.5s;
+  margin-top: 60px;
+}
+.grid-gallery ul li a h4 {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  color: #ffffff;
 }

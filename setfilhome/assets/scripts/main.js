@@ -2,7 +2,31 @@
 
     "use strict";
 
+    function openMenu() {
+        $('#mainSideNav').width(250);
+        $('.grid-gallery').css('background-color', 'rgba(0,0,0,0.4)');
+        $('#openMenuIcon').addClass('hidden');
+        $('#closeMenuIcon').removeClass('hidden');
+    }
+
+    function closeMenu() {
+        $('#mainSideNav').width(0);
+        // $('body').css('background-color', '#fff');
+        $('#openMenuIcon').removeClass('hidden');
+        $('#closeMenuIcon').addClass('hidden');
+    }
+
     $(document).ready(function() {
+        new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+
+        $('#openMenuIcon').click(function(){
+            openMenu();
+        });
+
+        $('#closeMenuIcon').click(function(){
+            closeMenu();
+        });
+
         // variables
         // var $header_top = $('.header-top');
         // var $nav = $('nav');

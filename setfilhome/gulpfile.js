@@ -23,6 +23,7 @@ gulp.task('css', ['less'], function () {
         'assets/fullpage/jquery.fullpage.min.css',
         'assets/materialize/css/materialize.min.css',
         'assets/fonts/material-iconfont/material-icons.css',
+        'assets/gridgallery/css/component.css',
         'assets/styles/styles.css'
     ])
         .pipe(concatCss('main.css'))
@@ -38,12 +39,16 @@ gulp.task('js', function () {
         'assets/scripts/libs/jquery.min.js',
         'assets/scripts/libs/modernizr.js',
         'assets/fullpage/jquery.fullpage.min.js',
-        'assets/gsap/TweenMax.min.js',
-        'assets/scripts/libs/bootstrap.min.js',
-        'assets/scrollmagic/ScrollMagic.min.js',
-        'assets/scrollmagic/plugins/animation.gsap.min.js',
-        'assets/gsap/plugins/ScrollToPlugin.min.js',
-        'assets/scrollmagic/plugins/debug.addIndicators.min.js',
+        'assets/gridgallery/js/imagesloaded.pkgd.min.js',
+        'assets/gridgallery/js/masonry.pkgd.min.js',
+        'assets/gridgallery/js/classie.js',
+        'assets/gridgallery/js/cbpGridGallery.js',
+        // 'assets/gsap/TweenMax.min.js',
+        // 'assets/scripts/libs/bootstrap.min.js',
+        // 'assets/scrollmagic/ScrollMagic.min.js',
+        // 'assets/scrollmagic/plugins/animation.gsap.min.js',
+        // 'assets/gsap/plugins/ScrollToPlugin.min.js',
+        // 'assets/scrollmagic/plugins/debug.addIndicators.min.js',
         'assets/scripts/main.js'
     ])
         .pipe(concat('main.js'))
