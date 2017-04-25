@@ -6720,7 +6720,7 @@ body {
   position: fixed;
   top: 0;
   z-index: 999;
-  height: 60px;
+  height: 64px;
   background-color: #fff;
 }
 .top-nav .nav-wrapper {
@@ -6737,11 +6737,15 @@ body {
 .top-nav .nav-wrapper .left-content .menu-icon {
   color: black;
 }
+.top-nav .nav-wrapper .left-content .menu-icon i {
+  font-size: 36px;
+}
 .top-nav .nav-wrapper .left-content .title {
+  font-size: 14px;
   color: black;
   position: absolute;
   top: 0;
-  left: 40px;
+  left: 45px;
 }
 .top-nav .nav-wrapper .right-content {
   position: absolute;
@@ -6751,9 +6755,20 @@ body {
   color: black;
   padding-left: 10px;
 }
+@media (max-width: 460px) {
+  .top-nav .nav-wrapper .left-content {
+    left: 10px;
+  }
+  .top-nav .nav-wrapper .left-content .title {
+    display: none;
+  }
+  .top-nav .nav-wrapper .right-content {
+    right: 10px;
+  }
+}
 .main-content {
   transition: margin-left 0.5s;
-  margin-top: 60px;
+  margin-top: 64px;
 }
 .main-content .main-sile-nav {
   height: 100%;
@@ -6768,15 +6783,29 @@ body {
   text-align: left;
 }
 .main-content .main-sile-nav a {
-  padding: 8px 8px 8px 32px;
+  padding: 10px;
+  padding-left: 30px;
   text-decoration: none;
-  font-size: 25px;
-  color: #000000;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.66);
   display: block;
   transition: 0.3s;
 }
-.main-content .main-sile-nav a:hover {
-  color: rgba(51, 51, 51, 0.66);
+.main-content .main-sile-nav a span {
+  text-transform: uppercase;
+}
+.main-content .main-sile-nav a span:hover,
+.main-content .main-sile-nav a span:focus {
+  color: black;
+}
+.main-content .main-sile-nav a span:hover:after,
+.main-content .main-sile-nav a span:focus:after,
+.main-content .main-sile-nav a span:hover:before,
+.main-content .main-sile-nav a span:focus:before {
+  background-color: black;
+}
+.main-content .main-sile-nav a.active span {
+  color: black;
 }
 #homePage .section-1 {
   background: url("../images/bg1.jpg") center top no-repeat;
@@ -6799,9 +6828,28 @@ body {
 #homePage .section-2 .fp-tableCell {
   vertical-align: top;
 }
-#projectsPage .grid-gallery ul li a h4 {
+#projectsPage .grid-gallery ul li:hover a figure {
+  opacity: 1;
+}
+#projectsPage .grid-gallery ul li:hover a figure .title {
+  opacity: 1;
+}
+#projectsPage .grid-gallery ul li:hover a figure img {
+  transform: scale(1.1);
+}
+#projectsPage .grid-gallery ul li a figure {
+  overflow: hidden;
+  z-index: 2;
+}
+#projectsPage .grid-gallery ul li a figure .title {
   position: absolute;
-  top: 50%;
-  left: 40%;
+  bottom: 50px;
+  width: 100%;
+  text-align: center;
   color: #ffffff;
+  opacity: 0;
+}
+#projectsPage .grid-gallery ul li a figure img {
+  transform: scale(1);
+  transition: 0.3s ease-in-out;
 }

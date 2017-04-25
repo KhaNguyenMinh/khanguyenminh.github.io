@@ -52,7 +52,6 @@
 }
 
 .grid figure {
-	padding: 1px;
 	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }

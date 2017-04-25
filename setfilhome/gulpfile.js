@@ -24,6 +24,8 @@ gulp.task('css', ['less'], function () {
         'assets/materialize/css/materialize.min.css',
         'assets/fonts/material-iconfont/material-icons.css',
         'assets/gridgallery/css/component.css',
+        'assets/text-hover-effects/css/base.css',
+        'assets/text-hover-effects/css/css-classes.css',
         'assets/styles/styles.css'
     ])
         .pipe(concatCss('main.css'))
@@ -43,6 +45,7 @@ gulp.task('js', function () {
         'assets/gridgallery/js/masonry.pkgd.min.js',
         'assets/gridgallery/js/classie.js',
         'assets/gridgallery/js/cbpGridGallery.js',
+        // 'assets/scripts/libs/iscroll.js',
         // 'assets/gsap/TweenMax.min.js',
         // 'assets/scripts/libs/bootstrap.min.js',
         // 'assets/scrollmagic/ScrollMagic.min.js',

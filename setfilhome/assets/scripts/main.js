@@ -4,7 +4,6 @@
 
     function openMenu() {
         $('#mainSideNav').width(250);
-        $('.grid-gallery').css('background-color', 'rgba(0,0,0,0.4)');
         $('#openMenuIcon').addClass('hidden');
         $('#closeMenuIcon').removeClass('hidden');
     }
