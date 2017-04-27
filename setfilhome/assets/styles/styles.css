@@ -6865,12 +6865,17 @@ body {
   transform: scale(1) !important;
   transition: 0.3s ease-in-out !important;
 }
-#projectsPage #gallery .ug-textpanel-title .cus-description {
-  outline: 0!important;
-  transition: color 1s ease!important;
+@media (max-width: 992px) {
+  #projectsPage #gallery .ug-textpanel {
+    opacity: 1!important;
+  }
 }
-#projectsPage #gallery .ug-textpanel-title .cus-description:after,
-#projectsPage #gallery .ug-textpanel-title .cus-description:before {
+#projectsPage #gallery .ug-textpanel .ug-textpanel-title .cus-description {
+  outline: 0 !important;
+  transition: color 1s ease !important;
+}
+#projectsPage #gallery .ug-textpanel .ug-textpanel-title .cus-description:after,
+#projectsPage #gallery .ug-textpanel .ug-textpanel-title .cus-description:before {
   outline: 0;
   background-color: #ffffff;
   transition: all 1s ease;
