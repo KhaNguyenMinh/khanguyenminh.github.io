@@ -26,6 +26,10 @@ gulp.task('css', ['less'], function () {
         'assets/gridgallery/css/component.css',
         'assets/text-hover-effects/css/base.css',
         'assets/text-hover-effects/css/css-classes.css',
+        'assets/masterslider/style/masterslider.css',
+        // 'assets/masterslider/style/ms-staff-style.css',
+        'assets/masterslider/skins/default/style.css',
+        'assets/unitegallery-master/dist/css/unite-gallery.css',
         'assets/styles/styles.css'
     ])
         .pipe(concatCss('main.css'))
@@ -45,6 +49,9 @@ gulp.task('js', function () {
         'assets/gridgallery/js/masonry.pkgd.min.js',
         'assets/gridgallery/js/classie.js',
         'assets/gridgallery/js/cbpGridGallery.js',
+        'assets/masterslider/masterslider.min.js',
+        'assets/unitegallery-master/dist/js/unitegallery.js',
+        'assets/unitegallery-master/dist/themes/tiles/ug-theme-tiles.js',
         // 'assets/scripts/libs/iscroll.js',
         // 'assets/gsap/TweenMax.min.js',
         // 'assets/scripts/libs/bootstrap.min.js',
