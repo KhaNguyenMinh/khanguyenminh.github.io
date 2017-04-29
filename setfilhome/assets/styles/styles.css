@@ -6716,6 +6716,7 @@ body {
   text-align: center;
   height: auto;
   transition: background-color 0.5s;
+  background-color: #f2f2f2;
 }
 .top-nav {
   position: fixed;
@@ -6775,7 +6776,7 @@ body {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   left: 0;
   background-color: #fff;
   overflow-x: hidden;
@@ -6886,22 +6887,41 @@ body {
   left: 0;
   top: 20px;
 }
-#projectDetailPage {
-  background-color: #f2f2f2;
-}
 #projectDetailPage .row {
   margin: 0;
 }
+@media (min-width: 861px) {
+  #projectDetailPage .row {
+    display: flex;
+  }
+}
 #projectDetailPage .project-img {
   padding: 20px;
+  padding-left: 32px;
+  padding-bottom: 0;
+}
+@media (min-width: 861px) {
+  #projectDetailPage .project-img {
+    align-items: stretch;
+  }
 }
 #projectDetailPage .project-img img {
   width: 100%;
 }
+@media (max-width: 860px) {
+  #projectDetailPage .project-img {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 #projectDetailPage .project-detail {
   padding: 0;
   background-color: #ffffff;
-  height: 100%;
+}
+@media (min-width: 861px) {
+  #projectDetailPage .project-detail {
+    align-items: stretch;
+  }
 }
 #projectDetailPage .project-detail .control-bar {
   min-height: 80px;
@@ -6923,4 +6943,166 @@ body {
   font-weight: 700;
   line-height: 30px;
   text-align: left;
+}
+#productsPage .row {
+  margin: 0;
+}
+#productsPage .products-menu {
+  padding-left: 0;
+  padding-right: 0;
+  z-index: 1;
+  left: 0;
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  text-align: left;
+}
+#productsPage .products-menu a {
+  padding: 10px;
+  padding-left: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 0.66);
+  display: block;
+}
+#productsPage .products-menu a span {
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+#productsPage .products-menu a span:hover,
+#productsPage .products-menu a span:focus {
+  color: black;
+}
+#productsPage .products-menu a span:hover:after,
+#productsPage .products-menu a span:focus:after,
+#productsPage .products-menu a span:hover:before,
+#productsPage .products-menu a span:focus:before {
+  background-color: black;
+}
+#productsPage .products-menu a.active span {
+  color: black;
+}
+#productsPage .products-img {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 25px;
+}
+@media (max-width: 860px) {
+  #productsPage .products-img {
+    padding: 10px;
+  }
+}
+#aboutusPage .main-content .right-content {
+  padding-top: 20px;
+}
+@media (max-width: 860px) {
+  #aboutusPage .main-content .right-content {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+#aboutusPage .main-content .right-content .wrapper {
+  background-color: #FFF;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content {
+  margin: 0;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content .left {
+  padding: 0;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content .left img {
+  padding-top: 0;
+  padding-left: 0;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content .right {
+  padding: 0;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content .right .img1 {
+  padding-top: 0;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content .right img {
+  padding-right: 0;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content img {
+  width: 100%;
+  padding: 1px;
+}
+@media (max-width: 860px) {
+  #aboutusPage .main-content .right-content .wrapper .img-content img {
+    padding: 0;
+    padding-bottom: 1px;
+  }
+}
+#aboutusPage .main-content .right-content .wrapper .text-content {
+  margin: 0;
+  text-align: left;
+  padding: 20px;
+}
+#aboutusPage .main-content .right-content .wrapper .social-network {
+  margin: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-top: 1px solid #f2f2f2;
+  text-align: left;
+}
+#aboutusPage .main-content .right-content .wrapper .social-network .follow-us {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@media (max-width: 860px) {
+  #contactPage .main-content .right-content {
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+#contactPage .main-content .right-content .wrapper {
+  padding-top: 50px;
+  font-size: 14px;
+}
+@media (max-width: 860px) {
+  #contactPage .main-content .right-content .wrapper {
+    padding: 10px;
+  }
+}
+#contactPage .main-content .right-content .wrapper .left {
+  text-align: right;
+  padding-top: 25px;
+}
+#contactPage .main-content .right-content .wrapper .left img {
+  width: 100%;
+}
+@media (max-width: 860px) {
+  #contactPage .main-content .right-content .wrapper .left {
+    text-align: left;
+    padding-top: 20px;
+  }
+}
+#contactPage .main-content .right-content .wrapper .right {
+  text-align: left;
+}
+@media (max-width: 860px) {
+  #contactPage .main-content .right-content .wrapper .right {
+    padding-top: 20px;
+  }
+}
+#contactPage .main-content .right-content .wrapper .right input,
+#contactPage .main-content .right-content .wrapper .right textarea,
+#contactPage .main-content .right-content .wrapper .right label {
+  font-size: 14px;
+}
+#contactPage .main-content .right-content .wrapper .right label {
+  font-weight: 500;
+}
+#contactPage .main-content .right-content .wrapper .right label.active {
+  color: #000;
+}
+#contactPage .main-content .right-content .wrapper .right .btn-send {
+  background-color: #000;
+  border-radius: 0;
+}
+#contactPage .main-content .right-content .wrapper .right .btn-send:hover {
+  color: #fff;
 }

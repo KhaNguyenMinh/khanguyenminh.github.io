@@ -27,9 +27,10 @@ gulp.task('css', ['less'], function () {
         'assets/text-hover-effects/css/base.css',
         'assets/text-hover-effects/css/css-classes.css',
         'assets/masterslider/style/masterslider.css',
-        // 'assets/masterslider/style/ms-staff-style.css',
         'assets/masterslider/skins/default/style.css',
         'assets/unitegallery-master/dist/css/unite-gallery.css',
+        // 'assets/lightbox/style/ms-lightbox.css',
+        'assets/lightbox/css/prettyPhoto.css',
         'assets/styles/styles.css'
     ])
         .pipe(concatCss('main.css'))
@@ -44,6 +45,7 @@ gulp.task('js', function () {
     gulp.src([
         'assets/scripts/libs/jquery.min.js',
         'assets/scripts/libs/modernizr.js',
+        'assets/materialize/js/materialize.min.js',
         'assets/fullpage/jquery.fullpage.min.js',
         'assets/gridgallery/js/imagesloaded.pkgd.min.js',
         'assets/gridgallery/js/masonry.pkgd.min.js',
@@ -52,6 +54,11 @@ gulp.task('js', function () {
         'assets/masterslider/masterslider.min.js',
         'assets/unitegallery-master/dist/js/unitegallery.js',
         'assets/unitegallery-master/dist/themes/tiles/ug-theme-tiles.js',
+        // 'assets/scripts/libs/tab.js',
+        // 'assets/syntax-highlighter/scripts/shCore.js',
+        // 'assets/syntax-highlighter/scripts/shBrushXml.js',
+        // 'assets/syntax-highlighter/scripts/shBrushCss.js',
+        // 'assets/syntax-highlighter/scripts/shBrushJScript.js',
         // 'assets/scripts/libs/iscroll.js',
         // 'assets/gsap/TweenMax.min.js',
         // 'assets/scripts/libs/bootstrap.min.js',
