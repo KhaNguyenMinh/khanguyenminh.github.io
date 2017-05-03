@@ -24,8 +24,8 @@
     BODY
 ----------------------------------------- */
 body {
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 12px;
+    font-family: "NotoSans", sans-serif;
+    //font-size: 12px;
     line-height: 1.5em;
     color: #333;
     text-align: center;
@@ -54,11 +54,12 @@ body {
             .menu-icon {
                 color: black;
                 i {
-                    font-size: 36px;
+                    font-size: 29px;
                 }
             }
             .title {
-                font-size: 14px;
+                font-size: 16px;
+                font-weight: 400;
                 color: black;
                 position: absolute;
                 top: 0;
@@ -70,8 +71,15 @@ body {
             position: absolute;
             right: 30px;
             a {
-                color: black;
+                color:  #bbbbbb;
                 padding-left: 10px;
+                font-weight: 400;
+                font-size: 16px;
+
+                &.active {
+                    color: #000000;
+                    font-weight: 500;
+                }
             }
         }
         @media (max-width: 460px) {
@@ -206,7 +214,10 @@ body {
 #projectsPage {
     #gallery {
         .underline-left {
-            font-size: 21px;
+            color:  #ffffff;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 30px
         }
         a {
             &:hover {
@@ -321,20 +332,42 @@ body {
 
             .action-btn {
                 padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
                 i {
                     font-size: 36px;
                     color: #555555;
                 }
+                .menu-icon {
+                    position: absolute;
+                    top: 8px;
+                    background: url('../images/menu-icon.png') no-repeat;
+                    height: 20px;
+                    width: 20px;
+                }
+                .text-left {
+                    text-align: left;
+                }
+                .text-right {
+                    text-align: right;
+                }
             }
         }
         .content {
-            text-align: left;
             padding: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
             .detail-title {
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 30px;
                 text-align: left;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 25px;
+                text-align: justify;
             }
         }
     }
@@ -457,6 +490,12 @@ body {
                     margin: 0;
                     text-align: left;
                     padding: 20px;
+                    p {
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 25px;
+                        text-align: justify;
+                    }
                 }
                 .social-network {
                     margin: 0;

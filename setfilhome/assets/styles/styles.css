@@ -6628,6 +6628,26 @@ button.close {
 /*---------------------------------------
   FONTS
 -----------------------------------------*/
+@font-face {
+  font-family: 'NotoSans';
+  src: url('../fonts/noto/NotoSans-Regular.ttf');
+}
+@font-face {
+  font-family: 'NotoSans';
+  font-style: italic;
+  src: url('../fonts/noto/NotoSans-Italic.ttf');
+}
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 700;
+  src: url('../fonts/noto/NotoSans-Bold.ttf');
+}
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../fonts/noto/NotoSans-BoldItalic.ttf');
+}
 /* ---------------------------------------
 GENERAL STYLES
 ----------------------------------------- */
@@ -6709,8 +6729,7 @@ MAIN STYLES
     BODY
 ----------------------------------------- */
 body {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 12px;
+  font-family: "NotoSans", sans-serif;
   line-height: 1.5em;
   color: #333;
   text-align: center;
@@ -6740,10 +6759,11 @@ body {
   color: black;
 }
 .top-nav .nav-wrapper .left-content .menu-icon i {
-  font-size: 36px;
+  font-size: 29px;
 }
 .top-nav .nav-wrapper .left-content .title {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 400;
   color: black;
   position: absolute;
   top: 0;
@@ -6754,8 +6774,14 @@ body {
   right: 30px;
 }
 .top-nav .nav-wrapper .right-content a {
-  color: black;
+  color: #bbbbbb;
   padding-left: 10px;
+  font-weight: 400;
+  font-size: 16px;
+}
+.top-nav .nav-wrapper .right-content a.active {
+  color: #000000;
+  font-weight: 500;
 }
 @media (max-width: 460px) {
   .top-nav .nav-wrapper .left-content {
@@ -6857,7 +6883,10 @@ body {
   vertical-align: top;
 }
 #projectsPage #gallery .underline-left {
-  font-size: 21px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
 }
 #projectsPage #gallery a:hover img {
   transform: scale(1.1) !important;
@@ -6929,20 +6958,42 @@ body {
 }
 #projectDetailPage .project-detail .control-bar .action-btn {
   padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 #projectDetailPage .project-detail .control-bar .action-btn i {
   font-size: 36px;
   color: #555555;
 }
-#projectDetailPage .project-detail .content {
+#projectDetailPage .project-detail .control-bar .action-btn .menu-icon {
+  position: absolute;
+  top: 8px;
+  background: url('../images/menu-icon.png') no-repeat;
+  height: 20px;
+  width: 20px;
+}
+#projectDetailPage .project-detail .control-bar .action-btn .text-left {
   text-align: left;
+}
+#projectDetailPage .project-detail .control-bar .action-btn .text-right {
+  text-align: right;
+}
+#projectDetailPage .project-detail .content {
   padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 #projectDetailPage .project-detail .content .detail-title {
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
   text-align: left;
+}
+#projectDetailPage .project-detail .content p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: justify;
 }
 #productsPage .row {
   margin: 0;
@@ -7038,6 +7089,12 @@ body {
   margin: 0;
   text-align: left;
   padding: 20px;
+}
+#aboutusPage .main-content .right-content .wrapper .text-content p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 25px;
+  text-align: justify;
 }
 #aboutusPage .main-content .right-content .wrapper .social-network {
   margin: 0;
