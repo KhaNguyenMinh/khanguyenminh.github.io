@@ -6728,14 +6728,28 @@ MAIN STYLES
 /* ---------------------------------------
     BODY
 ----------------------------------------- */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
 body {
   font-family: "NotoSans", sans-serif;
-  line-height: 1.5em;
-  color: #333;
+  height: 100%;
   text-align: center;
-  height: auto;
   transition: background-color 0.5s;
   background-color: #f2f2f2;
+}
+body .footer {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  padding: 10px;
+}
+body .footer .copyright {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 20px;
 }
 .top-nav {
   position: fixed;
@@ -6795,7 +6809,7 @@ body {
   }
 }
 .main-content {
-  margin-top: 64px;
+  padding-top: 64px;
   height: 100%;
 }
 .main-content .main-sile-nav {
@@ -6882,6 +6896,15 @@ body {
 #homePage .section-2 .fp-tableCell {
   vertical-align: top;
 }
+#projectsPage {
+  min-height: 100%;
+  margin-bottom: -60px;
+}
+#projectsPage:after {
+  content: "";
+  display: block;
+  height: 60px;
+}
 #projectsPage #gallery .underline-left {
   color: #ffffff;
   font-size: 16px;
@@ -6915,6 +6938,15 @@ body {
   height: 3px;
   left: 0;
   top: 20px;
+}
+#projectDetailPage {
+  min-height: 100%;
+  margin-bottom: -60px;
+}
+#projectDetailPage:after {
+  content: "";
+  display: block;
+  height: 60px;
 }
 #projectDetailPage .row {
   margin: 0;
@@ -6995,6 +7027,15 @@ body {
   line-height: 25px;
   text-align: justify;
 }
+#productsPage {
+  min-height: 100%;
+  margin-bottom: -60px;
+}
+#productsPage:after {
+  content: "";
+  display: block;
+  height: 60px;
+}
 #productsPage .row {
   margin: 0;
 }
@@ -7041,6 +7082,15 @@ body {
   #productsPage .products-img {
     padding: 10px;
   }
+}
+#aboutusPage {
+  min-height: 100%;
+  margin-bottom: -60px;
+}
+#aboutusPage:after {
+  content: "";
+  display: block;
+  height: 60px;
 }
 #aboutusPage .main-content .right-content {
   padding-top: 20px;
@@ -7106,6 +7156,15 @@ body {
 #aboutusPage .main-content .right-content .wrapper .social-network .follow-us {
   text-transform: uppercase;
   cursor: pointer;
+}
+#contactPage {
+  min-height: 100%;
+  margin-bottom: -60px;
+}
+#contactPage:after {
+  content: "";
+  display: block;
+  height: 60px;
 }
 @media (max-width: 860px) {
   #contactPage .main-content .right-content {
