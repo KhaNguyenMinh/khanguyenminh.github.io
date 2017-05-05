@@ -7074,14 +7074,29 @@ body .footer .copyright {
   color: black;
 }
 #productsPage .products-img {
-  padding-top: 30px;
-  padding-left: 10px;
-  padding-right: 25px;
+  padding-top: 20px;
+  padding-right: 30px;
 }
-@media (max-width: 860px) {
-  #productsPage .products-img {
-    padding: 10px;
-  }
+#productsPage .products-img .img-wrapper {
+  cursor: pointer;
+  padding: 1px;
+}
+#productsPage .products-img .img-wrapper:hover {
+  opacity: 0.8;
+}
+#productsPage .products-img .img-wrapper:hover .title {
+  opacity: 1;
+}
+#productsPage .products-img .img-wrapper img {
+  width: 100%;
+}
+#productsPage .products-img .img-wrapper .title {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
 }
 #aboutusPage {
   min-height: 100%;

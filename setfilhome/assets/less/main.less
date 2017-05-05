@@ -470,12 +470,29 @@ body {
     }
 
     .products-img {
-        // align-items: stretch;
-        padding-top: 30px;
-        padding-left: 10px;
-        padding-right: 25px;
-        @media (max-width: 860px) {
-            padding: 10px;
+        padding-top: 20px;
+        padding-right: 30px;
+        .img-wrapper {
+            cursor: pointer;
+            padding: 1px;
+            &:hover {
+                //background-color: rgba(0, 0, 0, 0.3);
+                opacity: 0.8;
+                .title {
+                    opacity: 1;
+                }
+            }
+            img {
+                width: 100%;
+            }
+            .title {
+                position: absolute;
+                bottom: 30px;
+                width: 100%;
+                text-align: center;
+                color: #ffffff;
+                opacity: 0;
+            }
         }
     }
 }
