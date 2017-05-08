@@ -472,9 +472,13 @@ body {
     .products-img {
         padding-top: 20px;
         padding-right: 30px;
+        position: relative;
         .img-wrapper {
             cursor: pointer;
             padding: 1px;
+            transition:all 0.3s ease;
+            // width: 25%;
+            // float: left;
             &:hover {
                 //background-color: rgba(0, 0, 0, 0.3);
                 opacity: 0.8;
@@ -492,6 +496,12 @@ body {
                 text-align: center;
                 color: #ffffff;
                 opacity: 0;
+            }
+        }
+        .preview {
+            position: absolute;
+            img {
+                width: 100%;
             }
         }
     }

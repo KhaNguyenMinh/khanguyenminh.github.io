@@ -181,20 +181,26 @@
         }
 
         /**end*************PRODUCT PAGE***************/
-        // $('#productsPage .products-img .img-wrapper').click(function (e) {
-        //     var index = $(e.target).data('index');
-        //     var relatedIndex = $(e.target).data('related').split('-');
-        //
-        //     // $('#productsPage .products-img .img-wrapper').removeClass('hidden');
-        //     $('#productsPage .products-img .img-wrapper').css('width', '25%');
-        //     for (var i=0; i < relatedIndex.length; i++) {
-        //         var item = parseInt(relatedIndex[i]);
-        //         // $('#productsPage .products-img .img-wrapper[data-index="' + item + '"]').addClass('hidden');
-        //     }
-        //
-        //     $('#productsPage .products-img .img-wrapper[data-index="' + index + '"]').css('width', '50%');
-        //     console.log('index', index);
-        // });
+        $('#productsPage .products-img .img-wrapper').click(function (e) {
+            var index = $(e.target).data('index');
+            var relatedIndex = $(e.target).data('related').split('-');
+        
+            $('#productsPage .products-img .preview').addClass('hidden');
+            for (var i=0; i < relatedIndex.length; i++) {
+                var item = parseInt(relatedIndex[i]);
+                $('#productsPage .products-img .img-wrapper[data-index="' + item + '"]').css('opacity', 0);
+            }
+        
+            // $('#productsPage .products-img .img-wrapper[data-index="' + index + '"]').css('transform-origin', '0 0');
+            $('#productsPage .products-img .preview[data-index="' + index + '"]').removeClass('hidden').css('width', '50%');
+            if (index === 2 || index === 3 || index === 6 || index === 7) {
+                $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '25%');
+            }
+            if (index === 4 || index === 8) {
+                $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '50%');
+            }
+            console.log('index', index);
+        });
         /**start*************HOME PAGE***************/
 
         /**end*************PRODUCT PAGE***************/

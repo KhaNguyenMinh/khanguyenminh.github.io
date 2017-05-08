@@ -7076,10 +7076,12 @@ body .footer .copyright {
 #productsPage .products-img {
   padding-top: 20px;
   padding-right: 30px;
+  position: relative;
 }
 #productsPage .products-img .img-wrapper {
   cursor: pointer;
   padding: 1px;
+  transition: all 0.3s ease;
 }
 #productsPage .products-img .img-wrapper:hover {
   opacity: 0.8;
@@ -7097,6 +7099,12 @@ body .footer .copyright {
   text-align: center;
   color: #ffffff;
   opacity: 0;
+}
+#productsPage .products-img .preview {
+  position: absolute;
+}
+#productsPage .products-img .preview img {
+  width: 100%;
 }
 #aboutusPage {
   min-height: 100%;
