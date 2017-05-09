@@ -473,35 +473,58 @@ body {
         padding-top: 20px;
         padding-right: 30px;
         position: relative;
-        .img-wrapper {
-            cursor: pointer;
-            padding: 1px;
-            transition:all 0.3s ease;
-            // width: 25%;
-            // float: left;
-            &:hover {
-                //background-color: rgba(0, 0, 0, 0.3);
-                opacity: 0.8;
+        @media (max-width: 1000px) {
+            //padding: 0;
+            padding-top: 20px;
+            padding-left: 30px;
+        }
+        //@media (max-width: 859px) {
+        //    padding: 0;
+        //    padding-top: 20px;
+        //    //padding-left: 30px;
+        //}
+
+        .products-img-wrapper {
+            position: relative;
+            .img-wrapper {
+                height: 100%;
+                cursor: pointer;
+                padding: 1px;
+                transition:all 0.3s ease;
+                z-index: 200;
+                &:hover {
+                    opacity: 0.8;
+                    .title {
+                        opacity: 1;
+                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
                 .title {
-                    opacity: 1;
+                    position: absolute;
+                    bottom: 30px;
+                    width: 100%;
+                    text-align: center;
+                    color: #ffffff;
+                    opacity: 0;
                 }
             }
-            img {
-                width: 100%;
-            }
-            .title {
+            .preview {
+                height: 100%;
                 position: absolute;
-                bottom: 30px;
-                width: 100%;
-                text-align: center;
-                color: #ffffff;
+                bottom: 0;
+                padding: 1px;
+                z-index: 100;
+                transition:all 0.3s ease;
                 opacity: 0;
-            }
-        }
-        .preview {
-            position: absolute;
-            img {
-                width: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
         }
     }

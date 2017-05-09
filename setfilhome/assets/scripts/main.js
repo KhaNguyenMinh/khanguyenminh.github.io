@@ -181,25 +181,30 @@
         }
 
         /**end*************PRODUCT PAGE***************/
-        $('#productsPage .products-img .img-wrapper').click(function (e) {
-            var index = $(e.target).data('index');
-            var relatedIndex = $(e.target).data('related').split('-');
+        $('#productsPage .products-img .img-wrapper .title').click(function (e) {
+            if (Modernizr.mq("screen and (max-width:859px)")) {
+                return;
+            }
+            var index = $(e.target).closest('.img-wrapper').data('index');
+            var relatedIndex = $(e.target).closest('.img-wrapper').data('related').split('-');
         
-            $('#productsPage .products-img .preview').addClass('hidden');
+            $('#productsPage .products-img .preview').css('opacity', 0);
+            $('#productsPage .products-img .img-wrapper').css('opacity', 1);
+            $('#productsPage .products-img .img-wrapper').css('z-index', 200);
             for (var i=0; i < relatedIndex.length; i++) {
                 var item = parseInt(relatedIndex[i]);
                 $('#productsPage .products-img .img-wrapper[data-index="' + item + '"]').css('opacity', 0);
+                $('#productsPage .products-img .img-wrapper[data-index="' + item + '"]').css('z-index', 1);
             }
-        
-            // $('#productsPage .products-img .img-wrapper[data-index="' + index + '"]').css('transform-origin', '0 0');
-            $('#productsPage .products-img .preview[data-index="' + index + '"]').removeClass('hidden').css('width', '50%');
+
+            $('#productsPage .products-img .img-wrapper[data-index="' + index + '"]').css('z-index', 1);
+            $('#productsPage .products-img .preview[data-index="' + index + '"]').css('opacity', 1).css('width', '50%');
             if (index === 2 || index === 3 || index === 6 || index === 7) {
                 $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '25%');
             }
             if (index === 4 || index === 8) {
                 $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '50%');
             }
-            console.log('index', index);
         });
         /**start*************HOME PAGE***************/
 
