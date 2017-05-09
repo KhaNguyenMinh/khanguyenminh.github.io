@@ -21,7 +21,7 @@ gulp.task('less', function () {
 gulp.task('css', ['less'], function () {
     gulp.src([
         'assets/fullpage/jquery.fullpage.min.css',
-        'assets/materialize/css/materialize.min.css',
+        'assets/materialize/css/materialize.css',
         'assets/fonts/material-iconfont/material-icons.css',
         'assets/gridgallery/css/component.css',
         'assets/text-hover-effects/css/base.css',
