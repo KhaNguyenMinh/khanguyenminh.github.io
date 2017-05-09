@@ -6768,9 +6768,11 @@ body .footer .copyright {
 .top-nav .nav-wrapper .left-content {
   position: absolute;
   left: 30px;
+  width: 200px;
 }
 .top-nav .nav-wrapper .left-content .menu-icon {
   color: black;
+  float: left;
 }
 .top-nav .nav-wrapper .left-content .menu-icon i {
   font-size: 29px;
@@ -6816,7 +6818,7 @@ body .footer .copyright {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 100;
+  z-index: 500;
   left: 0;
   background-color: #fff;
   overflow-x: hidden;
