@@ -206,6 +206,12 @@
                 $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '50%');
             }
         });
+
+        $('#aboutusPage .social-network .follow-us').click(function (e) {
+            console.log(e.target);
+            $(e.target).addClass('hidden');
+            $('#aboutusPage .social-network .network').removeClass('hidden');
+        });
         /**start*************HOME PAGE***************/
 
         /**end*************PRODUCT PAGE***************/

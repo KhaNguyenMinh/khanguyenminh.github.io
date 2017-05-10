@@ -513,7 +513,7 @@ body {
                     color: #ffffff;
                     opacity: 0;
                     @media (max-width: 857px) {
-                        opacity: 1!important;
+                        opacity: 0!important;
                     }
                 }
             }
@@ -599,8 +599,38 @@ body {
                     border-top: 1px solid #f2f2f2;
                     text-align: left;
                     .follow-us {
+                        padding: 10px;
                         text-transform: uppercase;
                         cursor: pointer;
+                        height: 45px;
+                    }
+                    .network {
+                        padding: 10px;
+                        height: 45px;
+                        .fb {
+                            background: url('../images/facebook.png') no-repeat;
+                            display: inline-block;
+                            height: 21px;
+                            width: 11px;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+                        .in {
+                            background: url('../images/instagram.png') no-repeat;
+                            display: inline-block;
+                            height: 21px;
+                            width: 21px;
+                            margin-right: 10px;
+                            cursor: pointer;
+                        }
+                        .tw {
+                            background: url('../images/twitter.png') no-repeat;
+                            display: inline-block;
+                            height: 18px;
+                            width: 22px;
+                            padding-left: 25px;
+                            cursor: pointer;
+                        }
                     }
                 }
             }
