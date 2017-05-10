@@ -7134,6 +7134,13 @@ body .footer .copyright {
   height: 100%;
   object-fit: cover;
 }
+#productsPage .products-img .products-img-wrapper .preview .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 600;
+}
 #aboutusPage {
   min-height: 100%;
   margin-bottom: -60px;
@@ -7298,6 +7305,9 @@ body .footer .copyright {
 }
 #contactPage .main-content .right-content .wrapper .right label.active {
   color: #000;
+}
+#contactPage .main-content .right-content .wrapper .right .input-field {
+  padding-bottom: 11px;
 }
 #contactPage .main-content .right-content .wrapper .right .btn-send {
   background-color: #000;
