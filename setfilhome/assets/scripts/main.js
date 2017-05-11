@@ -50,6 +50,10 @@
 
     function projectGallery() {
         projectGallery = $("#gallery").unitegallery({
+            gallery_theme: "tiles",
+            tiles_type: "justified",
+            gallery_min_width: 250,
+            tiles_justified_row_height: 300,
             tiles_align:"center",	                //align of the tiles in the space
             tiles_space_between_cols: 1,			//space between images
             tiles_exact_width: false,				//exact width of column - disables the min and max columns
@@ -188,7 +192,7 @@
             var index = $(e.target).closest('.img-wrapper').data('index');
             var relatedIndex = $(e.target).closest('.img-wrapper').data('related').split('-');
         
-            $('#productsPage .products-img .preview').css('opacity', 0);
+            $('#productsPage .products-img .preview').css('opacity', 0).css('z-index', 0);
             $('#productsPage .products-img .img-wrapper').css('opacity', 1);
             $('#productsPage .products-img .img-wrapper').css('z-index', 200);
             for (var i=0; i < relatedIndex.length; i++) {
@@ -198,13 +202,22 @@
             }
 
             $('#productsPage .products-img .img-wrapper[data-index="' + index + '"]').css('z-index', 1);
-            $('#productsPage .products-img .preview[data-index="' + index + '"]').css('opacity', 1).css('width', '50%');
+            $('#productsPage .products-img .preview[data-index="' + index + '"]').css('opacity', 1).css('width', '50%').css('z-index', 100);
             if (index === 2 || index === 3 || index === 6 || index === 7) {
                 $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '25%');
             }
             if (index === 4 || index === 8) {
                 $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '50%');
             }
+        });
+
+        $('#productsPage .products-img .preview .btn-close').click(function (e) {
+            var currPreview = $(e.target).closest('.preview');
+            var index = currPreview.data('index');
+
+            currPreview.css('opacity', 0).css('width', '25%').css('z-index', 0);
+            $('#productsPage .products-img .img-wrapper').css('opacity', 1);
+            $('#productsPage .products-img .img-wrapper').css('z-index', 200);
         });
 
         $('#aboutusPage .social-network .follow-us').click(function (e) {
