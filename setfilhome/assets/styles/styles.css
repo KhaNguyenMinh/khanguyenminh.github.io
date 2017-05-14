@@ -7088,6 +7088,7 @@ body .footer .copyright {
 }
 #productsPage .products-img .products-img-wrapper {
   position: relative;
+  min-height: 400px;
 }
 #productsPage .products-img .products-img-wrapper .img-wrapper {
   height: 100%;
@@ -7106,6 +7107,7 @@ body .footer .copyright {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  min-height: 200px;
 }
 #productsPage .products-img .products-img-wrapper .img-wrapper .title {
   position: absolute;
