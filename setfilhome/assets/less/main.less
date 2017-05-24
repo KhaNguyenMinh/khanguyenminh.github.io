@@ -34,7 +34,7 @@ body {
     height: 100%;
     text-align: center;
     transition: background-color .5s;
-    
+
     background-color: #f2f2f2;
 
     .footer {
@@ -193,12 +193,14 @@ body {
             margin: 0 auto;
             z-index: 999;
             span {
+                font-weight: 700;
                 display: block;
                 font-size: 16px;
                 color: rgba(0, 0, 0, 0.75);
                 cursor: pointer;
                 i {
                     font-size: 36px;
+                    line-height: 15px;
                 }
             }
         }
@@ -328,7 +330,7 @@ body {
     }
     .row {
         margin: 0;
-        
+
         @media (min-width: 861px) {
             display: flex;
         }
@@ -337,7 +339,7 @@ body {
         padding: 20px;
         padding-left: 32px;
         padding-bottom: 0;
-        
+
         @media (min-width: 861px) {
             align-items: stretch;
         }
@@ -421,7 +423,7 @@ body {
         @color_1: #000000;
         @color_2: rgba(51, 51, 51, 0.66);
         @background_color_1: #f2f2f2;
-        
+
         // align-items: stretch;
         padding-left: 0;
         padding-right: 0;
@@ -516,6 +518,9 @@ body {
                     opacity: 0;
                     @media (max-width: 857px) {
                         opacity: 0!important;
+                    }
+                    i {
+                        font-size: 36px;
                     }
                 }
             }
@@ -678,6 +683,9 @@ body {
                 .left {
                     text-align: right;
                     padding-top: 25px;
+                    @media (min-width: 860px) {
+                        padding-right: 20px;
+                    }
                     img {
                         width: 100%;
                     }
@@ -686,14 +694,27 @@ body {
                         text-align: left;
                         padding-top: 20px;
                     }
+                    .mrg-b-5 {
+                        margin-bottom: 5px;
+                    }
+                    .mrg-b-15 {
+                        margin-bottom: 15px;
+                    }
+                    p {
+                        color: #1f1f1f;
+                    }
                 }
                 .right {
                     text-align: left;
+                    @media (min-width: 860px) {
+                        padding-left: 20px;
+                    }
                     @media (max-width: 860px) {
                         padding-top: 20px;
                     }
                     input, textarea, label {
                         font-size: 14px;
+                        color: #1f1f1f;
                     }
                     label {
                         font-weight: 500;

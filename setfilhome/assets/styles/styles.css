@@ -6871,6 +6871,7 @@ body .footer .copyright {
   z-index: 999;
 }
 #homePage .section .scroll-icon span {
+  font-weight: 700;
   display: block;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.75);
@@ -6878,6 +6879,7 @@ body .footer .copyright {
 }
 #homePage .section .scroll-icon span i {
   font-size: 36px;
+  line-height: 15px;
 }
 #homePage .section-1 {
   /*Adding background for the slides
@@ -7122,6 +7124,9 @@ body .footer .copyright {
     opacity: 0!important;
   }
 }
+#productsPage .products-img .products-img-wrapper .img-wrapper .title i {
+  font-size: 36px;
+}
 #productsPage .products-img .products-img-wrapper .preview {
   height: 100%;
   position: absolute;
@@ -7281,6 +7286,11 @@ body .footer .copyright {
   text-align: right;
   padding-top: 25px;
 }
+@media (min-width: 860px) {
+  #contactPage .main-content .right-content .wrapper .left {
+    padding-right: 20px;
+  }
+}
 #contactPage .main-content .right-content .wrapper .left img {
   width: 100%;
 }
@@ -7290,8 +7300,22 @@ body .footer .copyright {
     padding-top: 20px;
   }
 }
+#contactPage .main-content .right-content .wrapper .left .mrg-b-5 {
+  margin-bottom: 5px;
+}
+#contactPage .main-content .right-content .wrapper .left .mrg-b-15 {
+  margin-bottom: 15px;
+}
+#contactPage .main-content .right-content .wrapper .left p {
+  color: #1f1f1f;
+}
 #contactPage .main-content .right-content .wrapper .right {
   text-align: left;
+}
+@media (min-width: 860px) {
+  #contactPage .main-content .right-content .wrapper .right {
+    padding-left: 20px;
+  }
 }
 @media (max-width: 860px) {
   #contactPage .main-content .right-content .wrapper .right {
@@ -7302,6 +7326,7 @@ body .footer .copyright {
 #contactPage .main-content .right-content .wrapper .right textarea,
 #contactPage .main-content .right-content .wrapper .right label {
   font-size: 14px;
+  color: #1f1f1f;
 }
 #contactPage .main-content .right-content .wrapper .right label {
   font-weight: 500;

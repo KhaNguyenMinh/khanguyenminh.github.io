@@ -33,13 +33,13 @@
     function productsSlide() {
         var slider = new MasterSlider();
 
-        slider.control('arrows');   
-        slider.control('lightbox'); 
+        slider.control('arrows');
+        slider.control('lightbox');
         slider.control('thumblist' , {autohide:false ,dir:'h',align:'bottom', width:130, height:85, margin:5, space:5 , hideUnder:400});
 
         slider.setup('productMasterslider' , {
             width:1000,
-            height:500, 
+            height:500,
             fullwidth:true,
             space:5,
             loop:true,
