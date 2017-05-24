@@ -7093,7 +7093,7 @@ body .footer .copyright {
   min-height: 400px;
 }
 #productsPage .products-img .products-img-wrapper .img-wrapper {
-  height: 100%;
+  height: 200px;
   cursor: pointer;
   padding: 1px;
   transition: all 0.3s ease;
@@ -7109,7 +7109,6 @@ body .footer .copyright {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-height: 200px;
 }
 #productsPage .products-img .products-img-wrapper .img-wrapper .title {
   position: absolute;
@@ -7177,23 +7176,32 @@ body .footer .copyright {
 }
 #aboutusPage .main-content .right-content .wrapper .img-content .left {
   padding: 0;
+  padding-right: 1px;
 }
 #aboutusPage .main-content .right-content .wrapper .img-content .left img {
   padding-top: 0;
   padding-left: 0;
 }
+#aboutusPage .main-content .right-content .wrapper .img-content .left .img1 {
+  height: 481px;
+}
 #aboutusPage .main-content .right-content .wrapper .img-content .right {
   padding: 0;
 }
-#aboutusPage .main-content .right-content .wrapper .img-content .right .img1 {
-  padding-top: 0;
+#aboutusPage .main-content .right-content .wrapper .img-content .right .img-wrapper3 {
+  padding-top: 1px;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content .right .img2 {
+  height: 240px;
+}
+#aboutusPage .main-content .right-content .wrapper .img-content .right .img3 {
+  height: 240px;
 }
 #aboutusPage .main-content .right-content .wrapper .img-content .right img {
   padding-right: 0;
 }
 #aboutusPage .main-content .right-content .wrapper .img-content img {
   width: 100%;
-  padding: 1px;
 }
 @media (max-width: 860px) {
   #aboutusPage .main-content .right-content .wrapper .img-content img {

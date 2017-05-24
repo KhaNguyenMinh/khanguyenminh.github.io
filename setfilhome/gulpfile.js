@@ -31,6 +31,7 @@ gulp.task('css', ['less'], function () {
         'assets/unitegallery-master/dist/css/unite-gallery.css',
         // 'assets/lightbox/style/ms-lightbox.css',
         'assets/lightbox/css/prettyPhoto.css',
+        'assets/styles/animate.min.css',
         'assets/styles/styles.css'
     ])
         .pipe(concatCss('main.css'))
