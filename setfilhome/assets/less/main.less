@@ -659,10 +659,14 @@ body {
                         text-transform: uppercase;
                         cursor: pointer;
                         height: 45px;
+                        float: left;
                     }
                     .network {
                         padding: 10px;
                         height: 45px;
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: visibility 0s, opacity 0.5s linear;
                         .fb {
                             background: url('../images/facebook.png') no-repeat;
                             display: inline-block;

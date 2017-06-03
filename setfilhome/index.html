@@ -50,5 +50,22 @@
     </section>
 </div>
 <script type="text/javascript" src="dist/scripts/main.js?v=1.1.1"></script>
+
+<script type="text/javascript">
+    $('#homePage').vegas({
+        delay: 5000,
+        timer: false,
+        // shuffle: true,
+        // firstTransitionDuration: 5000,
+        transition: [ 'fade', 'zoomOut' ],
+        animation: 'kenburns',
+        transitionDuration: '7000',
+        slides: [
+                { src: './assets/images/bg1.jpg' },
+                { src: './assets/images/bg2.jpg' },
+                { src: './assets/images/bg3.jpg' }
+            ],
+    });
+</script>
 </body>
 </html>

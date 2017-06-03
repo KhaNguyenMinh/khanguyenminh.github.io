@@ -7261,10 +7261,14 @@ body .footer .copyright {
   text-transform: uppercase;
   cursor: pointer;
   height: 45px;
+  float: left;
 }
 #aboutusPage .main-content .right-content .wrapper .social-network .network {
   padding: 10px;
   height: 45px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 #aboutusPage .main-content .right-content .wrapper .social-network .network .fb {
   background: url('../images/facebook.png') no-repeat;
