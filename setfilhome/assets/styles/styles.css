@@ -1,5 +1,5 @@
 /*---------------------------------------
-  BOOTSTRAP 3                
+  BOOTSTRAP 3
 -----------------------------------------*/
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -6623,7 +6623,7 @@ button.close {
   }
 }
 /*---------------------------------------
-  VARIABLES                
+  VARIABLES
 -----------------------------------------*/
 /*---------------------------------------
   FONTS
@@ -6865,21 +6865,50 @@ body .footer .copyright {
 }
 #homePage .section .scroll-icon {
   position: absolute;
-  bottom: 0;
+  bottom: 45px;
   width: 100%;
   margin: 0 auto;
   z-index: 999;
 }
-#homePage .section .scroll-icon span {
+#homePage .section .scroll-icon .btn-scroll7 a span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb07 2s infinite;
+  animation: sdb07 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#homePage .section .scroll-icon .btn-scroll7 a span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+#homePage .section .scroll-icon .btn-scroll7 a span:nth-of-type(2) {
+  top: 16px;
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s;
+}
+#homePage .section .scroll-icon .btn-scroll7 a span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+#homePage .section .scroll-icon .btn-scroll {
+  position: relative;
+}
+#homePage .section .scroll-icon a {
   font-weight: 700;
   display: block;
   font-size: 16px;
   color: rgba(0, 0, 0, 0.75);
   cursor: pointer;
-}
-#homePage .section .scroll-icon span i {
-  font-size: 36px;
-  line-height: 15px;
 }
 #homePage .section-1 {
   /*Adding background for the slides

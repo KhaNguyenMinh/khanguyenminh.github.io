@@ -32,7 +32,10 @@ gulp.task('css', ['less'], function () {
         // 'assets/lightbox/style/ms-lightbox.css',
         'assets/lightbox/css/prettyPhoto.css',
         'assets/styles/animate.min.css',
-        'assets/styles/styles.css'
+        // 'assets/fullscreen-slideshow/css/demo.css',
+        'assets/vegas-master/dist/vegas.min.css',
+        'assets/styles/btn-scroll.css',
+        'assets/styles/styles.css',
     ])
         .pipe(concatCss('main.css'))
         .pipe(autoprefixer())
@@ -67,6 +70,7 @@ gulp.task('js', function () {
         // 'assets/scrollmagic/plugins/animation.gsap.min.js',
         // 'assets/gsap/plugins/ScrollToPlugin.min.js',
         // 'assets/scrollmagic/plugins/debug.addIndicators.min.js',
+        'assets/vegas-master/dist/vegas.min.js',
         'assets/scripts/main.js'
     ])
         .pipe(concat('main.js'))
@@ -99,7 +103,7 @@ gulp.task('dev', [
     'css',
     'js',
     'watch',
-    'images',
+    // 'images',
     'connectDev'
 ]);
 
