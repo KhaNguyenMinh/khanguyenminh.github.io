@@ -6876,7 +6876,7 @@ body .footer .copyright {
   left: 50%;
   width: 18px;
   height: 18px;
-  margin-left: -12px;
+  margin-left: -8px;
   border-left: 1px solid #fff;
   border-bottom: 1px solid #fff;
   -webkit-transform: rotate(-45deg);
@@ -7121,12 +7121,22 @@ body .footer .copyright {
   position: relative;
   min-height: 400px;
 }
+@media (min-width: 1500px) {
+  #productsPage .products-img .products-img-wrapper {
+    height: 560px;
+  }
+}
 #productsPage .products-img .products-img-wrapper .img-wrapper {
   height: 200px;
   cursor: pointer;
   padding: 1px;
   transition: all 0.3s ease;
   z-index: 200;
+}
+@media (min-width: 1500px) {
+  #productsPage .products-img .products-img-wrapper .img-wrapper {
+    height: 280px;
+  }
 }
 #productsPage .products-img .products-img-wrapper .img-wrapper:hover {
   opacity: 0.8;

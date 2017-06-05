@@ -199,7 +199,7 @@ body {
             	left: 50%;
             	width: 18px;
             	height: 18px;
-            	margin-left: -12px;
+            	margin-left: -8px;
             	border-left: 1px solid #fff;
             	border-bottom: 1px solid #fff;
             	-webkit-transform: rotate(-45deg);
@@ -513,16 +513,17 @@ body {
             padding-top: 20px;
             padding-left: 30px;
         }
-        //@media (max-width: 859px) {
-        //    padding: 0;
-        //    padding-top: 20px;
-        //    //padding-left: 30px;
-        //}
 
         .products-img-wrapper {
             position: relative;
             min-height: 400px;
+            @media (min-width: 1500px) {
+                height: 560px;
+            }
             .img-wrapper {
+                @media (min-width: 1500px) {
+                    height: 280px;
+                }
                 height: 200px;
                 cursor: pointer;
                 padding: 1px;
