@@ -6738,6 +6738,7 @@ body {
   text-align: center;
   transition: background-color 0.5s;
   background-color: #f2f2f2;
+  opacity: 0;
 }
 body .footer {
   width: 100%;
@@ -6754,7 +6755,7 @@ body .footer .copyright {
 .top-nav {
   position: fixed;
   top: 0;
-  z-index: 999;
+  z-index: 900;
   height: 64px;
   background-color: #fff;
 }
@@ -6907,7 +6908,7 @@ body .footer .copyright {
   font-weight: 700;
   display: block;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
   cursor: pointer;
 }
 #homePage .section-1 {
@@ -7389,7 +7390,7 @@ body .footer .copyright {
   padding-bottom: 5px;
 }
 #contactPage .main-content .right-content .wrapper .right .mgs textarea {
-  min-height: 60px !important;
+  min-height: 58px !important;
 }
 #contactPage .main-content .right-content .wrapper .right .btn-send {
   background-color: #000;

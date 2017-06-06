@@ -18,13 +18,13 @@
 
     function homePageSlide() {
         var slider = new MasterSlider();
-        slider.setup('masterslider' , {
+        slider.setup('masterslider', {
             speed: 5,
             layout: 'autofill',
             autoplay: true,
             grabCursor: false,
             loop: true,
-            view:"scale",
+            view: "scale",
             filters: {
                 grayscale: 1.5,
                 opacity: 0.5,
@@ -40,15 +40,24 @@
 
         slider.control('arrows');
         slider.control('lightbox');
-        slider.control('thumblist' , {autohide:false ,dir:'h',align:'bottom', width:130, height:85, margin:5, space:5 , hideUnder:400});
+        slider.control('thumblist', {
+            autohide: false,
+            dir: 'h',
+            align: 'bottom',
+            width: 130,
+            height: 85,
+            margin: 5,
+            space: 5,
+            hideUnder: 400
+        });
 
-        slider.setup('productMasterslider' , {
-            width:1000,
-            height:500,
-            fullwidth:true,
-            space:5,
-            loop:true,
-            view:'fade',
+        slider.setup('productMasterslider', {
+            width: 1000,
+            height: 500,
+            fullwidth: true,
+            space: 5,
+            loop: true,
+            view: 'fade',
             autoplay: true
         });
     }
@@ -59,7 +68,7 @@
             tiles_type: "justified",
             gallery_min_width: 250,
             tiles_justified_row_height: 300,
-            tiles_align:"center",	                //align of the tiles in the space
+            tiles_align: "center",	                //align of the tiles in the space
             tiles_space_between_cols: 1,			//space between images
             tiles_exact_width: false,				//exact width of column - disables the min and max columns
             tiles_space_between_cols_mobile: 1,     //space between cols for mobile type
@@ -68,11 +77,11 @@
             tiles_max_columns: 4,					//max columns (0 for unlimited)
             tiles_set_initial_height: true,			//columns type related only
             tiles_enable_transition: true,		    //enable transition when screen width change
-            tile_overlay_opacity:0.3,
+            tile_overlay_opacity: 0.3,
             tile_enable_icons: false,
             tile_enable_image_effect: false,
 
-            tile_enable_action:	false,			    //enable tile action on click like lightbox
+            tile_enable_action: false,			    //enable tile action on click like lightbox
             tile_as_link: true,				        //act the tile as link, no lightbox will appear
             tile_link_newpage: false,			    //open the tile link in new page
 
@@ -81,22 +90,22 @@
             tile_textpanel_source: "description",	//title,desc,desc_title. source of the textpanel. desc_title - if description empty, put title
             tile_textpanel_always_on: false,	 	//textpanel always visible
             tile_textpanel_appear_type: "fade", 	//slide, fade - appear type of the textpanel on mouseover
-            tile_textpanel_position:"inside_center",//inside_bottom, inside_top, inside_center, top, bottom the position of the textpanel
-            tile_textpanel_offset:10,			    //vertical offset of the textpanel
+            tile_textpanel_position: "inside_center",//inside_bottom, inside_top, inside_center, top, bottom the position of the textpanel
+            tile_textpanel_offset: 10,			    //vertical offset of the textpanel
 
-            tile_textpanel_padding_top:8,		 	//textpanel padding top
-            tile_textpanel_padding_bottom:20,	 	//textpanel padding bottom
+            tile_textpanel_padding_top: 8,		 	//textpanel padding top
+            tile_textpanel_padding_bottom: 20,	 	//textpanel padding bottom
             tile_textpanel_padding_right: 11,	 	//cut some space for text from right
             tile_textpanel_padding_left: 11,	 	//cut some space for text from left
             tile_textpanel_bg_opacity: 0.4,		 	//textpanel background opacity
-            tile_textpanel_bg_color:"transparent",	//textpanel background color
-            tile_textpanel_bg_css:{},			 	//textpanel background css
+            tile_textpanel_bg_color: "transparent",	//textpanel background color
+            tile_textpanel_bg_css: {},			 	//textpanel background css
 
-            tile_textpanel_title_color:null,		//textpanel title color. if null - take from css
-            tile_textpanel_title_font_family:null,	//textpanel title font family. if null - take from css
+            tile_textpanel_title_color: null,		//textpanel title color. if null - take from css
+            tile_textpanel_title_font_family: null,	//textpanel title font family. if null - take from css
             tile_textpanel_title_text_align: 'center',	 //textpanel title text align. if null - take from css
             tile_textpanel_title_font_size: 16,	    //textpanel title font size. if null - take from css
-            tile_textpanel_title_bold:null			//textpanel title bold. if null - take from css
+            tile_textpanel_title_bold: null			//textpanel title bold. if null - take from css
         });
     }
 
@@ -160,24 +169,20 @@
         });
     }
 
+    window.loading_screen = window.pleaseWait({
+        logo: "",
+        backgroundColor: '#fff',
+        loadingHtml: '<div id="loader-wrapper"><div id="loader"></div></div>'
+    });
+
+    $(window).on('load', function () {
+        window.loading_screen.finish();
+        $('body').css('opacity', 1);
+    });
+
     $(document).ready(function () {
         // Home page slider
         // homePageSlide();
-
-        // $('#homePage').vegas({
-        //     delay: 5000,
-        //     timer: false,
-        //     // shuffle: true,
-        //     // firstTransitionDuration: 5000,
-        //     transition: [ 'fade', 'zoomOut' ],
-        //     animation: 'kenburns',
-        //     transitionDuration: '7000',
-        //     slides: [
-        //             { src: './assets/images/bg1.jpg' },
-        //             { src: './assets/images/bg2.jpg' },
-        //             { src: './assets/images/bg3.jpg' }
-        //         ],
-        // });
 
         /**start*************SLIDE MENU***************/
         $('#openMenuIcon').click(function () {
@@ -223,14 +228,14 @@
             $('#productsPage .products-img .preview').css('width', '25%').css('opacity', 0).css('z-index', 0).css('transform', 'scale(0.5)');
             $('#productsPage .products-img .img-wrapper').css('opacity', 1);
             $('#productsPage .products-img .img-wrapper').css('z-index', 200);
-            for (var i=0; i < relatedIndex.length; i++) {
+            for (var i = 0; i < relatedIndex.length; i++) {
                 var item = parseInt(relatedIndex[i]);
                 $('#productsPage .products-img .img-wrapper[data-index="' + item + '"]').css('opacity', 0);
                 $('#productsPage .products-img .img-wrapper[data-index="' + item + '"]').css('z-index', 1);
             }
 
             $('#productsPage .products-img .img-wrapper[data-index="' + index + '"]').css('z-index', 1);
-            $('#productsPage .products-img .preview[data-index="' + index + '"]').css('width', '50%').css('opacity', 1).css('z-index', 100).css('transform', 'scale(1)');
+            $('#productsPage .products-img .preview[data-index="' + index + '"]').css('width', '50%').css('opacity', 1).css('z-index', 100).css('transform', 'scale(1)').css('transform-origin', 'bottom left');
             if (index === 2 || index === 3 || index === 6 || index === 7) {
                 $('#productsPage .products-img .preview[data-index="' + index + '"]').css('left', '25%');
             }
@@ -243,7 +248,7 @@
             var currPreview = $(e.target).closest('.preview');
             var index = currPreview.data('index');
 
-            currPreview.css('width', '25%').css('opacity', 0).css('z-index', 0).css('transform', 'scale(0.5)');
+            currPreview.css('width', '25%').css('opacity', 0).css('z-index', 0).css('transform', 'scale(0.5)').css('transform-origin', 'bottom left');
             $('#productsPage .products-img .img-wrapper').css('opacity', 1);
             $('#productsPage .products-img .img-wrapper').css('z-index', 200);
         });

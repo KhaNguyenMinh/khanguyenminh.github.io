@@ -20,6 +20,7 @@ gulp.task('less', function () {
 
 gulp.task('css', ['less'], function () {
     gulp.src([
+        'assets/styles/please-wait.css',
         'assets/fullpage/jquery.fullpage.min.css',
         'assets/materialize/css/materialize.css',
         'assets/fonts/material-iconfont/material-icons.css',
@@ -29,13 +30,13 @@ gulp.task('css', ['less'], function () {
         'assets/masterslider/style/masterslider.css',
         'assets/masterslider/skins/default/style.css',
         'assets/unitegallery-master/dist/css/unite-gallery.css',
-        // 'assets/lightbox/style/ms-lightbox.css',
         'assets/lightbox/css/prettyPhoto.css',
         'assets/styles/animate.min.css',
-        // 'assets/fullscreen-slideshow/css/demo.css',
         'assets/vegas-master/dist/vegas.min.css',
         'assets/styles/btn-scroll.css',
-        'assets/styles/styles.css',
+        'assets/styles/loader.css',
+        // 'assets/styles/fakeLoader.css',
+        'assets/styles/styles.css'
     ])
         .pipe(concatCss('main.css'))
         .pipe(autoprefixer())
@@ -47,6 +48,7 @@ gulp.task('css', ['less'], function () {
 
 gulp.task('js', function () {
     gulp.src([
+        'assets/scripts/libs/please-wait.min.js',
         'assets/scripts/libs/jquery.min.js',
         'assets/scripts/libs/modernizr.js',
         'assets/materialize/js/materialize.min.js',
@@ -58,19 +60,8 @@ gulp.task('js', function () {
         'assets/masterslider/masterslider.min.js',
         'assets/unitegallery-master/dist/js/unitegallery.js',
         'assets/unitegallery-master/dist/themes/tiles/ug-theme-tiles.js',
-        // 'assets/scripts/libs/tab.js',
-        // 'assets/syntax-highlighter/scripts/shCore.js',
-        // 'assets/syntax-highlighter/scripts/shBrushXml.js',
-        // 'assets/syntax-highlighter/scripts/shBrushCss.js',
-        // 'assets/syntax-highlighter/scripts/shBrushJScript.js',
-        // 'assets/scripts/libs/iscroll.js',
-        // 'assets/gsap/TweenMax.min.js',
-        // 'assets/scripts/libs/bootstrap.min.js',
-        // 'assets/scrollmagic/ScrollMagic.min.js',
-        // 'assets/scrollmagic/plugins/animation.gsap.min.js',
-        // 'assets/gsap/plugins/ScrollToPlugin.min.js',
-        // 'assets/scrollmagic/plugins/debug.addIndicators.min.js',
         'assets/vegas-master/dist/vegas.min.js',
+        // 'assets/scripts/libs/fakeLoader.min.js',
         'assets/scripts/main.js'
     ])
         .pipe(concat('main.js'))
@@ -103,7 +94,7 @@ gulp.task('dev', [
     'css',
     'js',
     'watch',
-    // 'images',
+    'images',
     'connectDev'
 ]);
 
