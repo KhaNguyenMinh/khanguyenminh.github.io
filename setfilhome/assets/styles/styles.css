@@ -7349,7 +7349,7 @@ body .footer .copyright {
 @media (max-width: 860px) {
   #contactPage .main-content .right-content .wrapper .left {
     text-align: left;
-    padding-top: 20px;
+    padding-top: 10px;
   }
 }
 #contactPage .main-content .right-content .wrapper .left .mrg-b-5 {
@@ -7390,7 +7390,7 @@ body .footer .copyright {
   padding-bottom: 5px;
 }
 #contactPage .main-content .right-content .wrapper .right .mgs textarea {
-  min-height: 58px !important;
+  min-height: 48px !important;
 }
 #contactPage .main-content .right-content .wrapper .right .btn-send {
   background-color: #000;
