@@ -794,29 +794,44 @@ body {
 
 .vegas-transition-kha {
     opacity: 0;
-    transition: opacity .1s ease-in-out;
-    transform: scale(1.2);
+    //transform: scale(1.2);
 }
 
 .vegas-transition-kha-in {
     opacity: 1;
-    transition: opacity .1s ease-in-out;
-    transform: scale(1);
+    //transform: scale(1);
+    transition: opacity 1000ms linear !important;
 }
 
 .vegas-transition-kha-out {
     opacity: 0;
-    transition: opacity .1s ease-in-out;
-    transform: scale(1);
+    //transform: scale(1);
+    transition: opacity 1000ms linear !important;
 }
 
-
-@keyframes fadein{
-    0% { opacity:0; visibility: hidden}
-    66% { opacity:0; visibility: hidden}
-    100% { opacity:1; visibility: visible}
+.vegas-animation-kha-ani {
+    -webkit-animation: kenburns ease-out;
+    animation: kenburns ease-out;
 }
 
-.vegas-animation-kha_ami {
-    transition: visibility 0s 2s, opacity 2s linear;
+@-webkit-keyframes kenburns {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes kenburns {
+    0% {
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
 }

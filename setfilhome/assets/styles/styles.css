@@ -7402,33 +7402,36 @@ body .footer .copyright {
 }
 .vegas-transition-kha {
   opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-  transform: scale(1.2);
 }
 .vegas-transition-kha-in {
   opacity: 1;
-  transition: opacity 0.1s ease-in-out;
-  transform: scale(1);
+  transition: opacity 1000ms linear !important;
 }
 .vegas-transition-kha-out {
   opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-  transform: scale(1);
+  transition: opacity 1000ms linear !important;
 }
-@keyframes fadein {
+.vegas-animation-kha-ani {
+  -webkit-animation: kenburns ease-out;
+  animation: kenburns ease-out;
+}
+@-webkit-keyframes kenburns {
   0% {
-    opacity: 0;
-    visibility: hidden;
-  }
-  66% {
-    opacity: 0;
-    visibility: hidden;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
   }
   100% {
-    opacity: 1;
-    visibility: visible;
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
-.vegas-animation-kha_ami {
-  transition: visibility 0s 2s, opacity 2s linear;
+@keyframes kenburns {
+  0% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
