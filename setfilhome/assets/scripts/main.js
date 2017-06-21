@@ -253,6 +253,21 @@
             $('#productsPage .products-img .img-wrapper').css('z-index', 200);
         });
 
+        $(document).click(function(e) {
+            console.log(e.target.className);
+            if(e.target.className != "img-wrapper"
+            && e.target.className != "img-item"
+            && e.target.className != "material-icons icon-search"
+            && e.target.className != "title product-img-title"
+            && e.target.className != "preview"
+            && e.target.className != "preview-img") {
+                var currPreview = $('.preview');
+                currPreview.css('width', '25%').css('opacity', 0).css('z-index', 0).css('transform', 'scale(0.5)').css('transform-origin', 'bottom left');
+                $('#productsPage .products-img .img-wrapper').css('opacity', 1);
+                $('#productsPage .products-img .img-wrapper').css('z-index', 200);
+            }
+        });
+
         $('#aboutusPage .social-network .follow-us').click(function (e) {
             console.log(e.target);
             $(e.target).addClass('hidden');

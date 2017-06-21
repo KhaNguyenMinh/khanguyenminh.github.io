@@ -6778,13 +6778,102 @@ body .footer .copyright {
 .top-nav .nav-wrapper .left-content .menu-icon i {
   font-size: 29px;
 }
-.top-nav .nav-wrapper .left-content .title {
+.top-nav .nav-wrapper .left-content #closeMenuIcon i {
+  line-height: 64px;
+  font-size: 30px;
+}
+.top-nav .nav-wrapper .left-content #closeMenuIcon .title {
   font-size: 16px;
   font-weight: 400;
   color: black;
   position: absolute;
   top: 0;
-  left: 45px;
+  left: 55px;
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon {
+  height: 60px;
+  width: 100%;
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon .title {
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 55px;
+}
+.top-nav .nav-wrapper .left-content #menu-toggle {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  font-size: 30px;
+  display: block;
+  margin-left: -15px;
+  width: 25px;
+  height: 3px;
+  background: #000;
+}
+.top-nav .nav-wrapper .left-content #menu-toggle:after,
+.top-nav .nav-wrapper .left-content #menu-toggle:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000;
+  left: 0;
+  -webkit-transform-origin: center center;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -o-transform-origin: center center;
+  transform-origin: center center;
+}
+.top-nav .nav-wrapper .left-content #menu-toggle:before {
+  top: -8px;
+}
+.top-nav .nav-wrapper .left-content #menu-toggle:after {
+  bottom: -8px;
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon.anim-out #menu-toggle {
+  background: rgba(220, 151, 31, 0);
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon.anim-out #menu-toggle:after {
+  -webkit-transform: rotate(-45deg) translate(2px, -8px);
+  -moz-transform: rotate(-45deg) translate(3px, -8px);
+  -ms-transform: rotate(-45deg) translate(3px, -8px);
+  -o-transform: rotate(-45deg) translate(3px, -8px);
+  transform: rotate(-45deg) translate(3px, -8px);
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon.anim-out #menu-toggle:before {
+  -webkit-transform: rotate(45deg) translate(4px, 9px);
+  -moz-transform: rotate(45deg) translate(3px, 8px);
+  -ms-transform: rotate(45deg) translate(3px, 8px);
+  -o-transform: rotate(45deg) translate(3px, 8px);
+  transform: rotate(45deg) translate(3px, 8px);
+}
+.top-nav .nav-wrapper .left-content #menu-toggle,
+.top-nav .nav-wrapper .left-content #menu-toggle:before,
+.top-nav .nav-wrapper .left-content #menu-toggle:after {
+  -webkit-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  -moz-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  -ms-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  -o-transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+  transition: all 0.3s cubic-bezier(0.585, -0.6, 0.43, 1.65);
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon:hover #menu-toggle:before,
+.top-nav .nav-wrapper .left-content #openMenuIcon:focus #menu-toggle:before {
+  top: -6px;
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon:hover #menu-toggle:after,
+.top-nav .nav-wrapper .left-content #openMenuIcon:focus #menu-toggle:after {
+  bottom: -6px;
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon.anim-out:hover #menu-toggle:after,
+.top-nav .nav-wrapper .left-content #openMenuIcon.anim-out:focus #menu-toggle:after {
+  bottom: -8px;
+}
+.top-nav .nav-wrapper .left-content #openMenuIcon.anim-out:hover #menu-toggle:before,
+.top-nav .nav-wrapper .left-content #openMenuIcon.anim-out:focus #menu-toggle:before {
+  top: -8px;
 }
 .top-nav .nav-wrapper .right-content {
   position: absolute;
@@ -6803,6 +6892,9 @@ body .footer .copyright {
 @media (max-width: 460px) {
   .top-nav .nav-wrapper .left-content {
     left: 10px;
+  }
+  .top-nav .nav-wrapper .left-content #openMenuIcon {
+    left: 0;
   }
   .top-nav .nav-wrapper .left-content .title {
     display: none;
@@ -6905,7 +6997,8 @@ body .footer .copyright {
   position: relative;
 }
 #homePage .section .scroll-icon a {
-  font-weight: 700;
+  font-weight: 500;
+  letter-spacing: 1px;
   display: block;
   font-size: 16px;
   color: #ffffff;
@@ -7091,7 +7184,7 @@ body .footer .copyright {
   display: block;
 }
 #productsPage .products-menu a span {
-  padding-left: 5px;
+  padding-left: 0;
   text-transform: uppercase;
 }
 #productsPage .products-menu a span:hover,

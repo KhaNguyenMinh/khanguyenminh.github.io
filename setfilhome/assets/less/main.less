@@ -77,13 +77,121 @@ body {
                     font-size: 29px;
                 }
             }
-            .title {
-                font-size: 16px;
-                font-weight: 400;
-                color: black;
+
+            #closeMenuIcon {
+                i {
+                    line-height: 64px;
+                    font-size: 30px;
+                }
+
+                .title {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: black;
+                    position: absolute;
+                    top: 0;
+                    left: 55px;
+                }
+            }
+
+            #openMenuIcon {
+                height: 60px;
+                width: 100%;
+                .title {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: black;
+                    position: absolute;
+                    top: 0;
+                    left: 55px;
+                }
+            }
+
+            #menu-toggle {
                 position: absolute;
-                top: 0;
-                left: 45px;
+                top: 50%;
+                left: 15px;
+                font-size: 30px;
+                display: block;
+                margin-left: -15px;
+                width: 25px;
+                height: 3px;
+                background: #000;
+            }
+
+            #menu-toggle:after, #menu-toggle:before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 3px;
+                background: #000;
+                left: 0;
+
+                -webkit-transform-origin: center center;
+                -moz-transform-origin: center center;
+                -ms-transform-origin: center center;
+                -o-transform-origin: center center;
+                transform-origin: center center;
+            }
+
+            #menu-toggle:before {
+                top: -8px;
+            }
+
+            #menu-toggle:after {
+                bottom: -8px;
+            }
+
+            #openMenuIcon.anim-out #menu-toggle {
+                background: rgba(220, 151, 31, 0);
+            }
+
+            #openMenuIcon.anim-out #menu-toggle:after {
+                -webkit-transform: rotate(-45deg) translate(2px, -8px);
+                -moz-transform: rotate(-45deg) translate(3px, -8px);
+                -ms-transform: rotate(-45deg) translate(3px, -8px);
+                -o-transform: rotate(-45deg) translate(3px, -8px);
+                transform: rotate(-45deg) translate(3px, -8px);
+
+            }
+
+            #openMenuIcon.anim-out #menu-toggle:before {
+                -webkit-transform: rotate(45deg) translate(4px, 9px);
+                -moz-transform: rotate(45deg) translate(3px, 8px);
+                -ms-transform: rotate(45deg) translate(3px, 8px);
+                -o-transform: rotate(45deg) translate(3px, 8px);
+                transform: rotate(45deg) translate(3px, 8px);
+
+            }
+
+            #menu-toggle,
+            #menu-toggle:before,
+            #menu-toggle:after {
+                -webkit-transition: all 0.3s cubic-bezier(0.585, -0.600, 0.430, 1.650);
+                -moz-transition: all 0.3s cubic-bezier(0.585, -0.600, 0.430, 1.650);
+                -ms-transition: all 0.3s cubic-bezier(0.585, -0.600, 0.430, 1.650);
+                -o-transition: all 0.3s cubic-bezier(0.585, -0.600, 0.430, 1.650);
+                transition: all 0.3s cubic-bezier(0.585, -0.600, 0.430, 1.650);
+            }
+
+            #openMenuIcon:hover #menu-toggle:before,
+            #openMenuIcon:focus #menu-toggle:before {
+                top: -6px;
+            }
+
+            #openMenuIcon:hover #menu-toggle:after,
+            #openMenuIcon:focus #menu-toggle:after {
+                bottom: -6px;
+            }
+
+            #openMenuIcon.anim-out:hover #menu-toggle:after,
+            #openMenuIcon.anim-out:focus #menu-toggle:after {
+                bottom: -8px;
+            }
+
+            #openMenuIcon.anim-out:hover #menu-toggle:before,
+            #openMenuIcon.anim-out:focus #menu-toggle:before {
+                top: -8px;
             }
         }
 
@@ -105,6 +213,9 @@ body {
         @media (max-width: 460px) {
             .left-content {
                 left: 10px;
+                #openMenuIcon {
+                    left: 0;
+                }
                 .title {
                     display: none;
                 }
@@ -230,7 +341,8 @@ body {
                 position: relative;
             }
             a {
-                font-weight: 700;
+                font-weight: 500;
+                letter-spacing: 1px;
                 display: block;
                 font-size: 16px;
                 color: #ffffff;
@@ -476,7 +588,7 @@ body {
             display: block;
             // transition: 0.3s;
             span {
-                padding-left: 5px;
+                padding-left: 0;
                 text-transform: uppercase;
                 &:hover, &:focus {
                     color: black;
