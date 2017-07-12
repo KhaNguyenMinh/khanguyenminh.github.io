@@ -277,5 +277,11 @@
 
         /**end*************PRODUCT PAGE***************/
 
+        $(document).ready(function(){
+            $('.left-content').click(function(){
+                $('#nav-icon4').toggleClass('open');
+            });
+        });
+
     });
 })(window.jQuery);

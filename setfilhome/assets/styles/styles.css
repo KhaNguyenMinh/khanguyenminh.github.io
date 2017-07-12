@@ -6767,9 +6767,11 @@ body .footer .copyright {
   color: black;
 }
 .top-nav .nav-wrapper .left-content {
+  cursor: pointer;
   position: absolute;
   left: 30px;
-  width: 200px;
+  height: 100%;
+  /* Icon 4 */
 }
 .top-nav .nav-wrapper .left-content .menu-icon {
   color: black;
@@ -6777,6 +6779,132 @@ body .footer .copyright {
 }
 .top-nav .nav-wrapper .left-content .menu-icon i {
   font-size: 29px;
+}
+.top-nav .nav-wrapper .left-content .title {
+  display: block;
+  float: right;
+  color: #1a1a1a;
+  padding-left: 30px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.top-nav .nav-wrapper .left-content:hover #nav-icon4:not(.open) span:nth-child(1) {
+  top: -10px;
+  opacity: 0;
+  -webkit-transition-delay: 0ms;
+  -moz-transition-delay: 0ms;
+  -o-transition-delay: 0ms;
+  transition-delay: 0ms;
+}
+.top-nav .nav-wrapper .left-content:hover #nav-icon4:not(.open) span:nth-child(2) {
+  top: 0px;
+  -webkit-transition-delay: 40ms;
+  -moz-transition-delay: 40ms;
+  -o-transition-delay: 40ms;
+  transition-delay: 40ms;
+}
+.top-nav .nav-wrapper .left-content:hover #nav-icon4:not(.open) span:nth-child(3) {
+  top: 6px;
+  -webkit-transition-delay: 80ms;
+  -moz-transition-delay: 80ms;
+  -o-transition-delay: 80ms;
+  transition-delay: 80ms;
+}
+.top-nav .nav-wrapper .left-content:hover #nav-icon4:not(.open) span:nth-child(4) {
+  top: 12px;
+  opacity: 1;
+  -webkit-transition-delay: 80ms;
+  -moz-transition-delay: 80ms;
+  -o-transition-delay: 80ms;
+  transition-delay: 80ms;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4 {
+  top: 25px;
+  width: 20px;
+  height: 18px;
+  position: relative;
+  display: block;
+  float: left;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4 span {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4 span:nth-child(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4 span:nth-child(2) {
+  top: 6px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4 span:nth-child(3) {
+  top: 12px;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4 span:nth-child(4) {
+  top: 18px;
+  opacity: 0;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -3px;
+  width: 25px;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 15px;
+  width: 25px;
+}
+.top-nav .nav-wrapper .left-content #nav-icon4.open span:nth-child(4) {
+  width: 0%;
+  opacity: 0;
 }
 .top-nav .nav-wrapper .left-content #closeMenuIcon i {
   line-height: 64px;
@@ -6889,7 +7017,7 @@ body .footer .copyright {
   color: #000000;
   font-weight: 500;
 }
-@media (max-width: 460px) {
+@media (max-width: 620px) {
   .top-nav .nav-wrapper .left-content {
     left: 10px;
   }
