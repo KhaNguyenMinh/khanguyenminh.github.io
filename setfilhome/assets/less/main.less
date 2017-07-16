@@ -745,8 +745,212 @@ body {
         background-color: #ffffff;
 
         .control-bar {
-            min-height: 80px;
-            border-bottom: 1px solid #f2f2f2;
+            /*
+            .paginate
+            -------------------------------------------------*/
+            .paginate{
+            	width: 100%;
+            	position:relative;
+                padding:20px 30px;
+            	margin-bottom: 0;
+            	height:80px;
+            	border-bottom:1px solid #e5e5e5;
+            }
+
+            .paginate .prev,
+            .paginate .next,
+            .paginate .list{
+            	position:absolute;
+            	top: 20px;
+            }
+
+            .paginate .prev{
+            	left:30px;
+            }
+            .paginate .list{
+            	left:50%;
+            	margin-left:-20px;
+            }
+            .paginate .next{
+            	right:30px;
+            }
+
+            .paginate a,
+            .paginate span{
+            	display:block;
+            	width:40px;
+            	height:40px;
+            }
+
+
+            .paginate .list a{
+            	position:relative;
+            	padding: 10px;
+            }
+            .paginate .list a span{
+            	width: 20px;
+            	height: 20px;
+            	overflow:hidden;
+            	position: relative;
+            }
+            .paginate .list a i{
+            	display:block;
+            	position:absolute;
+            	background-color:#000;
+            	width:6px;
+            	height:0;
+            	-webkit-transition-property: height, -webkit-transform;
+            	   -moz-transition-property: height, -moz-transform;
+            	     -o-transition-property: height, -o-transform;
+            	        transition-property: height, transform;
+            	-webkit-transition-duration: 0.5s;
+            	   -moz-transition-duration: 0.5s;
+            	     -o-transition-duration: 0.5s;
+            	        transition-duration: 0.5s;
+            	-webkit-transition-timing-function: cubic-bezier(.75,0,.3,1);
+            	   -moz-transition-timing-function: cubic-bezier(.75,0,.3,1);
+            	     -o-transition-timing-function: cubic-bezier(.75,0,.3,1);
+            	        transition-timing-function: cubic-bezier(.75,0,.3,1);
+            }
+
+            .paginate .list a i.c1{ left:0px; }
+            .paginate .list a i.c2{ left:7px; }
+            .paginate .list a i.c3{ left:14px; }
+
+            .paginate .list a i.c1.b1{ height:7px; 	-webkit-transform: translate(0, 0); 	-moz-transform: translate(0, 0); 	-o-transform: translate(0, 0); 		transform: translate(0, 0); }
+            .paginate .list a i.c1.b2{ height:7px; 	-webkit-transform: translate(0, 8px); 	-moz-transform: translate(0, 8px); 	-o-transform: translate(0, 8px); 	transform: translate(0, 8px); }
+            .paginate .list a i.c1.b3{ height:7px; 	-webkit-transform: translate(0, 40px); 	-moz-transform: translate(0, 40px); -o-transform: translate(0, 40px); 	transform: translate(0, 40px); }
+            .paginate .list a i.c2.b1{ height:10px; -webkit-transform: translate(0, 0); 	-moz-transform: translate(0, 0); 	-o-transform: translate(0, 0); 		transform: translate(0, 0); }
+            .paginate .list a i.c2.b2{ height:7px; 	-webkit-transform: translate(0, 11px); 	-moz-transform: translate(0, 11px); -o-transform: translate(0, 11px); 	transform: translate(0, 11px); }
+            .paginate .list a i.c2.b3{ height:7px; 	-webkit-transform: translate(0, 35px); 	-moz-transform: translate(0, 35px); -o-transform: translate(0, 35px); 	transform: translate(0, 35px); }
+            .paginate .list a i.c3.b1{ height:5px; 	-webkit-transform: translate(0, 0); 	-moz-transform: translate(0, 0); 	-o-transform: translate(0, 0); 		transform: translate(0, 0); }
+            .paginate .list a i.c3.b2{ height:7px; 	-webkit-transform: translate(0, 6px); 	-moz-transform: translate(0, 6px); 	-o-transform: translate(0, 6px); 	transform: translate(0, 6px); }
+            .paginate .list a i.c3.b3{ height:7px; 	-webkit-transform: translate(0, 33px); 	-moz-transform: translate(0, 33px); -o-transform: translate(0, 33px); 	transform: translate(0, 33px); }
+
+            .paginate .list a:hover i.c1.b1{ height:7px; 	-webkit-transform: translate(0, -8px); 	-moz-transform: translate(0, -8px);	 -o-transform: translate(0, -8px); 	transform: translate(0, -8px); }
+            .paginate .list a:hover i.c1.b2{ height:7px; 	-webkit-transform: translate(0, 0); 	-moz-transform: translate(0, 0); 	 -o-transform: translate(0, 0); 	transform: translate(0, 0); }
+            .paginate .list a:hover i.c1.b3{ height:7px; 	-webkit-transform: translate(0, 8px); 	-moz-transform: translate(0, 8px); 	 -o-transform: translate(0, 8px); 	transform: translate(0, 8px); }
+            .paginate .list a:hover i.c2.b1{ height:10px; 	-webkit-transform: translate(0, -11px); -moz-transform: translate(0, -11px); -o-transform: translate(0, -11px); transform: translate(0, -11px); }
+            .paginate .list a:hover i.c2.b2{ height:10px; 	-webkit-transform: translate(0, 0); 	-moz-transform: translate(0, 0); 	 -o-transform: translate(0, 0); 	transform: translate(0, 0); }
+            .paginate .list a:hover i.c2.b3{ height:7px; 	-webkit-transform: translate(0, 11px); 	-moz-transform: translate(0, 11px);  -o-transform: translate(0, 11px); 	transform: translate(0, 11px); }
+            .paginate .list a:hover i.c3.b1{ height:5px; 	-webkit-transform: translate(0, -6px); 	-moz-transform: translate(0, -6px);  -o-transform: translate(0, -6px); 	transform: translate(0, -6px); }
+            .paginate .list a:hover i.c3.b2{ height:5px; 	-webkit-transform: translate(0, 0); 	-moz-transform: translate(0, 0); 	 -o-transform: translate(0, 0); 	transform: translate(0, 0); }
+            .paginate .list a:hover i.c3.b3{ height:7px; 	-webkit-transform: translate(0, 6px); 	-moz-transform: translate(0, 6px); 	 -o-transform: translate(0, 6px); 	transform: translate(0, 6px); }
+
+
+            .paginate .prev a:before,
+            .paginate .prev a:after,
+            .paginate .next a:before,
+            .paginate .next a:after,
+            .paginate .prev span:before,
+            .paginate .prev span:after,
+            .paginate .next span:before,
+            .paginate .next span:after{
+            	content:'';
+            	position:absolute;
+            	left:50%;
+            	top:50%;
+            	width:10px;
+            	height:2px;
+            	background-color:#171717;
+            	border-radius:1px;
+            	margin-left:-4px;
+
+            	-webkit-transform-origin:50% 50%;
+            	   -moz-transform-origin:50% 50%;
+            	    -ms-transform-origin:50% 50%;
+            	     -o-transform-origin:50% 50%;
+            	        transform-origin:50% 50%;
+            	-webkit-transition: margin-left 0.5s ease-out, -webkit-transform 0.5s ease-out;
+            	   -moz-transition: margin-left 0.5s ease-out, -moz-transform 0.5s ease-out;
+            	     -o-transition: margin-left 0.5s ease-out, -o-transform 0.5s ease-out;
+            	        transition: margin-left 0.5s ease-out, transform 0.5s ease-out;
+
+            }
+            .paginate .prev span:before,
+            .paginate .prev span:after,
+            .paginate .next span:before,
+            .paginate .next span:after{
+            	background-color:#d1d1d1;
+            }
+
+            .paginate .prev a:before,
+            .paginate .prev span:before{
+            	margin-top:-4px;
+            	-webkit-transform: rotate(-45deg);
+            	   -moz-transform: rotate(-45deg);
+            	    -ms-transform: rotate(-45deg);
+            	     -o-transform: rotate(-45deg);
+            	        transform: rotate(-45deg);
+            }
+
+            .paginate .prev a:after,
+            .paginate .prev span:after{
+            	margin-top:2px;
+            	-webkit-transform: rotate(45deg);
+            	   -moz-transform: rotate(45deg);
+            	    -ms-transform: rotate(45deg);
+            	     -o-transform: rotate(45deg);
+            	        transform: rotate(45deg);
+            }
+
+            .paginate .prev a:hover:before{
+            	margin-left:-8px;
+            	-webkit-transform: rotate(135deg);
+            	   -moz-transform: rotate(135deg);
+            	    -ms-transform: rotate(135deg);
+            	     -o-transform: rotate(135deg);
+            	        transform: rotate(135deg);
+            }
+
+            .paginate .prev a:hover:after{
+            	margin-left:-8px;
+            	-webkit-transform: rotate(-135deg);
+            	   -moz-transform: rotate(-135deg);
+            	    -ms-transform: rotate(-135deg);
+            	     -o-transform: rotate(-135deg);
+            	        transform: rotate(-135deg);
+            }
+
+
+
+            .paginate .next a:before,
+            .paginate .next span:before{
+            	margin-top:-4px;
+            	-webkit-transform: rotate(45deg);
+            	   -moz-transform: rotate(45deg);
+            	    -ms-transform: rotate(45deg);
+            	     -o-transform: rotate(45deg);
+            	        transform: rotate(45deg);
+            }
+
+            .paginate .next a:after,
+            .paginate .next span:after{
+            	margin-top:2px;
+            	-webkit-transform: rotate(-45deg);
+            	   -moz-transform: rotate(-45deg);
+            	    -ms-transform: rotate(-45deg);
+            	     -o-transform: rotate(-45deg);
+            	        transform: rotate(-45deg);
+            }
+
+            .paginate .next a:hover:before{
+            	margin-left:0px;
+            	-webkit-transform: rotate(-135deg);
+            	   -moz-transform: rotate(-135deg);
+            	    -ms-transform: rotate(-135deg);
+            	     -o-transform: rotate(-135deg);
+            	        transform: rotate(-135deg);
+            }
+
+            .paginate .next a:hover:after{
+            	margin-left:0px;
+            	-webkit-transform: rotate(135deg);
+            	   -moz-transform: rotate(135deg);
+            	    -ms-transform: rotate(135deg);
+            	     -o-transform: rotate(135deg);
+            	        transform: rotate(135deg);
+            }
 
             .action-btn {
                 padding-top: 20px;

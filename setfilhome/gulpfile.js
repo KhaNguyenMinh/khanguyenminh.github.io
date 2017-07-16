@@ -34,7 +34,7 @@ gulp.task('css', ['less'], function () {
         'assets/styles/animate.min.css',
         'assets/vegas-master/dist/vegas.min.css',
         'assets/styles/btn-scroll.css',
-        'assets/styles/loader.css',
+        'assets/styles/loader1.css',
         // 'assets/styles/fakeLoader.css',
         'assets/styles/styles.css'
     ])

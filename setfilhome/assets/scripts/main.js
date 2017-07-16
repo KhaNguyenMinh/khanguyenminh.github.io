@@ -4,17 +4,17 @@
 
     var projectGallery;
 
-    function openMenu() {
-        $('#mainSideNav').width(250);
-        $('#openMenuIcon').addClass('hidden');
-        $('#closeMenuIcon').removeClass('hidden');
-    }
-
-    function closeMenu() {
-        $('#mainSideNav').width(0);
-        $('#openMenuIcon').removeClass('hidden');
-        $('#closeMenuIcon').addClass('hidden');
-    }
+    // function openMenu() {
+    //     $('#mainSideNav').width(250);
+    //     $('#openMenuIcon').addClass('hidden');
+    //     $('#closeMenuIcon').removeClass('hidden');
+    // }
+    //
+    // function closeMenu() {
+    //     $('#mainSideNav').width(0);
+    //     $('#openMenuIcon').removeClass('hidden');
+    //     $('#closeMenuIcon').addClass('hidden');
+    // }
 
     function homePageSlide() {
         var slider = new MasterSlider();
@@ -172,7 +172,8 @@
     window.loading_screen = window.pleaseWait({
         logo: "",
         backgroundColor: '#fff',
-        loadingHtml: '<div id="loader-wrapper"><div id="loader"></div></div>'
+        // loadingHtml: '<div id="loader-wrapper"><div id="loader"></div></div>'
+        loadingHtml: '<div id="loading"><div id="loading-center"><div id="loading-center-absolute"><div class="object" id="object_four"></div><div class="object" id="object_three"></div><div class="object" id="object_two"></div><div class="object" id="object_one"></div></div></div></div>'
     });
 
     $(window).on('load', function () {
@@ -185,12 +186,13 @@
         // homePageSlide();
 
         /**start*************SLIDE MENU***************/
-        $('#openMenuIcon').click(function () {
-            openMenu();
-        });
-
-        $('#closeMenuIcon').click(function () {
-            closeMenu();
+        $('.left-content').click(function(){
+            $('#nav-icon4').toggleClass('open');
+            if ($('#nav-icon4').hasClass('open')) {
+                $('#mainSideNav').width(250);
+            } else {
+                $('#mainSideNav').width(0);
+            }
         });
         /**end*************SLIDE MENU***************/
 
@@ -276,12 +278,5 @@
         /**start*************HOME PAGE***************/
 
         /**end*************PRODUCT PAGE***************/
-
-        $(document).ready(function(){
-            $('.left-content').click(function(){
-                $('#nav-icon4').toggleClass('open');
-            });
-        });
-
     });
 })(window.jQuery);
